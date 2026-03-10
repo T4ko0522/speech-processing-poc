@@ -61,7 +61,6 @@ def run_pipeline(
     from poc.src.correction.typo_corrector import correct_transcript
     from poc.src.emotion.dimensional_emotion import analyze_dimensional_emotion
     from poc.src.emotion.fusion import fuse_emotions
-    from poc.src.emotion.speech_emotion import analyze_speech_emotion
     from poc.src.emotion.text_emotion import analyze_text_emotion
     from poc.src.io.reader import validate_input
     from poc.src.io.writer import write_results
@@ -202,25 +201,8 @@ def run_pipeline(
 
     # ===== Step 6: 感情推定 (スキップ可) =====
     emotion_cfg = config.get("emotion", {})
-    speech_emotions = None
     dimensional_emotions = None
     text_emotions = None
-
-    # 音声感情
-    t0 = time.monotonic()
-    try:
-        speech_cfg = emotion_cfg.get("speech", {})
-        speech_emotions = analyze_speech_emotion(
-            audio_path,
-            segments,
-            model_name=speech_cfg.get("model", "FunAudioLLM/SenseVoiceSmall"),
-            language=speech_cfg.get("language", "ja"),
-            device=device,
-        )
-        _record_timing(timings, "emotion_speech", t0)
-    except Exception:
-        _record_timing(timings, "emotion_speech", t0, status="failed", skip_reason="推定エラー")
-        logger.warning("音声感情推定スキップ")
 
     # 次元感情
     t0 = time.monotonic()
@@ -272,14 +254,12 @@ def run_pipeline(
     # 融合
     t0 = time.monotonic()
     fusion_cfg = emotion_cfg.get("fusion", {})
-    if speech_emotions or dimensional_emotions or text_emotions:
+    if dimensional_emotions or text_emotions:
         timeline = fuse_emotions(
             segments,
-            speech_emotions=speech_emotions,
             dimensional_emotions=dimensional_emotions,
             text_emotions=text_emotions,
             prosody_results=prosody_results,
-            speech_weight=fusion_cfg.get("speech_weight", 0.4),
             text_weight=fusion_cfg.get("text_weight", 0.6),
             dimensional_weight=fusion_cfg.get("dimensional_weight", 0.2),
             neutral_zone=fusion_cfg.get("neutral_zone", [0.35, 0.65]),

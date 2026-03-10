@@ -75,13 +75,6 @@ class ScenesResult(BaseModel):
     summaries: list[SceneSummary] = Field(default_factory=list)
 
 
-class EmotionCategory(BaseModel):
-    """カテゴリカル感情."""
-
-    label: str
-    score: float
-
-
 class DimensionalEmotion(BaseModel):
     """次元感情（arousal/valence/dominance）."""
 
@@ -112,7 +105,6 @@ class FusedEmotion(BaseModel):
 
     start: float
     end: float
-    speech_category: EmotionCategory | None = None
     dimensional: DimensionalEmotion | None = None
     text_emotions: TextEmotion | None = None
     prosody: ProsodyFeatures | None = None
