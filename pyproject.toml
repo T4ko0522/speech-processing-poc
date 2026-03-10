@@ -1,0 +1,49 @@
+[project]
+name = "vodai-poc"
+version = "0.1.0"
+description = "VODAI 動画解析PoC - 字幕生成・誤字補正・感情推定・シーン要約CLIツール"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "ffmpeg-python>=0.2",
+    "openai>=1.0",
+    "tenacity>=8.0",
+    "scenedetect[opencv]>=0.6",
+    "transformers>=4.30",
+    "sentencepiece>=0.1",
+    "librosa>=0.10",
+    "srt>=3.5",
+    "structlog>=23.0",
+    "rich>=13.0",
+    "tqdm>=4.60",
+    "torch>=2.6,<2.7",
+    "torchaudio>=2.6,<2.7",
+    "whisperx>=3.1",
+    "funasr>=1.0",
+    "modelscope>=1.0",
+    "setuptools>=70.0,<80.0",
+]
+
+[project.scripts]
+vodai = "poc.src.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["poc"]
+
+[tool.uv]
+# WhisperX が pytorch cu128 index を指定するため、
+# git source と組み合わせると index 競合が発生する。
+# whisperx は PyPI パッケージ版を使用し、torch は PyPI から取得する。
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9",
+    "pytest>=8.0",
+]
