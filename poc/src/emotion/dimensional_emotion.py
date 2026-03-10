@@ -5,14 +5,55 @@ from __future__ import annotations
 from pathlib import Path
 
 import librosa
-import numpy as np
 import structlog
 import torch
-from transformers import Wav2Vec2Processor
+import torch.nn as nn
+from transformers import Wav2Vec2Model, Wav2Vec2PreTrainedModel, Wav2Vec2Processor
 
 from poc.src.pipeline.models import DimensionalEmotion, TranscriptSegment
 
 logger = structlog.get_logger(__name__)
+
+
+class _RegressionHead(nn.Module):
+    """audEERING カスタム回帰ヘッド."""
+
+    def __init__(self, config):
+        super().__init__()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.dropout = nn.Dropout(config.final_dropout)
+        self.out_proj = nn.Linear(config.hidden_size, config.num_labels)
+
+    def forward(self, features, **kwargs):
+        x = self.dropout(features)
+        x = self.dense(x)
+        x = torch.tanh(x)
+        x = self.dropout(x)
+        x = self.out_proj(x)
+        return x
+
+
+class _EmotionModel(Wav2Vec2PreTrainedModel):
+    """audEERING wav2vec2 + 回帰ヘッド.
+
+    モデルカード: https://huggingface.co/audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim
+    回帰ヘッドが arousal/dominance/valence を直接出力する。
+    """
+
+    _tied_weights_keys = []
+
+    def __init__(self, config):
+        super().__init__(config)
+        self.wav2vec2 = Wav2Vec2Model(config)
+        self.classifier = _RegressionHead(config)
+        self.post_init()
+
+    def forward(self, input_values):
+        outputs = self.wav2vec2(input_values)
+        hidden_states = outputs[0]
+        hidden_states = torch.mean(hidden_states, dim=1)
+        logits = self.classifier(hidden_states)
+        return hidden_states, logits
 
 
 def analyze_dimensional_emotion(
@@ -24,6 +65,9 @@ def analyze_dimensional_emotion(
 ) -> dict[int, DimensionalEmotion]:
     """audeering の wav2vec2 モデルで arousal/valence/dominance を推定する.
 
+    正しい回帰ヘッド付きモデル (_EmotionModel) を使用し、
+    arousal/dominance/valence を直接出力する。
+
     Args:
         audio_path: 入力WAVファイルパス
         segments: 字幕セグメントリスト（時間区間参照用）
@@ -33,12 +77,10 @@ def analyze_dimensional_emotion(
     Returns:
         セグメントID → DimensionalEmotion のマッピング
     """
-    from transformers import Wav2Vec2Model
-
     logger.info("次元感情推定開始", model=model_name)
 
     processor = Wav2Vec2Processor.from_pretrained(model_name)
-    model = Wav2Vec2Model.from_pretrained(model_name)
+    model = _EmotionModel.from_pretrained(model_name)
     model.to(device)
     model.eval()
 
@@ -64,19 +106,17 @@ def analyze_dimensional_emotion(
             return_tensors="pt",
             padding=True,
         )
-        inputs = {k: v.to(device) for k, v in inputs.items()}
+        input_values = inputs["input_values"].to(device)
 
         with torch.no_grad():
-            outputs = model(**inputs)
-            # hidden_states の平均をとり、線形変換で3次元に射影
-            hidden = outputs.last_hidden_state.mean(dim=1)
-            # 簡易的にsigmoidで0-1に正規化
-            values = torch.sigmoid(hidden[0, :3]).cpu().numpy()
+            _, logits = model(input_values)
+            vals = logits.squeeze().cpu().numpy()
 
+        # モデル出力順序: arousal, dominance, valence
         results[seg.id] = DimensionalEmotion(
-            arousal=float(values[0]),
-            valence=float(values[1]),
-            dominance=float(values[2]),
+            arousal=float(vals[0]),
+            dominance=float(vals[1]),
+            valence=float(vals[2]),
         )
 
     logger.info("次元感情推定完了", segments_analyzed=len(results))
