@@ -96,6 +96,17 @@ class TextEmotion(BaseModel):
     scores: dict[str, float] = Field(default_factory=dict)
 
 
+class ProsodyFeatures(BaseModel):
+    """prosody特徴量（発話の緩急・抑揚）."""
+
+    speech_rate: float = 0.0  # 文字/秒
+    f0_mean: float = 0.0  # 基本周波数の平均 (Hz)
+    f0_std: float = 0.0  # 基本周波数の標準偏差
+    f0_range: float = 0.0  # 基本周波数のレンジ (max - min)
+    energy_mean: float = 0.0  # RMSエネルギーの平均
+    energy_std: float = 0.0  # RMSエネルギーの標準偏差
+
+
 class FusedEmotion(BaseModel):
     """融合済み感情."""
 
@@ -104,6 +115,7 @@ class FusedEmotion(BaseModel):
     speech_category: EmotionCategory | None = None
     dimensional: DimensionalEmotion | None = None
     text_emotions: TextEmotion | None = None
+    prosody: ProsodyFeatures | None = None
     fused_label: str = ""
     fused_valence: float = 0.0
     fused_arousal: float = 0.0
@@ -115,6 +127,15 @@ class EmotionTimeline(BaseModel):
     entries: list[FusedEmotion] = Field(default_factory=list)
 
 
+class StepTiming(BaseModel):
+    """パイプラインステップの計測情報."""
+
+    step_name: str
+    duration_seconds: float
+    status: str = "completed"  # "completed" / "skipped" / "failed"
+    skip_reason: str | None = None
+
+
 class PipelineResult(BaseModel):
     """パイプライン全体の出力."""
 
@@ -123,3 +144,4 @@ class PipelineResult(BaseModel):
     fixed_transcript: FixedTranscript | None = None
     scenes: ScenesResult | None = None
     emotions: EmotionTimeline | None = None
+    step_timings: list[StepTiming] = Field(default_factory=list)

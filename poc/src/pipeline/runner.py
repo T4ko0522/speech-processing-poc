@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from pathlib import Path
 
 import structlog
@@ -11,6 +12,7 @@ from poc.src.pipeline.models import (
     EmotionTimeline,
     PipelineResult,
     ScenesResult,
+    StepTiming,
 )
 
 logger = structlog.get_logger(__name__)
@@ -23,6 +25,25 @@ def load_config(config_path: Path | None = None) -> dict:
     path = config_path or CONFIG_PATH
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def _record_timing(
+    timings: list[StepTiming],
+    step_name: str,
+    start_time: float,
+    status: str = "completed",
+    skip_reason: str | None = None,
+) -> None:
+    """ステップの計測結果を記録する."""
+    duration = time.monotonic() - start_time
+    timings.append(
+        StepTiming(
+            step_name=step_name,
+            duration_seconds=round(duration, 3),
+            status=status,
+            skip_reason=skip_reason,
+        )
+    )
 
 
 def run_pipeline(
@@ -48,8 +69,10 @@ def run_pipeline(
     from poc.src.scene.detector import detect_scenes
     from poc.src.scene.summarizer import summarize_scenes
 
+    pipeline_start = time.monotonic()
     config = load_config(Path(config_path) if config_path else None)
     result = PipelineResult(input_file=input_file)
+    timings: list[StepTiming] = []
 
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
@@ -71,6 +94,7 @@ def run_pipeline(
     # ===== Step 1: 音声抽出 (Fatal) =====
     audio_cfg = config.get("audio", {})
     audio_path = out_path / "audio.wav"
+    t0 = time.monotonic()
     try:
         extract_audio(
             video_path,
@@ -78,12 +102,15 @@ def run_pipeline(
             sample_rate=audio_cfg.get("sample_rate", 16000),
             channels=audio_cfg.get("channels", 1),
         )
+        _record_timing(timings, "audio_extract", t0)
     except Exception as e:
+        _record_timing(timings, "audio_extract", t0, status="failed", skip_reason=str(e))
         logger.error("音声抽出失敗（Fatal）", error=str(e))
         raise
 
     # ===== Step 2: 文字起こし (Fatal) =====
     asr_cfg = config.get("asr", {})
+    t0 = time.monotonic()
     try:
         raw_transcript = transcribe(
             audio_path,
@@ -95,13 +122,16 @@ def run_pipeline(
             hf_token=hf_token,
         )
         result.raw_transcript = raw_transcript
+        _record_timing(timings, "transcribe", t0)
     except Exception as e:
+        _record_timing(timings, "transcribe", t0, status="failed", skip_reason=str(e))
         logger.error("文字起こし失敗（Fatal）", error=str(e))
         raise
 
     segments = raw_transcript.segments
 
     # ===== Step 3: 誤字補正 (リトライ後スキップ可) =====
+    t0 = time.monotonic()
     if llm_client:
         corr_cfg = config.get("correction", {})
         correction_model = get_model_for_task(llm_cfg, "correction")
@@ -113,28 +143,37 @@ def run_pipeline(
                 chunk_size=corr_cfg.get("chunk_size", 10),
                 temperature=corr_cfg.get("temperature", 0.1),
                 confidence_threshold=corr_cfg.get("confidence_threshold", 0.7),
+                max_retries=corr_cfg.get("max_retries", 3),
             )
             result.fixed_transcript = fixed
             segments = fixed.segments
+            _record_timing(timings, "correction", t0)
         except Exception:
+            _record_timing(timings, "correction", t0, status="failed", skip_reason="API失敗")
             logger.warning("誤字補正スキップ（API失敗）")
     else:
+        _record_timing(timings, "correction", t0, status="skipped", skip_reason="LLM未設定")
         logger.warning("LLM未設定、誤字補正スキップ")
 
     # ===== Step 4: シーン検出 (スキップ可) =====
     scene_cfg = config.get("scene", {})
     boundaries = []
+    t0 = time.monotonic()
     try:
         boundaries = detect_scenes(
             video_path,
             out_path,
             threshold=scene_cfg.get("threshold", 27.0),
             min_scene_len=scene_cfg.get("min_scene_len", 15),
+            merge_threshold=scene_cfg.get("merge_threshold", 2.0),
         )
+        _record_timing(timings, "scene_detect", t0)
     except Exception:
+        _record_timing(timings, "scene_detect", t0, status="failed", skip_reason="検出エラー")
         logger.warning("シーン検出スキップ（エラー）")
 
     # ===== Step 5: シーン要約 (スキップ可) =====
+    t0 = time.monotonic()
     if boundaries and llm_client:
         summary_cfg = config.get("scene_summary", {})
         summary_model = get_model_for_task(llm_cfg, "summary")
@@ -150,11 +189,16 @@ def run_pipeline(
                 supports_vision=supports_vision,
             )
             result.scenes = scenes_result
+            _record_timing(timings, "scene_summary", t0)
         except Exception:
+            _record_timing(timings, "scene_summary", t0, status="failed", skip_reason="API失敗")
             logger.warning("シーン要約スキップ（API失敗）")
             result.scenes = ScenesResult(boundaries=boundaries)
     elif boundaries:
+        _record_timing(timings, "scene_summary", t0, status="skipped", skip_reason="LLM未設定")
         result.scenes = ScenesResult(boundaries=boundaries)
+    else:
+        _record_timing(timings, "scene_summary", t0, status="skipped", skip_reason="シーン未検出")
 
     # ===== Step 6: 感情推定 (スキップ可) =====
     emotion_cfg = config.get("emotion", {})
@@ -163,6 +207,7 @@ def run_pipeline(
     text_emotions = None
 
     # 音声感情
+    t0 = time.monotonic()
     try:
         speech_cfg = emotion_cfg.get("speech", {})
         speech_emotions = analyze_speech_emotion(
@@ -172,10 +217,13 @@ def run_pipeline(
             language=speech_cfg.get("language", "ja"),
             device=device,
         )
+        _record_timing(timings, "emotion_speech", t0)
     except Exception:
+        _record_timing(timings, "emotion_speech", t0, status="failed", skip_reason="推定エラー")
         logger.warning("音声感情推定スキップ")
 
     # 次元感情
+    t0 = time.monotonic()
     try:
         dim_cfg = emotion_cfg.get("dimensional", {})
         dimensional_emotions = analyze_dimensional_emotion(
@@ -187,10 +235,13 @@ def run_pipeline(
             ),
             device=device,
         )
+        _record_timing(timings, "emotion_dimensional", t0)
     except Exception:
+        _record_timing(timings, "emotion_dimensional", t0, status="failed", skip_reason="推定エラー")
         logger.warning("次元感情推定スキップ")
 
     # テキスト感情
+    t0 = time.monotonic()
     try:
         text_cfg = emotion_cfg.get("text", {})
         text_emotions = analyze_text_emotion(
@@ -201,10 +252,25 @@ def run_pipeline(
             ),
             device=device,
         )
+        _record_timing(timings, "emotion_text", t0)
     except Exception:
+        _record_timing(timings, "emotion_text", t0, status="failed", skip_reason="推定エラー")
         logger.warning("テキスト感情推定スキップ")
 
+    # prosody
+    t0 = time.monotonic()
+    prosody_results = None
+    try:
+        from poc.src.emotion.prosody import analyze_prosody
+
+        prosody_results = analyze_prosody(audio_path, segments)
+        _record_timing(timings, "emotion_prosody", t0)
+    except Exception:
+        _record_timing(timings, "emotion_prosody", t0, status="failed", skip_reason="推定エラー")
+        logger.warning("prosody推定スキップ")
+
     # 融合
+    t0 = time.monotonic()
     fusion_cfg = emotion_cfg.get("fusion", {})
     if speech_emotions or dimensional_emotions or text_emotions:
         timeline = fuse_emotions(
@@ -212,15 +278,26 @@ def run_pipeline(
             speech_emotions=speech_emotions,
             dimensional_emotions=dimensional_emotions,
             text_emotions=text_emotions,
+            prosody_results=prosody_results,
             speech_weight=fusion_cfg.get("speech_weight", 0.4),
             text_weight=fusion_cfg.get("text_weight", 0.6),
+            dimensional_weight=fusion_cfg.get("dimensional_weight", 0.2),
+            neutral_zone=fusion_cfg.get("neutral_zone", [0.35, 0.65]),
         )
         result.emotions = timeline
+        _record_timing(timings, "emotion_fusion", t0)
     else:
         result.emotions = EmotionTimeline(entries=[])
+        _record_timing(timings, "emotion_fusion", t0, status="skipped", skip_reason="感情データなし")
 
     # ===== Step 7: 出力書き出し =====
+    t0 = time.monotonic()
+    result.step_timings = timings
     files = write_results(result, out_path)
-    logger.info("パイプライン完了", output_files=len(files))
+    _record_timing(timings, "output", t0)
+    result.step_timings = timings
+
+    total_duration = round(time.monotonic() - pipeline_start, 3)
+    logger.info("パイプライン完了", output_files=len(files), total_duration=total_duration)
 
     return result

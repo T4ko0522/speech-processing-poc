@@ -83,6 +83,8 @@ def write_results(result: PipelineResult, output_dir: str | Path) -> dict[str, P
         logger.info("出力完了", file=str(p))
 
     # report.json
+    step_timings_data = [t.model_dump() for t in result.step_timings] if result.step_timings else []
+    total_duration = sum(t.duration_seconds for t in result.step_timings) if result.step_timings else 0.0
     report = {
         "input_file": result.input_file,
         "raw_segments": len(result.raw_transcript.segments) if result.raw_transcript else 0,
@@ -91,6 +93,8 @@ def write_results(result: PipelineResult, output_dir: str | Path) -> dict[str, P
         "scenes": len(result.scenes.boundaries) if result.scenes else 0,
         "emotion_entries": len(result.emotions.entries) if result.emotions else 0,
         "output_files": {k: str(v) for k, v in files.items()},
+        "step_timings": step_timings_data,
+        "total_duration": round(total_duration, 3),
     }
     p = out / "report.json"
     p.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")

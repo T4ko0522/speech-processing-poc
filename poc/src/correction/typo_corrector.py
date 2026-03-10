@@ -7,7 +7,7 @@ from pathlib import Path
 
 import structlog
 from openai import OpenAI
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import stop_after_attempt, wait_exponential
 
 from poc.src.pipeline.models import (
     CorrectionDiff,
@@ -26,36 +26,41 @@ def _load_prompt() -> str:
     return PROMPT_PATH.read_text(encoding="utf-8")
 
 
-@retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=2, max=30),
-    reraise=True,
-)
 def _call_llm(
     client: OpenAI,
     prompt: str,
     chunk: list[dict],
     model: str,
     temperature: float,
+    max_retries: int = 3,
 ) -> dict:
     """LLM に誤字補正リクエストを送信."""
-    response = client.chat.completions.create(
-        model=model,
-        temperature=temperature,
-        messages=[
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": json.dumps(chunk, ensure_ascii=False)},
-        ],
-    )
-    content = response.choices[0].message.content
+    from tenacity import Retrying
 
-    # JSON部分を抽出（Ollamaはマークダウンで囲む場合がある）
-    text = content.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    retryer = Retrying(
+        stop=stop_after_attempt(max_retries),
+        wait=wait_exponential(multiplier=1, min=2, max=30),
+        reraise=True,
+    )
+    for attempt in retryer:
+        with attempt:
+            response = client.chat.completions.create(
+                model=model,
+                temperature=temperature,
+                messages=[
+                    {"role": "system", "content": prompt},
+                    {"role": "user", "content": json.dumps(chunk, ensure_ascii=False)},
+                ],
+            )
+            content = response.choices[0].message.content
+
+            # JSON部分を抽出（Ollamaはマークダウンで囲む場合がある）
+            text = content.strip()
+            if text.startswith("```"):
+                lines = text.split("\n")
+                lines = [l for l in lines if not l.startswith("```")]
+                text = "\n".join(lines)
+            return json.loads(text)
 
 
 def correct_transcript(
@@ -66,6 +71,7 @@ def correct_transcript(
     chunk_size: int = 10,
     temperature: float = 0.1,
     confidence_threshold: float = 0.7,
+    max_retries: int = 3,
 ) -> FixedTranscript:
     """字幕テキストの誤字を LLM でチャンク単位に補正する.
 
@@ -76,6 +82,7 @@ def correct_transcript(
         chunk_size: 一度に補正するセグメント数
         temperature: 生成温度
         confidence_threshold: この閾値未満の補正は適用しない
+        max_retries: LLM呼び出しの最大リトライ回数
 
     Returns:
         FixedTranscript: 補正済み字幕 + diff ログ
@@ -98,7 +105,7 @@ def correct_transcript(
         logger.info("誤字補正チャンク処理中", chunk=chunk_idx + 1, total=len(chunks))
 
         try:
-            result = _call_llm(client, prompt, chunk_data, model, temperature)
+            result = _call_llm(client, prompt, chunk_data, model, temperature, max_retries)
             consecutive_failures = 0
         except Exception as e:
             consecutive_failures += 1
