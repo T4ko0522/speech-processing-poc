@@ -1,0 +1,16 @@
+{
+  "input_file": "poc/input/vod.mp4",
+  "raw_segments": 35,
+  "fixed_segments": 35,
+  "correction_diffs": 21,
+  "scenes": 346,
+  "emotion_entries": 35,
+  "output_files": {
+    "transcript_raw": "poc\\output\\transcript_raw.json",
+    "transcript_fixed": "poc\\output\\transcript_fixed.json",
+    "scenes": "poc\\output\\scenes.json",
+    "emotions": "poc\\output\\emotions.json",
+    "srt": "poc\\output\\output.srt",
+    "vtt": "poc\\output\\output.vtt"
+  }
+}

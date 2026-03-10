@@ -1,0 +1,6567 @@
+{
+  "boundaries": [
+    {
+      "scene_id": 0,
+      "start": 0.0,
+      "end": 2.3,
+      "start_timecode": "00:00:00.000",
+      "end_timecode": "00:00:02.299",
+      "frame_path": "poc\\output\\frames\\scene_0000.png"
+    },
+    {
+      "scene_id": 1,
+      "start": 2.3,
+      "end": 11.433333333333334,
+      "start_timecode": "00:00:02.299",
+      "end_timecode": "00:00:11.433",
+      "frame_path": "poc\\output\\frames\\scene_0001.png"
+    },
+    {
+      "scene_id": 2,
+      "start": 11.433333333333334,
+      "end": 13.1,
+      "start_timecode": "00:00:11.433",
+      "end_timecode": "00:00:13.099",
+      "frame_path": "poc\\output\\frames\\scene_0002.png"
+    },
+    {
+      "scene_id": 3,
+      "start": 13.1,
+      "end": 13.966666666666667,
+      "start_timecode": "00:00:13.099",
+      "end_timecode": "00:00:13.966",
+      "frame_path": "poc\\output\\frames\\scene_0003.png"
+    },
+    {
+      "scene_id": 4,
+      "start": 13.966666666666667,
+      "end": 14.7,
+      "start_timecode": "00:00:13.966",
+      "end_timecode": "00:00:14.699",
+      "frame_path": "poc\\output\\frames\\scene_0004.png"
+    },
+    {
+      "scene_id": 5,
+      "start": 14.7,
+      "end": 16.466666666666665,
+      "start_timecode": "00:00:14.699",
+      "end_timecode": "00:00:16.466",
+      "frame_path": "poc\\output\\frames\\scene_0005.png"
+    },
+    {
+      "scene_id": 6,
+      "start": 16.466666666666665,
+      "end": 17.2,
+      "start_timecode": "00:00:16.466",
+      "end_timecode": "00:00:17.199",
+      "frame_path": "poc\\output\\frames\\scene_0006.png"
+    },
+    {
+      "scene_id": 7,
+      "start": 17.2,
+      "end": 18.233333333333334,
+      "start_timecode": "00:00:17.199",
+      "end_timecode": "00:00:18.233",
+      "frame_path": "poc\\output\\frames\\scene_0007.png"
+    },
+    {
+      "scene_id": 8,
+      "start": 18.233333333333334,
+      "end": 19.366666666666667,
+      "start_timecode": "00:00:18.233",
+      "end_timecode": "00:00:19.366",
+      "frame_path": "poc\\output\\frames\\scene_0008.png"
+    },
+    {
+      "scene_id": 9,
+      "start": 19.366666666666667,
+      "end": 20.166666666666668,
+      "start_timecode": "00:00:19.366",
+      "end_timecode": "00:00:20.166",
+      "frame_path": "poc\\output\\frames\\scene_0009.png"
+    },
+    {
+      "scene_id": 10,
+      "start": 20.166666666666668,
+      "end": 25.933333333333334,
+      "start_timecode": "00:00:20.166",
+      "end_timecode": "00:00:25.933",
+      "frame_path": "poc\\output\\frames\\scene_0010.png"
+    },
+    {
+      "scene_id": 11,
+      "start": 25.933333333333334,
+      "end": 29.666666666666668,
+      "start_timecode": "00:00:25.933",
+      "end_timecode": "00:00:29.666",
+      "frame_path": "poc\\output\\frames\\scene_0011.png"
+    },
+    {
+      "scene_id": 12,
+      "start": 29.666666666666668,
+      "end": 31.766666666666666,
+      "start_timecode": "00:00:29.666",
+      "end_timecode": "00:00:31.766",
+      "frame_path": "poc\\output\\frames\\scene_0012.png"
+    },
+    {
+      "scene_id": 13,
+      "start": 31.766666666666666,
+      "end": 35.86666666666667,
+      "start_timecode": "00:00:31.766",
+      "end_timecode": "00:00:35.866",
+      "frame_path": "poc\\output\\frames\\scene_0013.png"
+    },
+    {
+      "scene_id": 14,
+      "start": 35.86666666666667,
+      "end": 38.36666666666667,
+      "start_timecode": "00:00:35.866",
+      "end_timecode": "00:00:38.366",
+      "frame_path": "poc\\output\\frames\\scene_0014.png"
+    },
+    {
+      "scene_id": 15,
+      "start": 38.36666666666667,
+      "end": 39.03333333333333,
+      "start_timecode": "00:00:38.366",
+      "end_timecode": "00:00:39.033",
+      "frame_path": "poc\\output\\frames\\scene_0015.png"
+    },
+    {
+      "scene_id": 16,
+      "start": 39.03333333333333,
+      "end": 40.8,
+      "start_timecode": "00:00:39.033",
+      "end_timecode": "00:00:40.799",
+      "frame_path": "poc\\output\\frames\\scene_0016.png"
+    },
+    {
+      "scene_id": 17,
+      "start": 40.8,
+      "end": 43.733333333333334,
+      "start_timecode": "00:00:40.799",
+      "end_timecode": "00:00:43.733",
+      "frame_path": "poc\\output\\frames\\scene_0017.png"
+    },
+    {
+      "scene_id": 18,
+      "start": 43.733333333333334,
+      "end": 44.833333333333336,
+      "start_timecode": "00:00:43.733",
+      "end_timecode": "00:00:44.833",
+      "frame_path": "poc\\output\\frames\\scene_0018.png"
+    },
+    {
+      "scene_id": 19,
+      "start": 44.833333333333336,
+      "end": 45.43333333333333,
+      "start_timecode": "00:00:44.833",
+      "end_timecode": "00:00:45.433",
+      "frame_path": "poc\\output\\frames\\scene_0019.png"
+    },
+    {
+      "scene_id": 20,
+      "start": 45.43333333333333,
+      "end": 48.333333333333336,
+      "start_timecode": "00:00:45.433",
+      "end_timecode": "00:00:48.333",
+      "frame_path": "poc\\output\\frames\\scene_0020.png"
+    },
+    {
+      "scene_id": 21,
+      "start": 48.333333333333336,
+      "end": 56.53333333333333,
+      "start_timecode": "00:00:48.333",
+      "end_timecode": "00:00:56.533",
+      "frame_path": "poc\\output\\frames\\scene_0021.png"
+    },
+    {
+      "scene_id": 22,
+      "start": 56.53333333333333,
+      "end": 60.666666666666664,
+      "start_timecode": "00:00:56.533",
+      "end_timecode": "00:01:00.666",
+      "frame_path": "poc\\output\\frames\\scene_0022.png"
+    },
+    {
+      "scene_id": 23,
+      "start": 60.666666666666664,
+      "end": 63.0,
+      "start_timecode": "00:01:00.666",
+      "end_timecode": "00:01:03.000",
+      "frame_path": "poc\\output\\frames\\scene_0023.png"
+    },
+    {
+      "scene_id": 24,
+      "start": 63.0,
+      "end": 75.7,
+      "start_timecode": "00:01:03.000",
+      "end_timecode": "00:01:15.700",
+      "frame_path": "poc\\output\\frames\\scene_0024.png"
+    },
+    {
+      "scene_id": 25,
+      "start": 75.7,
+      "end": 76.86666666666666,
+      "start_timecode": "00:01:15.700",
+      "end_timecode": "00:01:16.866",
+      "frame_path": "poc\\output\\frames\\scene_0025.png"
+    },
+    {
+      "scene_id": 26,
+      "start": 76.86666666666666,
+      "end": 78.2,
+      "start_timecode": "00:01:16.866",
+      "end_timecode": "00:01:18.200",
+      "frame_path": "poc\\output\\frames\\scene_0026.png"
+    },
+    {
+      "scene_id": 27,
+      "start": 78.2,
+      "end": 79.1,
+      "start_timecode": "00:01:18.200",
+      "end_timecode": "00:01:19.099",
+      "frame_path": "poc\\output\\frames\\scene_0027.png"
+    },
+    {
+      "scene_id": 28,
+      "start": 79.1,
+      "end": 81.4,
+      "start_timecode": "00:01:19.099",
+      "end_timecode": "00:01:21.400",
+      "frame_path": "poc\\output\\frames\\scene_0028.png"
+    },
+    {
+      "scene_id": 29,
+      "start": 81.4,
+      "end": 82.2,
+      "start_timecode": "00:01:21.400",
+      "end_timecode": "00:01:22.200",
+      "frame_path": "poc\\output\\frames\\scene_0029.png"
+    },
+    {
+      "scene_id": 30,
+      "start": 82.2,
+      "end": 82.76666666666667,
+      "start_timecode": "00:01:22.200",
+      "end_timecode": "00:01:22.766",
+      "frame_path": "poc\\output\\frames\\scene_0030.png"
+    },
+    {
+      "scene_id": 31,
+      "start": 82.76666666666667,
+      "end": 84.53333333333333,
+      "start_timecode": "00:01:22.766",
+      "end_timecode": "00:01:24.533",
+      "frame_path": "poc\\output\\frames\\scene_0031.png"
+    },
+    {
+      "scene_id": 32,
+      "start": 84.53333333333333,
+      "end": 85.46666666666667,
+      "start_timecode": "00:01:24.533",
+      "end_timecode": "00:01:25.466",
+      "frame_path": "poc\\output\\frames\\scene_0032.png"
+    },
+    {
+      "scene_id": 33,
+      "start": 85.46666666666667,
+      "end": 86.1,
+      "start_timecode": "00:01:25.466",
+      "end_timecode": "00:01:26.099",
+      "frame_path": "poc\\output\\frames\\scene_0033.png"
+    },
+    {
+      "scene_id": 34,
+      "start": 86.1,
+      "end": 89.53333333333333,
+      "start_timecode": "00:01:26.099",
+      "end_timecode": "00:01:29.533",
+      "frame_path": "poc\\output\\frames\\scene_0034.png"
+    },
+    {
+      "scene_id": 35,
+      "start": 89.53333333333333,
+      "end": 90.06666666666666,
+      "start_timecode": "00:01:29.533",
+      "end_timecode": "00:01:30.066",
+      "frame_path": "poc\\output\\frames\\scene_0035.png"
+    },
+    {
+      "scene_id": 36,
+      "start": 90.06666666666666,
+      "end": 91.86666666666666,
+      "start_timecode": "00:01:30.066",
+      "end_timecode": "00:01:31.866",
+      "frame_path": "poc\\output\\frames\\scene_0036.png"
+    },
+    {
+      "scene_id": 37,
+      "start": 91.86666666666666,
+      "end": 93.93333333333334,
+      "start_timecode": "00:01:31.866",
+      "end_timecode": "00:01:33.933",
+      "frame_path": "poc\\output\\frames\\scene_0037.png"
+    },
+    {
+      "scene_id": 38,
+      "start": 93.93333333333334,
+      "end": 94.53333333333333,
+      "start_timecode": "00:01:33.933",
+      "end_timecode": "00:01:34.533",
+      "frame_path": "poc\\output\\frames\\scene_0038.png"
+    },
+    {
+      "scene_id": 39,
+      "start": 94.53333333333333,
+      "end": 95.03333333333333,
+      "start_timecode": "00:01:34.533",
+      "end_timecode": "00:01:35.033",
+      "frame_path": "poc\\output\\frames\\scene_0039.png"
+    },
+    {
+      "scene_id": 40,
+      "start": 95.03333333333333,
+      "end": 95.96666666666667,
+      "start_timecode": "00:01:35.033",
+      "end_timecode": "00:01:35.966",
+      "frame_path": "poc\\output\\frames\\scene_0040.png"
+    },
+    {
+      "scene_id": 41,
+      "start": 95.96666666666667,
+      "end": 99.6,
+      "start_timecode": "00:01:35.966",
+      "end_timecode": "00:01:39.599",
+      "frame_path": "poc\\output\\frames\\scene_0041.png"
+    },
+    {
+      "scene_id": 42,
+      "start": 99.6,
+      "end": 102.7,
+      "start_timecode": "00:01:39.599",
+      "end_timecode": "00:01:42.700",
+      "frame_path": "poc\\output\\frames\\scene_0042.png"
+    },
+    {
+      "scene_id": 43,
+      "start": 102.7,
+      "end": 103.83333333333333,
+      "start_timecode": "00:01:42.700",
+      "end_timecode": "00:01:43.833",
+      "frame_path": "poc\\output\\frames\\scene_0043.png"
+    },
+    {
+      "scene_id": 44,
+      "start": 103.83333333333333,
+      "end": 104.6,
+      "start_timecode": "00:01:43.833",
+      "end_timecode": "00:01:44.599",
+      "frame_path": "poc\\output\\frames\\scene_0044.png"
+    },
+    {
+      "scene_id": 45,
+      "start": 104.6,
+      "end": 105.26666666666667,
+      "start_timecode": "00:01:44.599",
+      "end_timecode": "00:01:45.266",
+      "frame_path": "poc\\output\\frames\\scene_0045.png"
+    },
+    {
+      "scene_id": 46,
+      "start": 105.26666666666667,
+      "end": 106.1,
+      "start_timecode": "00:01:45.266",
+      "end_timecode": "00:01:46.099",
+      "frame_path": "poc\\output\\frames\\scene_0046.png"
+    },
+    {
+      "scene_id": 47,
+      "start": 106.1,
+      "end": 107.36666666666666,
+      "start_timecode": "00:01:46.099",
+      "end_timecode": "00:01:47.366",
+      "frame_path": "poc\\output\\frames\\scene_0047.png"
+    },
+    {
+      "scene_id": 48,
+      "start": 107.36666666666666,
+      "end": 108.83333333333333,
+      "start_timecode": "00:01:47.366",
+      "end_timecode": "00:01:48.833",
+      "frame_path": "poc\\output\\frames\\scene_0048.png"
+    },
+    {
+      "scene_id": 49,
+      "start": 108.83333333333333,
+      "end": 109.43333333333334,
+      "start_timecode": "00:01:48.833",
+      "end_timecode": "00:01:49.433",
+      "frame_path": "poc\\output\\frames\\scene_0049.png"
+    },
+    {
+      "scene_id": 50,
+      "start": 109.43333333333334,
+      "end": 110.8,
+      "start_timecode": "00:01:49.433",
+      "end_timecode": "00:01:50.799",
+      "frame_path": "poc\\output\\frames\\scene_0050.png"
+    },
+    {
+      "scene_id": 51,
+      "start": 110.8,
+      "end": 112.36666666666666,
+      "start_timecode": "00:01:50.799",
+      "end_timecode": "00:01:52.366",
+      "frame_path": "poc\\output\\frames\\scene_0051.png"
+    },
+    {
+      "scene_id": 52,
+      "start": 112.36666666666666,
+      "end": 147.43333333333334,
+      "start_timecode": "00:01:52.366",
+      "end_timecode": "00:02:27.433",
+      "frame_path": "poc\\output\\frames\\scene_0052.png"
+    },
+    {
+      "scene_id": 53,
+      "start": 147.43333333333334,
+      "end": 148.6,
+      "start_timecode": "00:02:27.433",
+      "end_timecode": "00:02:28.599",
+      "frame_path": "poc\\output\\frames\\scene_0053.png"
+    },
+    {
+      "scene_id": 54,
+      "start": 148.6,
+      "end": 150.6,
+      "start_timecode": "00:02:28.599",
+      "end_timecode": "00:02:30.599",
+      "frame_path": "poc\\output\\frames\\scene_0054.png"
+    },
+    {
+      "scene_id": 55,
+      "start": 150.6,
+      "end": 151.36666666666667,
+      "start_timecode": "00:02:30.599",
+      "end_timecode": "00:02:31.366",
+      "frame_path": "poc\\output\\frames\\scene_0055.png"
+    },
+    {
+      "scene_id": 56,
+      "start": 151.36666666666667,
+      "end": 152.33333333333334,
+      "start_timecode": "00:02:31.366",
+      "end_timecode": "00:02:32.333",
+      "frame_path": "poc\\output\\frames\\scene_0056.png"
+    },
+    {
+      "scene_id": 57,
+      "start": 152.33333333333334,
+      "end": 157.56666666666666,
+      "start_timecode": "00:02:32.333",
+      "end_timecode": "00:02:37.566",
+      "frame_path": "poc\\output\\frames\\scene_0057.png"
+    },
+    {
+      "scene_id": 58,
+      "start": 157.56666666666666,
+      "end": 159.23333333333332,
+      "start_timecode": "00:02:37.566",
+      "end_timecode": "00:02:39.233",
+      "frame_path": "poc\\output\\frames\\scene_0058.png"
+    },
+    {
+      "scene_id": 59,
+      "start": 159.23333333333332,
+      "end": 159.83333333333334,
+      "start_timecode": "00:02:39.233",
+      "end_timecode": "00:02:39.833",
+      "frame_path": "poc\\output\\frames\\scene_0059.png"
+    },
+    {
+      "scene_id": 60,
+      "start": 159.83333333333334,
+      "end": 161.63333333333333,
+      "start_timecode": "00:02:39.833",
+      "end_timecode": "00:02:41.633",
+      "frame_path": "poc\\output\\frames\\scene_0060.png"
+    },
+    {
+      "scene_id": 61,
+      "start": 161.63333333333333,
+      "end": 162.3,
+      "start_timecode": "00:02:41.633",
+      "end_timecode": "00:02:42.300",
+      "frame_path": "poc\\output\\frames\\scene_0061.png"
+    },
+    {
+      "scene_id": 62,
+      "start": 162.3,
+      "end": 164.83333333333334,
+      "start_timecode": "00:02:42.300",
+      "end_timecode": "00:02:44.833",
+      "frame_path": "poc\\output\\frames\\scene_0062.png"
+    },
+    {
+      "scene_id": 63,
+      "start": 164.83333333333334,
+      "end": 165.53333333333333,
+      "start_timecode": "00:02:44.833",
+      "end_timecode": "00:02:45.533",
+      "frame_path": "poc\\output\\frames\\scene_0063.png"
+    },
+    {
+      "scene_id": 64,
+      "start": 165.53333333333333,
+      "end": 166.46666666666667,
+      "start_timecode": "00:02:45.533",
+      "end_timecode": "00:02:46.466",
+      "frame_path": "poc\\output\\frames\\scene_0064.png"
+    },
+    {
+      "scene_id": 65,
+      "start": 166.46666666666667,
+      "end": 167.1,
+      "start_timecode": "00:02:46.466",
+      "end_timecode": "00:02:47.099",
+      "frame_path": "poc\\output\\frames\\scene_0065.png"
+    },
+    {
+      "scene_id": 66,
+      "start": 167.1,
+      "end": 168.53333333333333,
+      "start_timecode": "00:02:47.099",
+      "end_timecode": "00:02:48.533",
+      "frame_path": "poc\\output\\frames\\scene_0066.png"
+    },
+    {
+      "scene_id": 67,
+      "start": 168.53333333333333,
+      "end": 169.2,
+      "start_timecode": "00:02:48.533",
+      "end_timecode": "00:02:49.199",
+      "frame_path": "poc\\output\\frames\\scene_0067.png"
+    },
+    {
+      "scene_id": 68,
+      "start": 169.2,
+      "end": 171.06666666666666,
+      "start_timecode": "00:02:49.199",
+      "end_timecode": "00:02:51.066",
+      "frame_path": "poc\\output\\frames\\scene_0068.png"
+    },
+    {
+      "scene_id": 69,
+      "start": 171.06666666666666,
+      "end": 173.16666666666666,
+      "start_timecode": "00:02:51.066",
+      "end_timecode": "00:02:53.166",
+      "frame_path": "poc\\output\\frames\\scene_0069.png"
+    },
+    {
+      "scene_id": 70,
+      "start": 173.16666666666666,
+      "end": 177.3,
+      "start_timecode": "00:02:53.166",
+      "end_timecode": "00:02:57.300",
+      "frame_path": "poc\\output\\frames\\scene_0070.png"
+    },
+    {
+      "scene_id": 71,
+      "start": 177.3,
+      "end": 181.5,
+      "start_timecode": "00:02:57.300",
+      "end_timecode": "00:03:01.500",
+      "frame_path": "poc\\output\\frames\\scene_0071.png"
+    },
+    {
+      "scene_id": 72,
+      "start": 181.5,
+      "end": 182.5,
+      "start_timecode": "00:03:01.500",
+      "end_timecode": "00:03:02.500",
+      "frame_path": "poc\\output\\frames\\scene_0072.png"
+    },
+    {
+      "scene_id": 73,
+      "start": 182.5,
+      "end": 184.5,
+      "start_timecode": "00:03:02.500",
+      "end_timecode": "00:03:04.500",
+      "frame_path": "poc\\output\\frames\\scene_0073.png"
+    },
+    {
+      "scene_id": 74,
+      "start": 184.5,
+      "end": 185.36666666666667,
+      "start_timecode": "00:03:04.500",
+      "end_timecode": "00:03:05.366",
+      "frame_path": "poc\\output\\frames\\scene_0074.png"
+    },
+    {
+      "scene_id": 75,
+      "start": 185.36666666666667,
+      "end": 186.3,
+      "start_timecode": "00:03:05.366",
+      "end_timecode": "00:03:06.300",
+      "frame_path": "poc\\output\\frames\\scene_0075.png"
+    },
+    {
+      "scene_id": 76,
+      "start": 186.3,
+      "end": 186.93333333333334,
+      "start_timecode": "00:03:06.300",
+      "end_timecode": "00:03:06.933",
+      "frame_path": "poc\\output\\frames\\scene_0076.png"
+    },
+    {
+      "scene_id": 77,
+      "start": 186.93333333333334,
+      "end": 188.2,
+      "start_timecode": "00:03:06.933",
+      "end_timecode": "00:03:08.199",
+      "frame_path": "poc\\output\\frames\\scene_0077.png"
+    },
+    {
+      "scene_id": 78,
+      "start": 188.2,
+      "end": 188.73333333333332,
+      "start_timecode": "00:03:08.199",
+      "end_timecode": "00:03:08.733",
+      "frame_path": "poc\\output\\frames\\scene_0078.png"
+    },
+    {
+      "scene_id": 79,
+      "start": 188.73333333333332,
+      "end": 189.9,
+      "start_timecode": "00:03:08.733",
+      "end_timecode": "00:03:09.900",
+      "frame_path": "poc\\output\\frames\\scene_0079.png"
+    },
+    {
+      "scene_id": 80,
+      "start": 189.9,
+      "end": 192.53333333333333,
+      "start_timecode": "00:03:09.900",
+      "end_timecode": "00:03:12.533",
+      "frame_path": "poc\\output\\frames\\scene_0080.png"
+    },
+    {
+      "scene_id": 81,
+      "start": 192.53333333333333,
+      "end": 199.2,
+      "start_timecode": "00:03:12.533",
+      "end_timecode": "00:03:19.199",
+      "frame_path": "poc\\output\\frames\\scene_0081.png"
+    },
+    {
+      "scene_id": 82,
+      "start": 199.2,
+      "end": 199.96666666666667,
+      "start_timecode": "00:03:19.199",
+      "end_timecode": "00:03:19.966",
+      "frame_path": "poc\\output\\frames\\scene_0082.png"
+    },
+    {
+      "scene_id": 83,
+      "start": 199.96666666666667,
+      "end": 200.93333333333334,
+      "start_timecode": "00:03:19.966",
+      "end_timecode": "00:03:20.933",
+      "frame_path": "poc\\output\\frames\\scene_0083.png"
+    },
+    {
+      "scene_id": 84,
+      "start": 200.93333333333334,
+      "end": 202.0,
+      "start_timecode": "00:03:20.933",
+      "end_timecode": "00:03:22.000",
+      "frame_path": "poc\\output\\frames\\scene_0084.png"
+    },
+    {
+      "scene_id": 85,
+      "start": 202.0,
+      "end": 206.3,
+      "start_timecode": "00:03:22.000",
+      "end_timecode": "00:03:26.300",
+      "frame_path": "poc\\output\\frames\\scene_0085.png"
+    },
+    {
+      "scene_id": 86,
+      "start": 206.3,
+      "end": 207.33333333333334,
+      "start_timecode": "00:03:26.300",
+      "end_timecode": "00:03:27.333",
+      "frame_path": "poc\\output\\frames\\scene_0086.png"
+    },
+    {
+      "scene_id": 87,
+      "start": 207.33333333333334,
+      "end": 209.53333333333333,
+      "start_timecode": "00:03:27.333",
+      "end_timecode": "00:03:29.533",
+      "frame_path": "poc\\output\\frames\\scene_0087.png"
+    },
+    {
+      "scene_id": 88,
+      "start": 209.53333333333333,
+      "end": 210.06666666666666,
+      "start_timecode": "00:03:29.533",
+      "end_timecode": "00:03:30.066",
+      "frame_path": "poc\\output\\frames\\scene_0088.png"
+    },
+    {
+      "scene_id": 89,
+      "start": 210.06666666666666,
+      "end": 210.86666666666667,
+      "start_timecode": "00:03:30.066",
+      "end_timecode": "00:03:30.866",
+      "frame_path": "poc\\output\\frames\\scene_0089.png"
+    },
+    {
+      "scene_id": 90,
+      "start": 210.86666666666667,
+      "end": 211.9,
+      "start_timecode": "00:03:30.866",
+      "end_timecode": "00:03:31.900",
+      "frame_path": "poc\\output\\frames\\scene_0090.png"
+    },
+    {
+      "scene_id": 91,
+      "start": 211.9,
+      "end": 213.53333333333333,
+      "start_timecode": "00:03:31.900",
+      "end_timecode": "00:03:33.533",
+      "frame_path": "poc\\output\\frames\\scene_0091.png"
+    },
+    {
+      "scene_id": 92,
+      "start": 213.53333333333333,
+      "end": 214.73333333333332,
+      "start_timecode": "00:03:33.533",
+      "end_timecode": "00:03:34.733",
+      "frame_path": "poc\\output\\frames\\scene_0092.png"
+    },
+    {
+      "scene_id": 93,
+      "start": 214.73333333333332,
+      "end": 218.96666666666667,
+      "start_timecode": "00:03:34.733",
+      "end_timecode": "00:03:38.966",
+      "frame_path": "poc\\output\\frames\\scene_0093.png"
+    },
+    {
+      "scene_id": 94,
+      "start": 218.96666666666667,
+      "end": 219.83333333333334,
+      "start_timecode": "00:03:38.966",
+      "end_timecode": "00:03:39.833",
+      "frame_path": "poc\\output\\frames\\scene_0094.png"
+    },
+    {
+      "scene_id": 95,
+      "start": 219.83333333333334,
+      "end": 220.8,
+      "start_timecode": "00:03:39.833",
+      "end_timecode": "00:03:40.800",
+      "frame_path": "poc\\output\\frames\\scene_0095.png"
+    },
+    {
+      "scene_id": 96,
+      "start": 220.8,
+      "end": 223.0,
+      "start_timecode": "00:03:40.800",
+      "end_timecode": "00:03:43.000",
+      "frame_path": "poc\\output\\frames\\scene_0096.png"
+    },
+    {
+      "scene_id": 97,
+      "start": 223.0,
+      "end": 239.76666666666668,
+      "start_timecode": "00:03:43.000",
+      "end_timecode": "00:03:59.766",
+      "frame_path": "poc\\output\\frames\\scene_0097.png"
+    },
+    {
+      "scene_id": 98,
+      "start": 239.76666666666668,
+      "end": 242.5,
+      "start_timecode": "00:03:59.766",
+      "end_timecode": "00:04:02.500",
+      "frame_path": "poc\\output\\frames\\scene_0098.png"
+    },
+    {
+      "scene_id": 99,
+      "start": 242.5,
+      "end": 244.13333333333333,
+      "start_timecode": "00:04:02.500",
+      "end_timecode": "00:04:04.133",
+      "frame_path": "poc\\output\\frames\\scene_0099.png"
+    },
+    {
+      "scene_id": 100,
+      "start": 244.13333333333333,
+      "end": 245.63333333333333,
+      "start_timecode": "00:04:04.133",
+      "end_timecode": "00:04:05.633",
+      "frame_path": "poc\\output\\frames\\scene_0100.png"
+    },
+    {
+      "scene_id": 101,
+      "start": 245.63333333333333,
+      "end": 246.16666666666666,
+      "start_timecode": "00:04:05.633",
+      "end_timecode": "00:04:06.166",
+      "frame_path": "poc\\output\\frames\\scene_0101.png"
+    },
+    {
+      "scene_id": 102,
+      "start": 246.16666666666666,
+      "end": 247.3,
+      "start_timecode": "00:04:06.166",
+      "end_timecode": "00:04:07.300",
+      "frame_path": "poc\\output\\frames\\scene_0102.png"
+    },
+    {
+      "scene_id": 103,
+      "start": 247.3,
+      "end": 247.96666666666667,
+      "start_timecode": "00:04:07.300",
+      "end_timecode": "00:04:07.966",
+      "frame_path": "poc\\output\\frames\\scene_0103.png"
+    },
+    {
+      "scene_id": 104,
+      "start": 247.96666666666667,
+      "end": 251.03333333333333,
+      "start_timecode": "00:04:07.966",
+      "end_timecode": "00:04:11.033",
+      "frame_path": "poc\\output\\frames\\scene_0104.png"
+    },
+    {
+      "scene_id": 105,
+      "start": 251.03333333333333,
+      "end": 251.63333333333333,
+      "start_timecode": "00:04:11.033",
+      "end_timecode": "00:04:11.633",
+      "frame_path": "poc\\output\\frames\\scene_0105.png"
+    },
+    {
+      "scene_id": 106,
+      "start": 251.63333333333333,
+      "end": 252.36666666666667,
+      "start_timecode": "00:04:11.633",
+      "end_timecode": "00:04:12.366",
+      "frame_path": "poc\\output\\frames\\scene_0106.png"
+    },
+    {
+      "scene_id": 107,
+      "start": 252.36666666666667,
+      "end": 253.0,
+      "start_timecode": "00:04:12.366",
+      "end_timecode": "00:04:13.000",
+      "frame_path": "poc\\output\\frames\\scene_0107.png"
+    },
+    {
+      "scene_id": 108,
+      "start": 253.0,
+      "end": 254.8,
+      "start_timecode": "00:04:13.000",
+      "end_timecode": "00:04:14.800",
+      "frame_path": "poc\\output\\frames\\scene_0108.png"
+    },
+    {
+      "scene_id": 109,
+      "start": 254.8,
+      "end": 255.53333333333333,
+      "start_timecode": "00:04:14.800",
+      "end_timecode": "00:04:15.533",
+      "frame_path": "poc\\output\\frames\\scene_0109.png"
+    },
+    {
+      "scene_id": 110,
+      "start": 255.53333333333333,
+      "end": 257.9,
+      "start_timecode": "00:04:15.533",
+      "end_timecode": "00:04:17.899",
+      "frame_path": "poc\\output\\frames\\scene_0110.png"
+    },
+    {
+      "scene_id": 111,
+      "start": 257.9,
+      "end": 258.6666666666667,
+      "start_timecode": "00:04:17.899",
+      "end_timecode": "00:04:18.666",
+      "frame_path": "poc\\output\\frames\\scene_0111.png"
+    },
+    {
+      "scene_id": 112,
+      "start": 258.6666666666667,
+      "end": 260.73333333333335,
+      "start_timecode": "00:04:18.666",
+      "end_timecode": "00:04:20.733",
+      "frame_path": "poc\\output\\frames\\scene_0112.png"
+    },
+    {
+      "scene_id": 113,
+      "start": 260.73333333333335,
+      "end": 261.3,
+      "start_timecode": "00:04:20.733",
+      "end_timecode": "00:04:21.300",
+      "frame_path": "poc\\output\\frames\\scene_0113.png"
+    },
+    {
+      "scene_id": 114,
+      "start": 261.3,
+      "end": 264.1666666666667,
+      "start_timecode": "00:04:21.300",
+      "end_timecode": "00:04:24.166",
+      "frame_path": "poc\\output\\frames\\scene_0114.png"
+    },
+    {
+      "scene_id": 115,
+      "start": 264.1666666666667,
+      "end": 269.8333333333333,
+      "start_timecode": "00:04:24.166",
+      "end_timecode": "00:04:29.833",
+      "frame_path": "poc\\output\\frames\\scene_0115.png"
+    },
+    {
+      "scene_id": 116,
+      "start": 269.8333333333333,
+      "end": 271.6666666666667,
+      "start_timecode": "00:04:29.833",
+      "end_timecode": "00:04:31.666",
+      "frame_path": "poc\\output\\frames\\scene_0116.png"
+    },
+    {
+      "scene_id": 117,
+      "start": 271.6666666666667,
+      "end": 274.4,
+      "start_timecode": "00:04:31.666",
+      "end_timecode": "00:04:34.399",
+      "frame_path": "poc\\output\\frames\\scene_0117.png"
+    },
+    {
+      "scene_id": 118,
+      "start": 274.4,
+      "end": 299.1666666666667,
+      "start_timecode": "00:04:34.399",
+      "end_timecode": "00:04:59.166",
+      "frame_path": "poc\\output\\frames\\scene_0118.png"
+    },
+    {
+      "scene_id": 119,
+      "start": 299.1666666666667,
+      "end": 300.3333333333333,
+      "start_timecode": "00:04:59.166",
+      "end_timecode": "00:05:00.333",
+      "frame_path": "poc\\output\\frames\\scene_0119.png"
+    },
+    {
+      "scene_id": 120,
+      "start": 300.3333333333333,
+      "end": 305.06666666666666,
+      "start_timecode": "00:05:00.333",
+      "end_timecode": "00:05:05.066",
+      "frame_path": "poc\\output\\frames\\scene_0120.png"
+    },
+    {
+      "scene_id": 121,
+      "start": 305.06666666666666,
+      "end": 307.3333333333333,
+      "start_timecode": "00:05:05.066",
+      "end_timecode": "00:05:07.333",
+      "frame_path": "poc\\output\\frames\\scene_0121.png"
+    },
+    {
+      "scene_id": 122,
+      "start": 307.3333333333333,
+      "end": 311.3,
+      "start_timecode": "00:05:07.333",
+      "end_timecode": "00:05:11.300",
+      "frame_path": "poc\\output\\frames\\scene_0122.png"
+    },
+    {
+      "scene_id": 123,
+      "start": 311.3,
+      "end": 318.3333333333333,
+      "start_timecode": "00:05:11.300",
+      "end_timecode": "00:05:18.333",
+      "frame_path": "poc\\output\\frames\\scene_0123.png"
+    },
+    {
+      "scene_id": 124,
+      "start": 318.3333333333333,
+      "end": 320.23333333333335,
+      "start_timecode": "00:05:18.333",
+      "end_timecode": "00:05:20.233",
+      "frame_path": "poc\\output\\frames\\scene_0124.png"
+    },
+    {
+      "scene_id": 125,
+      "start": 320.23333333333335,
+      "end": 325.3333333333333,
+      "start_timecode": "00:05:20.233",
+      "end_timecode": "00:05:25.333",
+      "frame_path": "poc\\output\\frames\\scene_0125.png"
+    },
+    {
+      "scene_id": 126,
+      "start": 325.3333333333333,
+      "end": 325.9,
+      "start_timecode": "00:05:25.333",
+      "end_timecode": "00:05:25.899",
+      "frame_path": "poc\\output\\frames\\scene_0126.png"
+    },
+    {
+      "scene_id": 127,
+      "start": 325.9,
+      "end": 327.23333333333335,
+      "start_timecode": "00:05:25.899",
+      "end_timecode": "00:05:27.233",
+      "frame_path": "poc\\output\\frames\\scene_0127.png"
+    },
+    {
+      "scene_id": 128,
+      "start": 327.23333333333335,
+      "end": 328.73333333333335,
+      "start_timecode": "00:05:27.233",
+      "end_timecode": "00:05:28.733",
+      "frame_path": "poc\\output\\frames\\scene_0128.png"
+    },
+    {
+      "scene_id": 129,
+      "start": 328.73333333333335,
+      "end": 329.6333333333333,
+      "start_timecode": "00:05:28.733",
+      "end_timecode": "00:05:29.633",
+      "frame_path": "poc\\output\\frames\\scene_0129.png"
+    },
+    {
+      "scene_id": 130,
+      "start": 329.6333333333333,
+      "end": 332.1666666666667,
+      "start_timecode": "00:05:29.633",
+      "end_timecode": "00:05:32.166",
+      "frame_path": "poc\\output\\frames\\scene_0130.png"
+    },
+    {
+      "scene_id": 131,
+      "start": 332.1666666666667,
+      "end": 333.8333333333333,
+      "start_timecode": "00:05:32.166",
+      "end_timecode": "00:05:33.833",
+      "frame_path": "poc\\output\\frames\\scene_0131.png"
+    },
+    {
+      "scene_id": 132,
+      "start": 333.8333333333333,
+      "end": 334.9,
+      "start_timecode": "00:05:33.833",
+      "end_timecode": "00:05:34.899",
+      "frame_path": "poc\\output\\frames\\scene_0132.png"
+    },
+    {
+      "scene_id": 133,
+      "start": 334.9,
+      "end": 340.4,
+      "start_timecode": "00:05:34.899",
+      "end_timecode": "00:05:40.399",
+      "frame_path": "poc\\output\\frames\\scene_0133.png"
+    },
+    {
+      "scene_id": 134,
+      "start": 340.4,
+      "end": 341.1666666666667,
+      "start_timecode": "00:05:40.399",
+      "end_timecode": "00:05:41.166",
+      "frame_path": "poc\\output\\frames\\scene_0134.png"
+    },
+    {
+      "scene_id": 135,
+      "start": 341.1666666666667,
+      "end": 342.43333333333334,
+      "start_timecode": "00:05:41.166",
+      "end_timecode": "00:05:42.433",
+      "frame_path": "poc\\output\\frames\\scene_0135.png"
+    },
+    {
+      "scene_id": 136,
+      "start": 342.43333333333334,
+      "end": 343.1,
+      "start_timecode": "00:05:42.433",
+      "end_timecode": "00:05:43.100",
+      "frame_path": "poc\\output\\frames\\scene_0136.png"
+    },
+    {
+      "scene_id": 137,
+      "start": 343.1,
+      "end": 344.93333333333334,
+      "start_timecode": "00:05:43.100",
+      "end_timecode": "00:05:44.933",
+      "frame_path": "poc\\output\\frames\\scene_0137.png"
+    },
+    {
+      "scene_id": 138,
+      "start": 344.93333333333334,
+      "end": 345.6333333333333,
+      "start_timecode": "00:05:44.933",
+      "end_timecode": "00:05:45.633",
+      "frame_path": "poc\\output\\frames\\scene_0138.png"
+    },
+    {
+      "scene_id": 139,
+      "start": 345.6333333333333,
+      "end": 347.26666666666665,
+      "start_timecode": "00:05:45.633",
+      "end_timecode": "00:05:47.266",
+      "frame_path": "poc\\output\\frames\\scene_0139.png"
+    },
+    {
+      "scene_id": 140,
+      "start": 347.26666666666665,
+      "end": 347.76666666666665,
+      "start_timecode": "00:05:47.266",
+      "end_timecode": "00:05:47.766",
+      "frame_path": "poc\\output\\frames\\scene_0140.png"
+    },
+    {
+      "scene_id": 141,
+      "start": 347.76666666666665,
+      "end": 349.6,
+      "start_timecode": "00:05:47.766",
+      "end_timecode": "00:05:49.600",
+      "frame_path": "poc\\output\\frames\\scene_0141.png"
+    },
+    {
+      "scene_id": 142,
+      "start": 349.6,
+      "end": 351.43333333333334,
+      "start_timecode": "00:05:49.600",
+      "end_timecode": "00:05:51.433",
+      "frame_path": "poc\\output\\frames\\scene_0142.png"
+    },
+    {
+      "scene_id": 143,
+      "start": 351.43333333333334,
+      "end": 353.46666666666664,
+      "start_timecode": "00:05:51.433",
+      "end_timecode": "00:05:53.466",
+      "frame_path": "poc\\output\\frames\\scene_0143.png"
+    },
+    {
+      "scene_id": 144,
+      "start": 353.46666666666664,
+      "end": 355.73333333333335,
+      "start_timecode": "00:05:53.466",
+      "end_timecode": "00:05:55.733",
+      "frame_path": "poc\\output\\frames\\scene_0144.png"
+    },
+    {
+      "scene_id": 145,
+      "start": 355.73333333333335,
+      "end": 367.73333333333335,
+      "start_timecode": "00:05:55.733",
+      "end_timecode": "00:06:07.733",
+      "frame_path": "poc\\output\\frames\\scene_0145.png"
+    },
+    {
+      "scene_id": 146,
+      "start": 367.73333333333335,
+      "end": 368.26666666666665,
+      "start_timecode": "00:06:07.733",
+      "end_timecode": "00:06:08.266",
+      "frame_path": "poc\\output\\frames\\scene_0146.png"
+    },
+    {
+      "scene_id": 147,
+      "start": 368.26666666666665,
+      "end": 369.8333333333333,
+      "start_timecode": "00:06:08.266",
+      "end_timecode": "00:06:09.833",
+      "frame_path": "poc\\output\\frames\\scene_0147.png"
+    },
+    {
+      "scene_id": 148,
+      "start": 369.8333333333333,
+      "end": 372.6,
+      "start_timecode": "00:06:09.833",
+      "end_timecode": "00:06:12.600",
+      "frame_path": "poc\\output\\frames\\scene_0148.png"
+    },
+    {
+      "scene_id": 149,
+      "start": 372.6,
+      "end": 373.3,
+      "start_timecode": "00:06:12.600",
+      "end_timecode": "00:06:13.300",
+      "frame_path": "poc\\output\\frames\\scene_0149.png"
+    },
+    {
+      "scene_id": 150,
+      "start": 373.3,
+      "end": 375.46666666666664,
+      "start_timecode": "00:06:13.300",
+      "end_timecode": "00:06:15.466",
+      "frame_path": "poc\\output\\frames\\scene_0150.png"
+    },
+    {
+      "scene_id": 151,
+      "start": 375.46666666666664,
+      "end": 376.43333333333334,
+      "start_timecode": "00:06:15.466",
+      "end_timecode": "00:06:16.433",
+      "frame_path": "poc\\output\\frames\\scene_0151.png"
+    },
+    {
+      "scene_id": 152,
+      "start": 376.43333333333334,
+      "end": 382.1,
+      "start_timecode": "00:06:16.433",
+      "end_timecode": "00:06:22.100",
+      "frame_path": "poc\\output\\frames\\scene_0152.png"
+    },
+    {
+      "scene_id": 153,
+      "start": 382.1,
+      "end": 383.3,
+      "start_timecode": "00:06:22.100",
+      "end_timecode": "00:06:23.300",
+      "frame_path": "poc\\output\\frames\\scene_0153.png"
+    },
+    {
+      "scene_id": 154,
+      "start": 383.3,
+      "end": 385.6,
+      "start_timecode": "00:06:23.300",
+      "end_timecode": "00:06:25.600",
+      "frame_path": "poc\\output\\frames\\scene_0154.png"
+    },
+    {
+      "scene_id": 155,
+      "start": 385.6,
+      "end": 402.5,
+      "start_timecode": "00:06:25.600",
+      "end_timecode": "00:06:42.500",
+      "frame_path": "poc\\output\\frames\\scene_0155.png"
+    },
+    {
+      "scene_id": 156,
+      "start": 402.5,
+      "end": 406.5,
+      "start_timecode": "00:06:42.500",
+      "end_timecode": "00:06:46.500",
+      "frame_path": "poc\\output\\frames\\scene_0156.png"
+    },
+    {
+      "scene_id": 157,
+      "start": 406.5,
+      "end": 407.1,
+      "start_timecode": "00:06:46.500",
+      "end_timecode": "00:06:47.100",
+      "frame_path": "poc\\output\\frames\\scene_0157.png"
+    },
+    {
+      "scene_id": 158,
+      "start": 407.1,
+      "end": 407.8,
+      "start_timecode": "00:06:47.100",
+      "end_timecode": "00:06:47.800",
+      "frame_path": "poc\\output\\frames\\scene_0158.png"
+    },
+    {
+      "scene_id": 159,
+      "start": 407.8,
+      "end": 408.7,
+      "start_timecode": "00:06:47.800",
+      "end_timecode": "00:06:48.699",
+      "frame_path": "poc\\output\\frames\\scene_0159.png"
+    },
+    {
+      "scene_id": 160,
+      "start": 408.7,
+      "end": 409.6666666666667,
+      "start_timecode": "00:06:48.699",
+      "end_timecode": "00:06:49.666",
+      "frame_path": "poc\\output\\frames\\scene_0160.png"
+    },
+    {
+      "scene_id": 161,
+      "start": 409.6666666666667,
+      "end": 410.26666666666665,
+      "start_timecode": "00:06:49.666",
+      "end_timecode": "00:06:50.266",
+      "frame_path": "poc\\output\\frames\\scene_0161.png"
+    },
+    {
+      "scene_id": 162,
+      "start": 410.26666666666665,
+      "end": 412.5,
+      "start_timecode": "00:06:50.266",
+      "end_timecode": "00:06:52.500",
+      "frame_path": "poc\\output\\frames\\scene_0162.png"
+    },
+    {
+      "scene_id": 163,
+      "start": 412.5,
+      "end": 413.56666666666666,
+      "start_timecode": "00:06:52.500",
+      "end_timecode": "00:06:53.566",
+      "frame_path": "poc\\output\\frames\\scene_0163.png"
+    },
+    {
+      "scene_id": 164,
+      "start": 413.56666666666666,
+      "end": 414.53333333333336,
+      "start_timecode": "00:06:53.566",
+      "end_timecode": "00:06:54.533",
+      "frame_path": "poc\\output\\frames\\scene_0164.png"
+    },
+    {
+      "scene_id": 165,
+      "start": 414.53333333333336,
+      "end": 415.6,
+      "start_timecode": "00:06:54.533",
+      "end_timecode": "00:06:55.600",
+      "frame_path": "poc\\output\\frames\\scene_0165.png"
+    },
+    {
+      "scene_id": 166,
+      "start": 415.6,
+      "end": 416.7,
+      "start_timecode": "00:06:55.600",
+      "end_timecode": "00:06:56.699",
+      "frame_path": "poc\\output\\frames\\scene_0166.png"
+    },
+    {
+      "scene_id": 167,
+      "start": 416.7,
+      "end": 417.2,
+      "start_timecode": "00:06:56.699",
+      "end_timecode": "00:06:57.199",
+      "frame_path": "poc\\output\\frames\\scene_0167.png"
+    },
+    {
+      "scene_id": 168,
+      "start": 417.2,
+      "end": 423.56666666666666,
+      "start_timecode": "00:06:57.199",
+      "end_timecode": "00:07:03.566",
+      "frame_path": "poc\\output\\frames\\scene_0168.png"
+    },
+    {
+      "scene_id": 169,
+      "start": 423.56666666666666,
+      "end": 424.3,
+      "start_timecode": "00:07:03.566",
+      "end_timecode": "00:07:04.300",
+      "frame_path": "poc\\output\\frames\\scene_0169.png"
+    },
+    {
+      "scene_id": 170,
+      "start": 424.3,
+      "end": 425.1333333333333,
+      "start_timecode": "00:07:04.300",
+      "end_timecode": "00:07:05.133",
+      "frame_path": "poc\\output\\frames\\scene_0170.png"
+    },
+    {
+      "scene_id": 171,
+      "start": 425.1333333333333,
+      "end": 426.3333333333333,
+      "start_timecode": "00:07:05.133",
+      "end_timecode": "00:07:06.333",
+      "frame_path": "poc\\output\\frames\\scene_0171.png"
+    },
+    {
+      "scene_id": 172,
+      "start": 426.3333333333333,
+      "end": 432.3,
+      "start_timecode": "00:07:06.333",
+      "end_timecode": "00:07:12.300",
+      "frame_path": "poc\\output\\frames\\scene_0172.png"
+    },
+    {
+      "scene_id": 173,
+      "start": 432.3,
+      "end": 432.8666666666667,
+      "start_timecode": "00:07:12.300",
+      "end_timecode": "00:07:12.866",
+      "frame_path": "poc\\output\\frames\\scene_0173.png"
+    },
+    {
+      "scene_id": 174,
+      "start": 432.8666666666667,
+      "end": 433.53333333333336,
+      "start_timecode": "00:07:12.866",
+      "end_timecode": "00:07:13.533",
+      "frame_path": "poc\\output\\frames\\scene_0174.png"
+    },
+    {
+      "scene_id": 175,
+      "start": 433.53333333333336,
+      "end": 436.1666666666667,
+      "start_timecode": "00:07:13.533",
+      "end_timecode": "00:07:16.166",
+      "frame_path": "poc\\output\\frames\\scene_0175.png"
+    },
+    {
+      "scene_id": 176,
+      "start": 436.1666666666667,
+      "end": 438.1,
+      "start_timecode": "00:07:16.166",
+      "end_timecode": "00:07:18.100",
+      "frame_path": "poc\\output\\frames\\scene_0176.png"
+    },
+    {
+      "scene_id": 177,
+      "start": 438.1,
+      "end": 457.1333333333333,
+      "start_timecode": "00:07:18.100",
+      "end_timecode": "00:07:37.133",
+      "frame_path": "poc\\output\\frames\\scene_0177.png"
+    },
+    {
+      "scene_id": 178,
+      "start": 457.1333333333333,
+      "end": 462.1333333333333,
+      "start_timecode": "00:07:37.133",
+      "end_timecode": "00:07:42.133",
+      "frame_path": "poc\\output\\frames\\scene_0178.png"
+    },
+    {
+      "scene_id": 179,
+      "start": 462.1333333333333,
+      "end": 462.93333333333334,
+      "start_timecode": "00:07:42.133",
+      "end_timecode": "00:07:42.933",
+      "frame_path": "poc\\output\\frames\\scene_0179.png"
+    },
+    {
+      "scene_id": 180,
+      "start": 462.93333333333334,
+      "end": 463.73333333333335,
+      "start_timecode": "00:07:42.933",
+      "end_timecode": "00:07:43.733",
+      "frame_path": "poc\\output\\frames\\scene_0180.png"
+    },
+    {
+      "scene_id": 181,
+      "start": 463.73333333333335,
+      "end": 473.6,
+      "start_timecode": "00:07:43.733",
+      "end_timecode": "00:07:53.600",
+      "frame_path": "poc\\output\\frames\\scene_0181.png"
+    },
+    {
+      "scene_id": 182,
+      "start": 473.6,
+      "end": 474.56666666666666,
+      "start_timecode": "00:07:53.600",
+      "end_timecode": "00:07:54.566",
+      "frame_path": "poc\\output\\frames\\scene_0182.png"
+    },
+    {
+      "scene_id": 183,
+      "start": 474.56666666666666,
+      "end": 476.3,
+      "start_timecode": "00:07:54.566",
+      "end_timecode": "00:07:56.300",
+      "frame_path": "poc\\output\\frames\\scene_0183.png"
+    },
+    {
+      "scene_id": 184,
+      "start": 476.3,
+      "end": 479.8,
+      "start_timecode": "00:07:56.300",
+      "end_timecode": "00:07:59.800",
+      "frame_path": "poc\\output\\frames\\scene_0184.png"
+    },
+    {
+      "scene_id": 185,
+      "start": 479.8,
+      "end": 482.5,
+      "start_timecode": "00:07:59.800",
+      "end_timecode": "00:08:02.500",
+      "frame_path": "poc\\output\\frames\\scene_0185.png"
+    },
+    {
+      "scene_id": 186,
+      "start": 482.5,
+      "end": 484.46666666666664,
+      "start_timecode": "00:08:02.500",
+      "end_timecode": "00:08:04.466",
+      "frame_path": "poc\\output\\frames\\scene_0186.png"
+    },
+    {
+      "scene_id": 187,
+      "start": 484.46666666666664,
+      "end": 486.26666666666665,
+      "start_timecode": "00:08:04.466",
+      "end_timecode": "00:08:06.266",
+      "frame_path": "poc\\output\\frames\\scene_0187.png"
+    },
+    {
+      "scene_id": 188,
+      "start": 486.26666666666665,
+      "end": 487.4,
+      "start_timecode": "00:08:06.266",
+      "end_timecode": "00:08:07.399",
+      "frame_path": "poc\\output\\frames\\scene_0188.png"
+    },
+    {
+      "scene_id": 189,
+      "start": 487.4,
+      "end": 488.6,
+      "start_timecode": "00:08:07.399",
+      "end_timecode": "00:08:08.600",
+      "frame_path": "poc\\output\\frames\\scene_0189.png"
+    },
+    {
+      "scene_id": 190,
+      "start": 488.6,
+      "end": 489.3333333333333,
+      "start_timecode": "00:08:08.600",
+      "end_timecode": "00:08:09.333",
+      "frame_path": "poc\\output\\frames\\scene_0190.png"
+    },
+    {
+      "scene_id": 191,
+      "start": 489.3333333333333,
+      "end": 489.8666666666667,
+      "start_timecode": "00:08:09.333",
+      "end_timecode": "00:08:09.866",
+      "frame_path": "poc\\output\\frames\\scene_0191.png"
+    },
+    {
+      "scene_id": 192,
+      "start": 489.8666666666667,
+      "end": 497.1,
+      "start_timecode": "00:08:09.866",
+      "end_timecode": "00:08:17.100",
+      "frame_path": "poc\\output\\frames\\scene_0192.png"
+    },
+    {
+      "scene_id": 193,
+      "start": 497.1,
+      "end": 498.93333333333334,
+      "start_timecode": "00:08:17.100",
+      "end_timecode": "00:08:18.933",
+      "frame_path": "poc\\output\\frames\\scene_0193.png"
+    },
+    {
+      "scene_id": 194,
+      "start": 498.93333333333334,
+      "end": 500.43333333333334,
+      "start_timecode": "00:08:18.933",
+      "end_timecode": "00:08:20.433",
+      "frame_path": "poc\\output\\frames\\scene_0194.png"
+    },
+    {
+      "scene_id": 195,
+      "start": 500.43333333333334,
+      "end": 504.1,
+      "start_timecode": "00:08:20.433",
+      "end_timecode": "00:08:24.100",
+      "frame_path": "poc\\output\\frames\\scene_0195.png"
+    },
+    {
+      "scene_id": 196,
+      "start": 504.1,
+      "end": 505.3333333333333,
+      "start_timecode": "00:08:24.100",
+      "end_timecode": "00:08:25.333",
+      "frame_path": "poc\\output\\frames\\scene_0196.png"
+    },
+    {
+      "scene_id": 197,
+      "start": 505.3333333333333,
+      "end": 506.6333333333333,
+      "start_timecode": "00:08:25.333",
+      "end_timecode": "00:08:26.633",
+      "frame_path": "poc\\output\\frames\\scene_0197.png"
+    },
+    {
+      "scene_id": 198,
+      "start": 506.6333333333333,
+      "end": 508.1333333333333,
+      "start_timecode": "00:08:26.633",
+      "end_timecode": "00:08:28.133",
+      "frame_path": "poc\\output\\frames\\scene_0198.png"
+    },
+    {
+      "scene_id": 199,
+      "start": 508.1333333333333,
+      "end": 508.6666666666667,
+      "start_timecode": "00:08:28.133",
+      "end_timecode": "00:08:28.666",
+      "frame_path": "poc\\output\\frames\\scene_0199.png"
+    },
+    {
+      "scene_id": 200,
+      "start": 508.6666666666667,
+      "end": 510.06666666666666,
+      "start_timecode": "00:08:28.666",
+      "end_timecode": "00:08:30.066",
+      "frame_path": "poc\\output\\frames\\scene_0200.png"
+    },
+    {
+      "scene_id": 201,
+      "start": 510.06666666666666,
+      "end": 510.96666666666664,
+      "start_timecode": "00:08:30.066",
+      "end_timecode": "00:08:30.966",
+      "frame_path": "poc\\output\\frames\\scene_0201.png"
+    },
+    {
+      "scene_id": 202,
+      "start": 510.96666666666664,
+      "end": 512.0666666666667,
+      "start_timecode": "00:08:30.966",
+      "end_timecode": "00:08:32.066",
+      "frame_path": "poc\\output\\frames\\scene_0202.png"
+    },
+    {
+      "scene_id": 203,
+      "start": 512.0666666666667,
+      "end": 514.1,
+      "start_timecode": "00:08:32.066",
+      "end_timecode": "00:08:34.100",
+      "frame_path": "poc\\output\\frames\\scene_0203.png"
+    },
+    {
+      "scene_id": 204,
+      "start": 514.1,
+      "end": 514.9666666666667,
+      "start_timecode": "00:08:34.100",
+      "end_timecode": "00:08:34.966",
+      "frame_path": "poc\\output\\frames\\scene_0204.png"
+    },
+    {
+      "scene_id": 205,
+      "start": 514.9666666666667,
+      "end": 515.5,
+      "start_timecode": "00:08:34.966",
+      "end_timecode": "00:08:35.500",
+      "frame_path": "poc\\output\\frames\\scene_0205.png"
+    },
+    {
+      "scene_id": 206,
+      "start": 515.5,
+      "end": 516.9666666666667,
+      "start_timecode": "00:08:35.500",
+      "end_timecode": "00:08:36.966",
+      "frame_path": "poc\\output\\frames\\scene_0206.png"
+    },
+    {
+      "scene_id": 207,
+      "start": 516.9666666666667,
+      "end": 518.1333333333333,
+      "start_timecode": "00:08:36.966",
+      "end_timecode": "00:08:38.133",
+      "frame_path": "poc\\output\\frames\\scene_0207.png"
+    },
+    {
+      "scene_id": 208,
+      "start": 518.1333333333333,
+      "end": 520.6666666666666,
+      "start_timecode": "00:08:38.133",
+      "end_timecode": "00:08:40.666",
+      "frame_path": "poc\\output\\frames\\scene_0208.png"
+    },
+    {
+      "scene_id": 209,
+      "start": 520.6666666666666,
+      "end": 521.3,
+      "start_timecode": "00:08:40.666",
+      "end_timecode": "00:08:41.299",
+      "frame_path": "poc\\output\\frames\\scene_0209.png"
+    },
+    {
+      "scene_id": 210,
+      "start": 521.3,
+      "end": 526.0,
+      "start_timecode": "00:08:41.299",
+      "end_timecode": "00:08:46.000",
+      "frame_path": "poc\\output\\frames\\scene_0210.png"
+    },
+    {
+      "scene_id": 211,
+      "start": 526.0,
+      "end": 527.4333333333333,
+      "start_timecode": "00:08:46.000",
+      "end_timecode": "00:08:47.433",
+      "frame_path": "poc\\output\\frames\\scene_0211.png"
+    },
+    {
+      "scene_id": 212,
+      "start": 527.4333333333333,
+      "end": 528.6333333333333,
+      "start_timecode": "00:08:47.433",
+      "end_timecode": "00:08:48.633",
+      "frame_path": "poc\\output\\frames\\scene_0212.png"
+    },
+    {
+      "scene_id": 213,
+      "start": 528.6333333333333,
+      "end": 531.2,
+      "start_timecode": "00:08:48.633",
+      "end_timecode": "00:08:51.200",
+      "frame_path": "poc\\output\\frames\\scene_0213.png"
+    },
+    {
+      "scene_id": 214,
+      "start": 531.2,
+      "end": 534.1333333333333,
+      "start_timecode": "00:08:51.200",
+      "end_timecode": "00:08:54.133",
+      "frame_path": "poc\\output\\frames\\scene_0214.png"
+    },
+    {
+      "scene_id": 215,
+      "start": 534.1333333333333,
+      "end": 534.7,
+      "start_timecode": "00:08:54.133",
+      "end_timecode": "00:08:54.700",
+      "frame_path": "poc\\output\\frames\\scene_0215.png"
+    },
+    {
+      "scene_id": 216,
+      "start": 534.7,
+      "end": 536.4333333333333,
+      "start_timecode": "00:08:54.700",
+      "end_timecode": "00:08:56.433",
+      "frame_path": "poc\\output\\frames\\scene_0216.png"
+    },
+    {
+      "scene_id": 217,
+      "start": 536.4333333333333,
+      "end": 538.0,
+      "start_timecode": "00:08:56.433",
+      "end_timecode": "00:08:58.000",
+      "frame_path": "poc\\output\\frames\\scene_0217.png"
+    },
+    {
+      "scene_id": 218,
+      "start": 538.0,
+      "end": 541.9333333333333,
+      "start_timecode": "00:08:58.000",
+      "end_timecode": "00:09:01.933",
+      "frame_path": "poc\\output\\frames\\scene_0218.png"
+    },
+    {
+      "scene_id": 219,
+      "start": 541.9333333333333,
+      "end": 543.5333333333333,
+      "start_timecode": "00:09:01.933",
+      "end_timecode": "00:09:03.533",
+      "frame_path": "poc\\output\\frames\\scene_0219.png"
+    },
+    {
+      "scene_id": 220,
+      "start": 543.5333333333333,
+      "end": 544.2333333333333,
+      "start_timecode": "00:09:03.533",
+      "end_timecode": "00:09:04.233",
+      "frame_path": "poc\\output\\frames\\scene_0220.png"
+    },
+    {
+      "scene_id": 221,
+      "start": 544.2333333333333,
+      "end": 547.4666666666667,
+      "start_timecode": "00:09:04.233",
+      "end_timecode": "00:09:07.466",
+      "frame_path": "poc\\output\\frames\\scene_0221.png"
+    },
+    {
+      "scene_id": 222,
+      "start": 547.4666666666667,
+      "end": 548.1666666666666,
+      "start_timecode": "00:09:07.466",
+      "end_timecode": "00:09:08.166",
+      "frame_path": "poc\\output\\frames\\scene_0222.png"
+    },
+    {
+      "scene_id": 223,
+      "start": 548.1666666666666,
+      "end": 549.3666666666667,
+      "start_timecode": "00:09:08.166",
+      "end_timecode": "00:09:09.366",
+      "frame_path": "poc\\output\\frames\\scene_0223.png"
+    },
+    {
+      "scene_id": 224,
+      "start": 549.3666666666667,
+      "end": 550.2666666666667,
+      "start_timecode": "00:09:09.366",
+      "end_timecode": "00:09:10.266",
+      "frame_path": "poc\\output\\frames\\scene_0224.png"
+    },
+    {
+      "scene_id": 225,
+      "start": 550.2666666666667,
+      "end": 551.4,
+      "start_timecode": "00:09:10.266",
+      "end_timecode": "00:09:11.399",
+      "frame_path": "poc\\output\\frames\\scene_0225.png"
+    },
+    {
+      "scene_id": 226,
+      "start": 551.4,
+      "end": 553.6333333333333,
+      "start_timecode": "00:09:11.399",
+      "end_timecode": "00:09:13.633",
+      "frame_path": "poc\\output\\frames\\scene_0226.png"
+    },
+    {
+      "scene_id": 227,
+      "start": 553.6333333333333,
+      "end": 555.7,
+      "start_timecode": "00:09:13.633",
+      "end_timecode": "00:09:15.700",
+      "frame_path": "poc\\output\\frames\\scene_0227.png"
+    },
+    {
+      "scene_id": 228,
+      "start": 555.7,
+      "end": 556.3,
+      "start_timecode": "00:09:15.700",
+      "end_timecode": "00:09:16.299",
+      "frame_path": "poc\\output\\frames\\scene_0228.png"
+    },
+    {
+      "scene_id": 229,
+      "start": 556.3,
+      "end": 557.6666666666666,
+      "start_timecode": "00:09:16.299",
+      "end_timecode": "00:09:17.666",
+      "frame_path": "poc\\output\\frames\\scene_0229.png"
+    },
+    {
+      "scene_id": 230,
+      "start": 557.6666666666666,
+      "end": 559.6333333333333,
+      "start_timecode": "00:09:17.666",
+      "end_timecode": "00:09:19.633",
+      "frame_path": "poc\\output\\frames\\scene_0230.png"
+    },
+    {
+      "scene_id": 231,
+      "start": 559.6333333333333,
+      "end": 560.3666666666667,
+      "start_timecode": "00:09:19.633",
+      "end_timecode": "00:09:20.366",
+      "frame_path": "poc\\output\\frames\\scene_0231.png"
+    },
+    {
+      "scene_id": 232,
+      "start": 560.3666666666667,
+      "end": 560.9333333333333,
+      "start_timecode": "00:09:20.366",
+      "end_timecode": "00:09:20.933",
+      "frame_path": "poc\\output\\frames\\scene_0232.png"
+    },
+    {
+      "scene_id": 233,
+      "start": 560.9333333333333,
+      "end": 564.0,
+      "start_timecode": "00:09:20.933",
+      "end_timecode": "00:09:24.000",
+      "frame_path": "poc\\output\\frames\\scene_0233.png"
+    },
+    {
+      "scene_id": 234,
+      "start": 564.0,
+      "end": 565.5666666666667,
+      "start_timecode": "00:09:24.000",
+      "end_timecode": "00:09:25.566",
+      "frame_path": "poc\\output\\frames\\scene_0234.png"
+    },
+    {
+      "scene_id": 235,
+      "start": 565.5666666666667,
+      "end": 568.5,
+      "start_timecode": "00:09:25.566",
+      "end_timecode": "00:09:28.500",
+      "frame_path": "poc\\output\\frames\\scene_0235.png"
+    },
+    {
+      "scene_id": 236,
+      "start": 568.5,
+      "end": 571.5,
+      "start_timecode": "00:09:28.500",
+      "end_timecode": "00:09:31.500",
+      "frame_path": "poc\\output\\frames\\scene_0236.png"
+    },
+    {
+      "scene_id": 237,
+      "start": 571.5,
+      "end": 573.0,
+      "start_timecode": "00:09:31.500",
+      "end_timecode": "00:09:33.000",
+      "frame_path": "poc\\output\\frames\\scene_0237.png"
+    },
+    {
+      "scene_id": 238,
+      "start": 573.0,
+      "end": 574.3,
+      "start_timecode": "00:09:33.000",
+      "end_timecode": "00:09:34.299",
+      "frame_path": "poc\\output\\frames\\scene_0238.png"
+    },
+    {
+      "scene_id": 239,
+      "start": 574.3,
+      "end": 577.3,
+      "start_timecode": "00:09:34.299",
+      "end_timecode": "00:09:37.299",
+      "frame_path": "poc\\output\\frames\\scene_0239.png"
+    },
+    {
+      "scene_id": 240,
+      "start": 577.3,
+      "end": 577.8333333333334,
+      "start_timecode": "00:09:37.299",
+      "end_timecode": "00:09:37.833",
+      "frame_path": "poc\\output\\frames\\scene_0240.png"
+    },
+    {
+      "scene_id": 241,
+      "start": 577.8333333333334,
+      "end": 578.7333333333333,
+      "start_timecode": "00:09:37.833",
+      "end_timecode": "00:09:38.733",
+      "frame_path": "poc\\output\\frames\\scene_0241.png"
+    },
+    {
+      "scene_id": 242,
+      "start": 578.7333333333333,
+      "end": 579.5333333333333,
+      "start_timecode": "00:09:38.733",
+      "end_timecode": "00:09:39.533",
+      "frame_path": "poc\\output\\frames\\scene_0242.png"
+    },
+    {
+      "scene_id": 243,
+      "start": 579.5333333333333,
+      "end": 582.1333333333333,
+      "start_timecode": "00:09:39.533",
+      "end_timecode": "00:09:42.133",
+      "frame_path": "poc\\output\\frames\\scene_0243.png"
+    },
+    {
+      "scene_id": 244,
+      "start": 582.1333333333333,
+      "end": 586.2,
+      "start_timecode": "00:09:42.133",
+      "end_timecode": "00:09:46.200",
+      "frame_path": "poc\\output\\frames\\scene_0244.png"
+    },
+    {
+      "scene_id": 245,
+      "start": 586.2,
+      "end": 603.0,
+      "start_timecode": "00:09:46.200",
+      "end_timecode": "00:10:03.000",
+      "frame_path": "poc\\output\\frames\\scene_0245.png"
+    },
+    {
+      "scene_id": 246,
+      "start": 603.0,
+      "end": 615.8,
+      "start_timecode": "00:10:03.000",
+      "end_timecode": "00:10:15.799",
+      "frame_path": "poc\\output\\frames\\scene_0246.png"
+    },
+    {
+      "scene_id": 247,
+      "start": 615.8,
+      "end": 617.9333333333333,
+      "start_timecode": "00:10:15.799",
+      "end_timecode": "00:10:17.933",
+      "frame_path": "poc\\output\\frames\\scene_0247.png"
+    },
+    {
+      "scene_id": 248,
+      "start": 617.9333333333333,
+      "end": 619.2333333333333,
+      "start_timecode": "00:10:17.933",
+      "end_timecode": "00:10:19.233",
+      "frame_path": "poc\\output\\frames\\scene_0248.png"
+    },
+    {
+      "scene_id": 249,
+      "start": 619.2333333333333,
+      "end": 622.0,
+      "start_timecode": "00:10:19.233",
+      "end_timecode": "00:10:22.000",
+      "frame_path": "poc\\output\\frames\\scene_0249.png"
+    },
+    {
+      "scene_id": 250,
+      "start": 622.0,
+      "end": 624.2333333333333,
+      "start_timecode": "00:10:22.000",
+      "end_timecode": "00:10:24.233",
+      "frame_path": "poc\\output\\frames\\scene_0250.png"
+    },
+    {
+      "scene_id": 251,
+      "start": 624.2333333333333,
+      "end": 625.8,
+      "start_timecode": "00:10:24.233",
+      "end_timecode": "00:10:25.799",
+      "frame_path": "poc\\output\\frames\\scene_0251.png"
+    },
+    {
+      "scene_id": 252,
+      "start": 625.8,
+      "end": 629.1,
+      "start_timecode": "00:10:25.799",
+      "end_timecode": "00:10:29.100",
+      "frame_path": "poc\\output\\frames\\scene_0252.png"
+    },
+    {
+      "scene_id": 253,
+      "start": 629.1,
+      "end": 630.2666666666667,
+      "start_timecode": "00:10:29.100",
+      "end_timecode": "00:10:30.266",
+      "frame_path": "poc\\output\\frames\\scene_0253.png"
+    },
+    {
+      "scene_id": 254,
+      "start": 630.2666666666667,
+      "end": 635.3333333333334,
+      "start_timecode": "00:10:30.266",
+      "end_timecode": "00:10:35.333",
+      "frame_path": "poc\\output\\frames\\scene_0254.png"
+    },
+    {
+      "scene_id": 255,
+      "start": 635.3333333333334,
+      "end": 636.8,
+      "start_timecode": "00:10:35.333",
+      "end_timecode": "00:10:36.799",
+      "frame_path": "poc\\output\\frames\\scene_0255.png"
+    },
+    {
+      "scene_id": 256,
+      "start": 636.8,
+      "end": 638.2333333333333,
+      "start_timecode": "00:10:36.799",
+      "end_timecode": "00:10:38.233",
+      "frame_path": "poc\\output\\frames\\scene_0256.png"
+    },
+    {
+      "scene_id": 257,
+      "start": 638.2333333333333,
+      "end": 639.8,
+      "start_timecode": "00:10:38.233",
+      "end_timecode": "00:10:39.799",
+      "frame_path": "poc\\output\\frames\\scene_0257.png"
+    },
+    {
+      "scene_id": 258,
+      "start": 639.8,
+      "end": 640.9333333333333,
+      "start_timecode": "00:10:39.799",
+      "end_timecode": "00:10:40.933",
+      "frame_path": "poc\\output\\frames\\scene_0258.png"
+    },
+    {
+      "scene_id": 259,
+      "start": 640.9333333333333,
+      "end": 642.4,
+      "start_timecode": "00:10:40.933",
+      "end_timecode": "00:10:42.399",
+      "frame_path": "poc\\output\\frames\\scene_0259.png"
+    },
+    {
+      "scene_id": 260,
+      "start": 642.4,
+      "end": 650.5333333333333,
+      "start_timecode": "00:10:42.399",
+      "end_timecode": "00:10:50.533",
+      "frame_path": "poc\\output\\frames\\scene_0260.png"
+    },
+    {
+      "scene_id": 261,
+      "start": 650.5333333333333,
+      "end": 655.2,
+      "start_timecode": "00:10:50.533",
+      "end_timecode": "00:10:55.200",
+      "frame_path": "poc\\output\\frames\\scene_0261.png"
+    },
+    {
+      "scene_id": 262,
+      "start": 655.2,
+      "end": 656.8333333333334,
+      "start_timecode": "00:10:55.200",
+      "end_timecode": "00:10:56.833",
+      "frame_path": "poc\\output\\frames\\scene_0262.png"
+    },
+    {
+      "scene_id": 263,
+      "start": 656.8333333333334,
+      "end": 657.6333333333333,
+      "start_timecode": "00:10:56.833",
+      "end_timecode": "00:10:57.633",
+      "frame_path": "poc\\output\\frames\\scene_0263.png"
+    },
+    {
+      "scene_id": 264,
+      "start": 657.6333333333333,
+      "end": 659.8666666666667,
+      "start_timecode": "00:10:57.633",
+      "end_timecode": "00:10:59.866",
+      "frame_path": "poc\\output\\frames\\scene_0264.png"
+    },
+    {
+      "scene_id": 265,
+      "start": 659.8666666666667,
+      "end": 661.6,
+      "start_timecode": "00:10:59.866",
+      "end_timecode": "00:11:01.600",
+      "frame_path": "poc\\output\\frames\\scene_0265.png"
+    },
+    {
+      "scene_id": 266,
+      "start": 661.6,
+      "end": 662.1333333333333,
+      "start_timecode": "00:11:01.600",
+      "end_timecode": "00:11:02.133",
+      "frame_path": "poc\\output\\frames\\scene_0266.png"
+    },
+    {
+      "scene_id": 267,
+      "start": 662.1333333333333,
+      "end": 665.5,
+      "start_timecode": "00:11:02.133",
+      "end_timecode": "00:11:05.500",
+      "frame_path": "poc\\output\\frames\\scene_0267.png"
+    },
+    {
+      "scene_id": 268,
+      "start": 665.5,
+      "end": 666.5333333333333,
+      "start_timecode": "00:11:05.500",
+      "end_timecode": "00:11:06.533",
+      "frame_path": "poc\\output\\frames\\scene_0268.png"
+    },
+    {
+      "scene_id": 269,
+      "start": 666.5333333333333,
+      "end": 667.4333333333333,
+      "start_timecode": "00:11:06.533",
+      "end_timecode": "00:11:07.433",
+      "frame_path": "poc\\output\\frames\\scene_0269.png"
+    },
+    {
+      "scene_id": 270,
+      "start": 667.4333333333333,
+      "end": 669.1333333333333,
+      "start_timecode": "00:11:07.433",
+      "end_timecode": "00:11:09.133",
+      "frame_path": "poc\\output\\frames\\scene_0270.png"
+    },
+    {
+      "scene_id": 271,
+      "start": 669.1333333333333,
+      "end": 669.7,
+      "start_timecode": "00:11:09.133",
+      "end_timecode": "00:11:09.700",
+      "frame_path": "poc\\output\\frames\\scene_0271.png"
+    },
+    {
+      "scene_id": 272,
+      "start": 669.7,
+      "end": 670.7666666666667,
+      "start_timecode": "00:11:09.700",
+      "end_timecode": "00:11:10.766",
+      "frame_path": "poc\\output\\frames\\scene_0272.png"
+    },
+    {
+      "scene_id": 273,
+      "start": 670.7666666666667,
+      "end": 674.5333333333333,
+      "start_timecode": "00:11:10.766",
+      "end_timecode": "00:11:14.533",
+      "frame_path": "poc\\output\\frames\\scene_0273.png"
+    },
+    {
+      "scene_id": 274,
+      "start": 674.5333333333333,
+      "end": 675.4333333333333,
+      "start_timecode": "00:11:14.533",
+      "end_timecode": "00:11:15.433",
+      "frame_path": "poc\\output\\frames\\scene_0274.png"
+    },
+    {
+      "scene_id": 275,
+      "start": 675.4333333333333,
+      "end": 676.6,
+      "start_timecode": "00:11:15.433",
+      "end_timecode": "00:11:16.600",
+      "frame_path": "poc\\output\\frames\\scene_0275.png"
+    },
+    {
+      "scene_id": 276,
+      "start": 676.6,
+      "end": 682.1333333333333,
+      "start_timecode": "00:11:16.600",
+      "end_timecode": "00:11:22.133",
+      "frame_path": "poc\\output\\frames\\scene_0276.png"
+    },
+    {
+      "scene_id": 277,
+      "start": 682.1333333333333,
+      "end": 683.9666666666667,
+      "start_timecode": "00:11:22.133",
+      "end_timecode": "00:11:23.966",
+      "frame_path": "poc\\output\\frames\\scene_0277.png"
+    },
+    {
+      "scene_id": 278,
+      "start": 683.9666666666667,
+      "end": 684.7,
+      "start_timecode": "00:11:23.966",
+      "end_timecode": "00:11:24.700",
+      "frame_path": "poc\\output\\frames\\scene_0278.png"
+    },
+    {
+      "scene_id": 279,
+      "start": 684.7,
+      "end": 685.4333333333333,
+      "start_timecode": "00:11:24.700",
+      "end_timecode": "00:11:25.433",
+      "frame_path": "poc\\output\\frames\\scene_0279.png"
+    },
+    {
+      "scene_id": 280,
+      "start": 685.4333333333333,
+      "end": 686.1333333333333,
+      "start_timecode": "00:11:25.433",
+      "end_timecode": "00:11:26.133",
+      "frame_path": "poc\\output\\frames\\scene_0280.png"
+    },
+    {
+      "scene_id": 281,
+      "start": 686.1333333333333,
+      "end": 690.5,
+      "start_timecode": "00:11:26.133",
+      "end_timecode": "00:11:30.500",
+      "frame_path": "poc\\output\\frames\\scene_0281.png"
+    },
+    {
+      "scene_id": 282,
+      "start": 690.5,
+      "end": 695.6,
+      "start_timecode": "00:11:30.500",
+      "end_timecode": "00:11:35.600",
+      "frame_path": "poc\\output\\frames\\scene_0282.png"
+    },
+    {
+      "scene_id": 283,
+      "start": 695.6,
+      "end": 697.0333333333333,
+      "start_timecode": "00:11:35.600",
+      "end_timecode": "00:11:37.033",
+      "frame_path": "poc\\output\\frames\\scene_0283.png"
+    },
+    {
+      "scene_id": 284,
+      "start": 697.0333333333333,
+      "end": 697.6,
+      "start_timecode": "00:11:37.033",
+      "end_timecode": "00:11:37.600",
+      "frame_path": "poc\\output\\frames\\scene_0284.png"
+    },
+    {
+      "scene_id": 285,
+      "start": 697.6,
+      "end": 701.8666666666667,
+      "start_timecode": "00:11:37.600",
+      "end_timecode": "00:11:41.866",
+      "frame_path": "poc\\output\\frames\\scene_0285.png"
+    },
+    {
+      "scene_id": 286,
+      "start": 701.8666666666667,
+      "end": 710.6333333333333,
+      "start_timecode": "00:11:41.866",
+      "end_timecode": "00:11:50.633",
+      "frame_path": "poc\\output\\frames\\scene_0286.png"
+    },
+    {
+      "scene_id": 287,
+      "start": 710.6333333333333,
+      "end": 712.3666666666667,
+      "start_timecode": "00:11:50.633",
+      "end_timecode": "00:11:52.366",
+      "frame_path": "poc\\output\\frames\\scene_0287.png"
+    },
+    {
+      "scene_id": 288,
+      "start": 712.3666666666667,
+      "end": 713.5,
+      "start_timecode": "00:11:52.366",
+      "end_timecode": "00:11:53.500",
+      "frame_path": "poc\\output\\frames\\scene_0288.png"
+    },
+    {
+      "scene_id": 289,
+      "start": 713.5,
+      "end": 714.8,
+      "start_timecode": "00:11:53.500",
+      "end_timecode": "00:11:54.799",
+      "frame_path": "poc\\output\\frames\\scene_0289.png"
+    },
+    {
+      "scene_id": 290,
+      "start": 714.8,
+      "end": 718.7333333333333,
+      "start_timecode": "00:11:54.799",
+      "end_timecode": "00:11:58.733",
+      "frame_path": "poc\\output\\frames\\scene_0290.png"
+    },
+    {
+      "scene_id": 291,
+      "start": 718.7333333333333,
+      "end": 719.4666666666667,
+      "start_timecode": "00:11:58.733",
+      "end_timecode": "00:11:59.466",
+      "frame_path": "poc\\output\\frames\\scene_0291.png"
+    },
+    {
+      "scene_id": 292,
+      "start": 719.4666666666667,
+      "end": 720.9666666666667,
+      "start_timecode": "00:11:59.466",
+      "end_timecode": "00:12:00.966",
+      "frame_path": "poc\\output\\frames\\scene_0292.png"
+    },
+    {
+      "scene_id": 293,
+      "start": 720.9666666666667,
+      "end": 721.5,
+      "start_timecode": "00:12:00.966",
+      "end_timecode": "00:12:01.500",
+      "frame_path": "poc\\output\\frames\\scene_0293.png"
+    },
+    {
+      "scene_id": 294,
+      "start": 721.5,
+      "end": 722.4666666666667,
+      "start_timecode": "00:12:01.500",
+      "end_timecode": "00:12:02.466",
+      "frame_path": "poc\\output\\frames\\scene_0294.png"
+    },
+    {
+      "scene_id": 295,
+      "start": 722.4666666666667,
+      "end": 723.1,
+      "start_timecode": "00:12:02.466",
+      "end_timecode": "00:12:03.100",
+      "frame_path": "poc\\output\\frames\\scene_0295.png"
+    },
+    {
+      "scene_id": 296,
+      "start": 723.1,
+      "end": 726.2333333333333,
+      "start_timecode": "00:12:03.100",
+      "end_timecode": "00:12:06.233",
+      "frame_path": "poc\\output\\frames\\scene_0296.png"
+    },
+    {
+      "scene_id": 297,
+      "start": 726.2333333333333,
+      "end": 727.7333333333333,
+      "start_timecode": "00:12:06.233",
+      "end_timecode": "00:12:07.733",
+      "frame_path": "poc\\output\\frames\\scene_0297.png"
+    },
+    {
+      "scene_id": 298,
+      "start": 727.7333333333333,
+      "end": 728.5666666666667,
+      "start_timecode": "00:12:07.733",
+      "end_timecode": "00:12:08.566",
+      "frame_path": "poc\\output\\frames\\scene_0298.png"
+    },
+    {
+      "scene_id": 299,
+      "start": 728.5666666666667,
+      "end": 729.1666666666666,
+      "start_timecode": "00:12:08.566",
+      "end_timecode": "00:12:09.166",
+      "frame_path": "poc\\output\\frames\\scene_0299.png"
+    },
+    {
+      "scene_id": 300,
+      "start": 729.1666666666666,
+      "end": 734.5666666666667,
+      "start_timecode": "00:12:09.166",
+      "end_timecode": "00:12:14.566",
+      "frame_path": "poc\\output\\frames\\scene_0300.png"
+    },
+    {
+      "scene_id": 301,
+      "start": 734.5666666666667,
+      "end": 735.4666666666667,
+      "start_timecode": "00:12:14.566",
+      "end_timecode": "00:12:15.466",
+      "frame_path": "poc\\output\\frames\\scene_0301.png"
+    },
+    {
+      "scene_id": 302,
+      "start": 735.4666666666667,
+      "end": 736.1,
+      "start_timecode": "00:12:15.466",
+      "end_timecode": "00:12:16.100",
+      "frame_path": "poc\\output\\frames\\scene_0302.png"
+    },
+    {
+      "scene_id": 303,
+      "start": 736.1,
+      "end": 737.6,
+      "start_timecode": "00:12:16.100",
+      "end_timecode": "00:12:17.600",
+      "frame_path": "poc\\output\\frames\\scene_0303.png"
+    },
+    {
+      "scene_id": 304,
+      "start": 737.6,
+      "end": 738.1333333333333,
+      "start_timecode": "00:12:17.600",
+      "end_timecode": "00:12:18.133",
+      "frame_path": "poc\\output\\frames\\scene_0304.png"
+    },
+    {
+      "scene_id": 305,
+      "start": 738.1333333333333,
+      "end": 741.7,
+      "start_timecode": "00:12:18.133",
+      "end_timecode": "00:12:21.700",
+      "frame_path": "poc\\output\\frames\\scene_0305.png"
+    },
+    {
+      "scene_id": 306,
+      "start": 741.7,
+      "end": 743.0666666666667,
+      "start_timecode": "00:12:21.700",
+      "end_timecode": "00:12:23.066",
+      "frame_path": "poc\\output\\frames\\scene_0306.png"
+    },
+    {
+      "scene_id": 307,
+      "start": 743.0666666666667,
+      "end": 747.4666666666667,
+      "start_timecode": "00:12:23.066",
+      "end_timecode": "00:12:27.466",
+      "frame_path": "poc\\output\\frames\\scene_0307.png"
+    },
+    {
+      "scene_id": 308,
+      "start": 747.4666666666667,
+      "end": 748.2333333333333,
+      "start_timecode": "00:12:27.466",
+      "end_timecode": "00:12:28.233",
+      "frame_path": "poc\\output\\frames\\scene_0308.png"
+    },
+    {
+      "scene_id": 309,
+      "start": 748.2333333333333,
+      "end": 749.1666666666666,
+      "start_timecode": "00:12:28.233",
+      "end_timecode": "00:12:29.166",
+      "frame_path": "poc\\output\\frames\\scene_0309.png"
+    },
+    {
+      "scene_id": 310,
+      "start": 749.1666666666666,
+      "end": 749.8,
+      "start_timecode": "00:12:29.166",
+      "end_timecode": "00:12:29.799",
+      "frame_path": "poc\\output\\frames\\scene_0310.png"
+    },
+    {
+      "scene_id": 311,
+      "start": 749.8,
+      "end": 750.8333333333334,
+      "start_timecode": "00:12:29.799",
+      "end_timecode": "00:12:30.833",
+      "frame_path": "poc\\output\\frames\\scene_0311.png"
+    },
+    {
+      "scene_id": 312,
+      "start": 750.8333333333334,
+      "end": 751.4666666666667,
+      "start_timecode": "00:12:30.833",
+      "end_timecode": "00:12:31.466",
+      "frame_path": "poc\\output\\frames\\scene_0312.png"
+    },
+    {
+      "scene_id": 313,
+      "start": 751.4666666666667,
+      "end": 752.3666666666667,
+      "start_timecode": "00:12:31.466",
+      "end_timecode": "00:12:32.366",
+      "frame_path": "poc\\output\\frames\\scene_0313.png"
+    },
+    {
+      "scene_id": 314,
+      "start": 752.3666666666667,
+      "end": 753.7,
+      "start_timecode": "00:12:32.366",
+      "end_timecode": "00:12:33.700",
+      "frame_path": "poc\\output\\frames\\scene_0314.png"
+    },
+    {
+      "scene_id": 315,
+      "start": 753.7,
+      "end": 755.4,
+      "start_timecode": "00:12:33.700",
+      "end_timecode": "00:12:35.399",
+      "frame_path": "poc\\output\\frames\\scene_0315.png"
+    },
+    {
+      "scene_id": 316,
+      "start": 755.4,
+      "end": 757.1,
+      "start_timecode": "00:12:35.399",
+      "end_timecode": "00:12:37.100",
+      "frame_path": "poc\\output\\frames\\scene_0316.png"
+    },
+    {
+      "scene_id": 317,
+      "start": 757.1,
+      "end": 758.0333333333333,
+      "start_timecode": "00:12:37.100",
+      "end_timecode": "00:12:38.033",
+      "frame_path": "poc\\output\\frames\\scene_0317.png"
+    },
+    {
+      "scene_id": 318,
+      "start": 758.0333333333333,
+      "end": 758.5666666666667,
+      "start_timecode": "00:12:38.033",
+      "end_timecode": "00:12:38.566",
+      "frame_path": "poc\\output\\frames\\scene_0318.png"
+    },
+    {
+      "scene_id": 319,
+      "start": 758.5666666666667,
+      "end": 759.1333333333333,
+      "start_timecode": "00:12:38.566",
+      "end_timecode": "00:12:39.133",
+      "frame_path": "poc\\output\\frames\\scene_0319.png"
+    },
+    {
+      "scene_id": 320,
+      "start": 759.1333333333333,
+      "end": 760.0,
+      "start_timecode": "00:12:39.133",
+      "end_timecode": "00:12:40.000",
+      "frame_path": "poc\\output\\frames\\scene_0320.png"
+    },
+    {
+      "scene_id": 321,
+      "start": 760.0,
+      "end": 760.5333333333333,
+      "start_timecode": "00:12:40.000",
+      "end_timecode": "00:12:40.533",
+      "frame_path": "poc\\output\\frames\\scene_0321.png"
+    },
+    {
+      "scene_id": 322,
+      "start": 760.5333333333333,
+      "end": 762.9666666666667,
+      "start_timecode": "00:12:40.533",
+      "end_timecode": "00:12:42.966",
+      "frame_path": "poc\\output\\frames\\scene_0322.png"
+    },
+    {
+      "scene_id": 323,
+      "start": 762.9666666666667,
+      "end": 763.6333333333333,
+      "start_timecode": "00:12:42.966",
+      "end_timecode": "00:12:43.633",
+      "frame_path": "poc\\output\\frames\\scene_0323.png"
+    },
+    {
+      "scene_id": 324,
+      "start": 763.6333333333333,
+      "end": 774.3333333333334,
+      "start_timecode": "00:12:43.633",
+      "end_timecode": "00:12:54.333",
+      "frame_path": "poc\\output\\frames\\scene_0324.png"
+    },
+    {
+      "scene_id": 325,
+      "start": 774.3333333333334,
+      "end": 776.1,
+      "start_timecode": "00:12:54.333",
+      "end_timecode": "00:12:56.100",
+      "frame_path": "poc\\output\\frames\\scene_0325.png"
+    },
+    {
+      "scene_id": 326,
+      "start": 776.1,
+      "end": 776.8,
+      "start_timecode": "00:12:56.100",
+      "end_timecode": "00:12:56.799",
+      "frame_path": "poc\\output\\frames\\scene_0326.png"
+    },
+    {
+      "scene_id": 327,
+      "start": 776.8,
+      "end": 778.3333333333334,
+      "start_timecode": "00:12:56.799",
+      "end_timecode": "00:12:58.333",
+      "frame_path": "poc\\output\\frames\\scene_0327.png"
+    },
+    {
+      "scene_id": 328,
+      "start": 778.3333333333334,
+      "end": 780.1333333333333,
+      "start_timecode": "00:12:58.333",
+      "end_timecode": "00:13:00.133",
+      "frame_path": "poc\\output\\frames\\scene_0328.png"
+    },
+    {
+      "scene_id": 329,
+      "start": 780.1333333333333,
+      "end": 781.7333333333333,
+      "start_timecode": "00:13:00.133",
+      "end_timecode": "00:13:01.733",
+      "frame_path": "poc\\output\\frames\\scene_0329.png"
+    },
+    {
+      "scene_id": 330,
+      "start": 781.7333333333333,
+      "end": 784.0666666666667,
+      "start_timecode": "00:13:01.733",
+      "end_timecode": "00:13:04.066",
+      "frame_path": "poc\\output\\frames\\scene_0330.png"
+    },
+    {
+      "scene_id": 331,
+      "start": 784.0666666666667,
+      "end": 787.3333333333334,
+      "start_timecode": "00:13:04.066",
+      "end_timecode": "00:13:07.333",
+      "frame_path": "poc\\output\\frames\\scene_0331.png"
+    },
+    {
+      "scene_id": 332,
+      "start": 787.3333333333334,
+      "end": 787.9333333333333,
+      "start_timecode": "00:13:07.333",
+      "end_timecode": "00:13:07.933",
+      "frame_path": "poc\\output\\frames\\scene_0332.png"
+    },
+    {
+      "scene_id": 333,
+      "start": 787.9333333333333,
+      "end": 788.9333333333333,
+      "start_timecode": "00:13:07.933",
+      "end_timecode": "00:13:08.933",
+      "frame_path": "poc\\output\\frames\\scene_0333.png"
+    },
+    {
+      "scene_id": 334,
+      "start": 788.9333333333333,
+      "end": 789.7666666666667,
+      "start_timecode": "00:13:08.933",
+      "end_timecode": "00:13:09.766",
+      "frame_path": "poc\\output\\frames\\scene_0334.png"
+    },
+    {
+      "scene_id": 335,
+      "start": 789.7666666666667,
+      "end": 790.8666666666667,
+      "start_timecode": "00:13:09.766",
+      "end_timecode": "00:13:10.866",
+      "frame_path": "poc\\output\\frames\\scene_0335.png"
+    },
+    {
+      "scene_id": 336,
+      "start": 790.8666666666667,
+      "end": 796.1333333333333,
+      "start_timecode": "00:13:10.866",
+      "end_timecode": "00:13:16.133",
+      "frame_path": "poc\\output\\frames\\scene_0336.png"
+    },
+    {
+      "scene_id": 337,
+      "start": 796.1333333333333,
+      "end": 799.6,
+      "start_timecode": "00:13:16.133",
+      "end_timecode": "00:13:19.600",
+      "frame_path": "poc\\output\\frames\\scene_0337.png"
+    },
+    {
+      "scene_id": 338,
+      "start": 799.6,
+      "end": 800.5,
+      "start_timecode": "00:13:19.600",
+      "end_timecode": "00:13:20.500",
+      "frame_path": "poc\\output\\frames\\scene_0338.png"
+    },
+    {
+      "scene_id": 339,
+      "start": 800.5,
+      "end": 805.4666666666667,
+      "start_timecode": "00:13:20.500",
+      "end_timecode": "00:13:25.466",
+      "frame_path": "poc\\output\\frames\\scene_0339.png"
+    },
+    {
+      "scene_id": 340,
+      "start": 805.4666666666667,
+      "end": 807.4333333333333,
+      "start_timecode": "00:13:25.466",
+      "end_timecode": "00:13:27.433",
+      "frame_path": "poc\\output\\frames\\scene_0340.png"
+    },
+    {
+      "scene_id": 341,
+      "start": 807.4333333333333,
+      "end": 809.2,
+      "start_timecode": "00:13:27.433",
+      "end_timecode": "00:13:29.200",
+      "frame_path": "poc\\output\\frames\\scene_0341.png"
+    },
+    {
+      "scene_id": 342,
+      "start": 809.2,
+      "end": 811.8333333333334,
+      "start_timecode": "00:13:29.200",
+      "end_timecode": "00:13:31.833",
+      "frame_path": "poc\\output\\frames\\scene_0342.png"
+    },
+    {
+      "scene_id": 343,
+      "start": 811.8333333333334,
+      "end": 812.8333333333334,
+      "start_timecode": "00:13:31.833",
+      "end_timecode": "00:13:32.833",
+      "frame_path": "poc\\output\\frames\\scene_0343.png"
+    },
+    {
+      "scene_id": 344,
+      "start": 812.8333333333334,
+      "end": 817.8333333333334,
+      "start_timecode": "00:13:32.833",
+      "end_timecode": "00:13:37.833",
+      "frame_path": "poc\\output\\frames\\scene_0344.png"
+    },
+    {
+      "scene_id": 345,
+      "start": 817.8333333333334,
+      "end": 818.4666666666667,
+      "start_timecode": "00:13:37.833",
+      "end_timecode": "00:13:38.466",
+      "frame_path": "poc\\output\\frames\\scene_0345.png"
+    }
+  ],
+  "summaries": [
+    {
+      "scene_id": 0,
+      "summary": "男性が自身の行動を非難し、女性にレイを読むように促している。戦闘をテーマにした言動が繰り返し、やや混乱した様子が伺える。",
+      "keywords": [
+        "戦闘",
+        "レイ",
+        "非難",
+        "混乱",
+        "男性"
+      ]
+    },
+    {
+      "scene_id": 1,
+      "summary": "男性が自身の行動を否定し、レイに読ませるべき本について言及している。戦闘員になったとしてもダサいと自覚しており、周囲に困惑している。",
+      "keywords": [
+        "戦闘員",
+        "レイ",
+        "男性",
+        "否定",
+        "ダサい"
+      ]
+    },
+    {
+      "scene_id": 2,
+      "summary": "男性がゲームの状況に不満を表明し、自身の行動を止めさせようと説得している。ゲーム内のキャラクターや状況について、ユーモラスな表現を用いる。",
+      "keywords": [
+        "ゲーム",
+        "不満",
+        "アドバイス",
+        "ユーモア",
+        "キャラクター"
+      ]
+    },
+    {
+      "scene_id": 3,
+      "summary": "男性が女性にゲームを中断するように促している。レイという女性について言及し、彼女はまるで大戦士のような存在だと批判している。会話内容はゲームに関するものと思われる。",
+      "keywords": [
+        "ゲーム",
+        "レイ",
+        "戦士",
+        "批判",
+        "中断"
+      ]
+    },
+    {
+      "scene_id": 4,
+      "summary": "男性が自らにアドバイスを送りつけ、自分の行動を否定している。レイという女性の名前が繰り返し出ており、彼女をモデルにした戦士になることを考えている。字幕内容から、周囲の状況や相手のスキルに対する不満が伺える。",
+      "keywords": [
+        "男性",
+        "レイ",
+        "戦士",
+        "否定",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 5,
+      "summary": "男性が女性に対して、ゲームを続けるのをやめるように強く促している。戦闘に転向するという提案もするが、自身のダサさを考慮し、最終的にはレイという女性のゲームを読んだ方が良いと判断する。",
+      "keywords": [
+        "ゲーム",
+        "戦闘",
+        "レイ",
+        "主張",
+        "ダサい"
+      ]
+    },
+    {
+      "scene_id": 6,
+      "summary": "一人の男性が、自分の行動を否定し合い、周囲の人に「やめろ」と強く訴える。彼の言動は奇妙で、レイという女性や「ミッド」という人物、そして「ホーク」という存在についても言及している。",
+      "keywords": [
+        "男性",
+        "行動",
+        "否定",
+        "レイ",
+        "ミッド"
+      ]
+    },
+    {
+      "scene_id": 7,
+      "summary": "男性が自分の行動を止めさせようと焦り、レイという女性への言及と、自身の無様な姿を自覚している。彼は戦闘的な役割を検討したが、それを否定し、レイに焦点を当てている。",
+      "keywords": [
+        "戦闘",
+        "レイ",
+        "自己嫌悪",
+        "男性",
+        "無気力"
+      ]
+    },
+    {
+      "scene_id": 8,
+      "summary": "男性が女性に何かを止めさせようとしており、自身の振る舞いがダサいと指摘している。レイという女性と、彼女が「0.4って大戦士」という設定について議論している場面である。",
+      "keywords": [
+        "レイ",
+        "戦士",
+        "ダサい",
+        "議論",
+        "スキル"
+      ]
+    },
+    {
+      "scene_id": 9,
+      "summary": "男性がゲームプレイ中に「やめろ」と繰り返し叫び、レイという女性のゲーム攻略についてコメントしている。自身のプレイを「ダサい」と感じ、逆に戦士になることを検討している。",
+      "keywords": [
+        "ゲーム",
+        "レイ",
+        "戦士",
+        "批判",
+        "攻略"
+      ]
+    },
+    {
+      "scene_id": 10,
+      "summary": "20秒から26秒のシーンでは、男性が別れを切り出すような強い言葉を繰り返し、自身を「ダサい」と自嘲的に表現している。視覚的な情報は不明だが、周囲の人物（レイ、ミッド、スパイプなど）との会話と、武器（ホークなど）の所持状況が示唆される。",
+      "keywords": [
+        "別れ",
+        "自嘲",
+        "会話",
+        "武器",
+        "レイ"
+      ]
+    },
+    {
+      "scene_id": 11,
+      "summary": "スパイプを使って壁を測る会話が行われている。相手は壁が意味がないと指摘し、スパイプで測定することを提案している。ラストワンとスモーキャン、スプレッシャー100といった専門用語も交えながら議論している。",
+      "keywords": [
+        "スパイプ",
+        "ラストワン",
+        "スモーキャン",
+        "スプレッシャー",
+        "測定"
+      ]
+    },
+    {
+      "scene_id": 12,
+      "summary": "薄暗い室内で、複数の男たちが無線で指示を出し合っている。壁を設置する理由について議論があり、スパイプを使用することを示唆している。",
+      "keywords": [
+        "無線",
+        "スパイプ",
+        "議論",
+        "室内",
+        "指示"
+      ]
+    },
+    {
+      "scene_id": 13,
+      "summary": "人物（おそらく男性）が壁について議論している場面。壁の存在意義やスパイプの使用、照準の方向について意見を交わしている。",
+      "keywords": [
+        "壁",
+        "スパイプ",
+        "照準",
+        "議論",
+        "スモキャン"
+      ]
+    },
+    {
+      "scene_id": 14,
+      "summary": "男性たちが壁の存在について議論している場面。壁の必要性や威力（スパイプ、スプレッシャー）に関する意見交換が行われている。",
+      "keywords": [
+        "壁",
+        "スパイプ",
+        "スプレッシャー",
+        "議論",
+        "ラストワン"
+      ]
+    },
+    {
+      "scene_id": 15,
+      "summary": "男性同士が壁について議論しているシーン。壁の存在意義やスパイプの有効性について意見交換をしている。",
+      "keywords": [
+        "壁",
+        "スパイプ",
+        "議論",
+        "犯罪",
+        "情報"
+      ]
+    },
+    {
+      "scene_id": 16,
+      "summary": "男性が壁の存在意義について議論している場面。具体的な数値（60、100）やスパイプ、スモーキャンといった専門用語が用いられ、相手を戒める口調である。",
+      "keywords": [
+        "議論",
+        "壁",
+        "スパイプ",
+        "スモーキャン",
+        "数値"
+      ]
+    },
+    {
+      "scene_id": 17,
+      "summary": "グループ内で壁の設置理由について議論している場面。スパイプの視界に関する指摘や、スモーキャン、スプレッシャー100といった装備についても言及されている。",
+      "keywords": [
+        "スパイプ",
+        "スモーキャン",
+        "スプレッシャー",
+        "議論",
+        "装備"
+      ]
+    },
+    {
+      "scene_id": 18,
+      "summary": "グループ内で壁の設置について議論している場面。相手に「60は多すぎる」と指摘し、壁の必要性を問いかけるスパイプの言葉と、最終目標（スモーキャン、スプレッシャー100）の確認が行われている。",
+      "keywords": [
+        "スパイプ",
+        "壁",
+        "議論",
+        "最終目標",
+        "スモーキャン"
+      ]
+    },
+    {
+      "scene_id": 19,
+      "summary": "複数の男性が建物内、またはその周辺で、スパイプやスプレッシャーといった道具を使用している様子が映っている。壁について議論し、スパイプの利用に納得していない発言をしている。",
+      "keywords": [
+        "スパイプ",
+        "スプレッシャー",
+        "議論",
+        "道具",
+        "建物"
+      ]
+    },
+    {
+      "scene_id": 20,
+      "summary": "人物Aが、壁の設置について物申し、60弱は遅すぎると指摘。人物Bに対し、壁が意味がないと主張し、スパイプを使用すれば問題ない、と説明している。場面は、最終的なスモーキャンやスプレッシャー100に関する議論が行われている。",
+      "keywords": [
+        "スパイプ",
+        "壁",
+        "スモーキャン",
+        "スプレッシャー",
+        "議論"
+      ]
+    },
+    {
+      "scene_id": 21,
+      "summary": "複数の人物がスパイプやラッシャーなどの武器を使用している場面。壁を構えようとする人物に対し、武器の選択について異議を唱え、フラッシャーの状況に戸惑いを見せる。最終的に惜しくも攻撃を回避する。",
+      "keywords": [
+        "スパイプ",
+        "ラッシャー",
+        "フラッシャー",
+        "ドロー",
+        "アストラクション"
+      ]
+    },
+    {
+      "scene_id": 22,
+      "summary": "男性がフラッシャーを見つめ、驚愕している様子が描かれている。フラッシャーの異常な動作に混乱し、『アストラクション』という言葉を発する。",
+      "keywords": [
+        "フラッシャー",
+        "驚愕",
+        "アストラクション",
+        "異常",
+        "混乱"
+      ]
+    },
+    {
+      "scene_id": 23,
+      "summary": "男性がフラッシャーを前に進ませようと試みているシーン。相手に何かを訴えかけているが、フラッシャーの動作に困惑している様子が伺える。",
+      "keywords": [
+        "フラッシャー",
+        "アストラクション",
+        "男性",
+        "訴え",
+        "困惑"
+      ]
+    },
+    {
+      "scene_id": 24,
+      "summary": "レースシーンで、フラッシャーが高速で走行中に他の車両と接触。接触後、「やばくね？w」と発言するなど、事態に戸惑いを覗かせている。壁に隠れるなど、状況に対応できずに事故を起こした。",
+      "keywords": [
+        "レース",
+        "接触",
+        "フラッシャー",
+        "高速",
+        "事故"
+      ]
+    },
+    {
+      "scene_id": 25,
+      "summary": "ゲーム中のレースシーンで、プレイヤーが障害物を避けられず衝突。字幕には、当たる理由や状況への疑問、及び事前のカーブ状況に関するコメントが含まれている。",
+      "keywords": [
+        "レース",
+        "障害物",
+        "衝突",
+        "ゲーム",
+        "ハーフ"
+      ]
+    },
+    {
+      "scene_id": 26,
+      "summary": "レースでジェットコースターのパストハーフを行うシーン。ライバル車が急旋回し、相手車を回避できず、壁に隠れるほどの過剰な旋回により、衝突に至った。",
+      "keywords": [
+        "レース",
+        "ジェットコースター",
+        "パストハーフ",
+        "衝突",
+        "旋回"
+      ]
+    },
+    {
+      "scene_id": 27,
+      "summary": "レースシーンで、車が速すぎて相手を捉えられず、壁に隠れて制御不能になり、衝突を喫しました。ドライバーは状況を面白がって発言しています。",
+      "keywords": [
+        "レース",
+        "衝突",
+        "車",
+        "障害",
+        "ハーフ"
+      ]
+    },
+    {
+      "scene_id": 28,
+      "summary": "レースシーンで、ドライバーが高速で走行中に障害物を避けようとしていますが、コースの傾斜や曲がり方により、壁に隠れてしまい、衝突してしまいます。ドライバーは状況を分析し、その状況を説明しています。",
+      "keywords": [
+        "レース",
+        "障害物",
+        "衝突",
+        "コース",
+        "ドライバー"
+      ]
+    },
+    {
+      "scene_id": 29,
+      "summary": "レース中のドライバーが、車両の制御を誤り、壁に衝突するシーン。字幕からは、ドライバーの混乱や怒りの感情が伝わる。",
+      "keywords": [
+        "レース",
+        "衝突",
+        "車両",
+        "パーストハーフ",
+        "制御"
+      ]
+    },
+    {
+      "scene_id": 30,
+      "summary": "モータースポーツのレースシーン。ドライバーがジェットパーストハーフを起こし、コースを右に大きく曲がり、壁に隠れてしまい、接触事故を起こす。字幕には、事故の原因やドライバーの反応が示されている。",
+      "keywords": [
+        "モータースポーツ",
+        "ジェットパーストハーフ",
+        "コース",
+        "事故",
+        "ドライバー"
+      ]
+    },
+    {
+      "scene_id": 31,
+      "summary": "レース中、ドライバーが過剰に加速し、車両が壁に衝突。字幕では、加速の速さや車の角度、そして衝突の衝撃が特徴的に描写されている。",
+      "keywords": [
+        "レース",
+        "衝突",
+        "加速",
+        "車両",
+        "壁"
+      ]
+    },
+    {
+      "scene_id": 32,
+      "summary": "レース中のカートシーン。字幕によると、加速が速すぎると壁に隠れてコースを大きく曲がり、壁にぶつかってしまったようだ。発話内容から、ドライバーは事故の状況を率直に分析している。",
+      "keywords": [
+        "カート",
+        "レース",
+        "事故",
+        "加速",
+        "曲がり"
+      ]
+    },
+    {
+      "scene_id": 33,
+      "summary": "レース中のドライバーが、スピードを上げて走行中に障害物に接触。字幕には、その状況の混乱とドライバーの興奮が表現されている。",
+      "keywords": [
+        "レース",
+        "接触",
+        "障害物",
+        "ドライバー",
+        "ジェットパーストハーフ"
+      ]
+    },
+    {
+      "scene_id": 34,
+      "summary": "レースシーンで、速度が速すぎて相手を正確に捉えられず、接触を避けることができなかった。ドライバーは、曲がりすぎた結果、壁に隠れてしまい、ミスを引き起こしたと分析している。",
+      "keywords": [
+        "レース",
+        "ミス",
+        "曲がりすぎ",
+        "壁",
+        "接触"
+      ]
+    },
+    {
+      "scene_id": 35,
+      "summary": "レース中、パーストハーフの走行中に壁に接触。字幕では、速度が速すぎるといった状況や、走行方向の誤りによる接触を指摘。映像から、速度調整や走行方向への注意が求められた場面と推測できる。",
+      "keywords": [
+        "レース",
+        "パーストハーフ",
+        "壁接触",
+        "速度",
+        "ミス"
+      ]
+    },
+    {
+      "scene_id": 36,
+      "summary": "ドライバーが高速で走行中に障害物を避けられず、壁に接触するハーフコースミスが発生。字幕には、速度の速さや方向転換の過剰さ、壁による影響など、状況を説明する具体的な言葉が記載されている。",
+      "keywords": [
+        "ハーフコースミス",
+        "高速走行",
+        "壁接触",
+        "方向転換",
+        "ジェットパースト"
+      ]
+    },
+    {
+      "scene_id": 37,
+      "summary": "レースシーンで、車両が急旋回し、壁に隠れて大幅に方向を変えてしまい、壁に衝突。ドライバーは状況を面白がりの発言をしている。",
+      "keywords": [
+        "レース",
+        "車両",
+        "衝突",
+        "急旋回",
+        "ハーフ"
+      ]
+    },
+    {
+      "scene_id": 38,
+      "summary": "レース中の激しいミートアップシーン。字幕によると、ドライバーはスピードを上げすぎて相手を捉えられず、走行ラインの傾きにより壁に隠れてしまった。ミスにより大幅な減速を強いられている。",
+      "keywords": [
+        "レース",
+        "ミートアップ",
+        "ミス",
+        "減速",
+        "ジェットパーストハーフ"
+      ]
+    },
+    {
+      "scene_id": 39,
+      "summary": "レース中のドライバーが、スピード超過により障害物を避けられず、壁に衝突する場面。字幕テキストからは、ドライバーの焦りや悔しさが伝わってくる。",
+      "keywords": [
+        "レース",
+        "衝突",
+        "障害物",
+        "スピード超過",
+        "ハーフ"
+      ]
+    },
+    {
+      "scene_id": 40,
+      "summary": "屋外の公園で、男性がベンに座り、スマートフォンを操作している。背景には緑の芝生と木々が見える。",
+      "keywords": [
+        "公園",
+        "男性",
+        "ベン",
+        "スマートフォン",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 41,
+      "summary": "96秒から99.6秒の映像では、ある人物（メイポコ）が、もう一つの人物（メイ）に対して、ある行動（オーナイ、スミスなど）をせず、プロとして真剣に取り組むよう促している場面である。発話内容から、不適切な行動に対する強い要望が読み取れる。",
+      "keywords": [
+        "メイポコ",
+        "メイ",
+        "オーナイ",
+        "プロ",
+        "行動"
+      ]
+    },
+    {
+      "scene_id": 42,
+      "summary": "男性が激しい怒りを露わにし、複数人に相手の名前を連呼して、行動を強く否定している。特に、ある人物（メイポコ）に対して厳しく注意し、プロとしての自覚を促している。",
+      "keywords": [
+        "怒り",
+        "否定",
+        "メイポコ",
+        "プロ",
+        "徹底"
+      ]
+    },
+    {
+      "scene_id": 43,
+      "summary": "男性が騒動を起こし、その状況について他者（メイポコ、メイ、スミス）に不満を表明している。プロとしての責任を強調し、問題行動を停止するよう懇願している。",
+      "keywords": [
+        "騒動",
+        "不満",
+        "プロ",
+        "謝罪",
+        "停止"
+      ]
+    },
+    {
+      "scene_id": 44,
+      "summary": "104秒時点、男性が感情的な怒りを露わにし、オーナイ、メイポコ、スミスといった人物について批判的な発言を繰り返している。プロとしての責任を強調し、特定の行為を拒否する意思を示している。",
+      "keywords": [
+        "怒り",
+        "批判",
+        "プロ",
+        "拒否",
+        "メイポコ"
+      ]
+    },
+    {
+      "scene_id": 45,
+      "summary": "男性が感情的な言葉で、オーナイやメイといった人物の行動を批判し、メイポコに特定の行為をしないように懇願している。プロとしての責任を強調し、二角に真剣に離れることを願っている。",
+      "keywords": [
+        "メイポコ",
+        "オーナイ",
+        "メイ",
+        "プロ",
+        "批判"
+      ]
+    },
+    {
+      "scene_id": 46,
+      "summary": "男性が、ある人物（メイポコ）の行動を激しく非難している。プロとしての責任を果たすよう強く求め、過去の過失や問題行動を指摘している。",
+      "keywords": [
+        "メイポコ",
+        "非難",
+        "プロ",
+        "責任",
+        "過去"
+      ]
+    },
+    {
+      "scene_id": 47,
+      "summary": "このシーンは、ある人物（メイポコ）が過去の過ちを悔い、他の人物（メイ、スミス）に対して行動を改めようと懇願している場面である。激しい感情が入り乱れ、プロとしての責任を強調し、再び同じ過ちを犯さないよう切望している。",
+      "keywords": [
+        "メイポコ",
+        "メイ",
+        "スミス",
+        "プロ",
+        "後悔"
+      ]
+    },
+    {
+      "scene_id": 48,
+      "summary": "男性が激しい怒りを露わにし、メイポコやスミスといった人物に対して、プロとしての自覚を欠いた行動を強く非難している。相手に特定の行為を繰り返すことを恐れ、プロとしての二角（二本柱）を築いてほしいと願うが、結果としてメイが死亡してしまう可能性を嘆いている。",
+      "keywords": [
+        "怒り",
+        "非難",
+        "メイポコ",
+        "スミス",
+        "死亡"
+      ]
+    },
+    {
+      "scene_id": 49,
+      "summary": "主人公は、オーナイやメイ、メイポコなど、複数の人物が問題のある行動をとっていることに対し、強い失望と不快感を表明している。特にメイポコが先取りし、スミスも避けるべきだと指摘し、プロとしての責任を果たすため、彼らが問題を解決するよう強く訴えている。",
+      "keywords": [
+        "失望",
+        "問題行動",
+        "訴え",
+        "プロ",
+        "メイポコ"
+      ]
+    },
+    {
+      "scene_id": 50,
+      "summary": "男性が、ある人物（メイポコ）の行動を批判し、プロとして適切な行動を求めている。特に、最近のオーナイやメイといった人々が問題行動を起こしていることへの不満が強く表れている。",
+      "keywords": [
+        "メイポコ",
+        "批判",
+        "プロ",
+        "行動",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 51,
+      "summary": "男性が他愛のない行為や先取り行為をせず、プロとしての自覚を持って活動を停止することを懇願している。発言内容から、特定の人物（メイポコ、メイ、スミスなど）に対する不満や失望が示唆される。",
+      "keywords": [
+        "プロ",
+        "行為",
+        "停止",
+        "不満",
+        "懇願"
+      ]
+    },
+    {
+      "scene_id": 52,
+      "summary": "プレイヤーがゲーム内で「アストラルフォーム」の出現を予期して、仲間たち（メイポコ、メイ、二角）を強く非難している。突如としてゲームが中断されたことへの強い失望と、それに伴う仲間への苛立ちが表現されている。",
+      "keywords": [
+        "アストラルフォーム",
+        "ゲーム中断",
+        "メイポコ",
+        "二角",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 53,
+      "summary": "主人公がアストラルフォームへの移行を体験中。来るだろうと焦る様子がうかがえる。発話内容から、移行への期待と不安が入り混じっている。",
+      "keywords": [
+        "アストラルフォーム",
+        "イライラ",
+        "期待",
+        "不安",
+        "移行"
+      ]
+    },
+    {
+      "scene_id": 54,
+      "summary": "男性がアストラルフォームへの移行を説明しており、その過程で相手を不快に感じている様子が伺える。",
+      "keywords": [
+        "アストラルフォーム",
+        "イライラ",
+        "不快",
+        "説明",
+        "移行"
+      ]
+    },
+    {
+      "scene_id": 55,
+      "summary": "女性がアストラルフォームに入った瞬間、誰かにイライラしながらもその存在がすぐに来ると確信している。彼女の激しい感情が伝わってくる。",
+      "keywords": [
+        "アストラルフォーム",
+        "イライラ",
+        "確信",
+        "感情",
+        "女性"
+      ]
+    },
+    {
+      "scene_id": 56,
+      "summary": "激しいイライラを表明する女性が、アストラルフォームへの移行を夢見ていたことを語っている。場所や人物情報は不明だが、強い感情が伝わる場面である。",
+      "keywords": [
+        "イライラ",
+        "アストラルフォーム",
+        "夢",
+        "感情",
+        "女性"
+      ]
+    },
+    {
+      "scene_id": 57,
+      "summary": "主人公がアストラルフォームへの移行を待っている間、強い苛立ちを表現しています。字幕テキストからは、誰かに怒りを向けている状況が伺えます。",
+      "keywords": [
+        "アストラルフォーム",
+        "苛立ち",
+        "イライラ",
+        "待機",
+        "表現"
+      ]
+    },
+    {
+      "scene_id": 58,
+      "summary": "暖かく包まれるような瞬間。シーン全体を通して、繰り返される’あったあった’という発声が、心地よい暖かさ、安心感を表現している。",
+      "keywords": [
+        "暖かさ",
+        "安心",
+        "繰り返し",
+        "発声",
+        "瞬間"
+      ]
+    },
+    {
+      "scene_id": 59,
+      "summary": "暖かく、包み込まれるような感覚が繰り返されるシーン。人物や場所に関する情報は不明だが、繰り返される発声から、リラックスした環境で何らかの行為が行われている。",
+      "keywords": [
+        "リラックス",
+        "繰り返し",
+        "暖かく",
+        "包囲",
+        "発声"
+      ]
+    },
+    {
+      "scene_id": 60,
+      "summary": "暖かく包まれるような、繰り返し『あった』と繰り返される状況が描かれている。背景は不明だが、リラックスした雰囲気である。",
+      "keywords": [
+        "暖かく",
+        "あった",
+        "繰り返し",
+        "リラックス"
+      ]
+    },
+    {
+      "scene_id": 61,
+      "summary": "暖かく包まれるような、繰り返される『あったあった』という言葉が印象的なシーン。人物の特定や場所の描写は不明だが、何らかの暖かさや安心感を感じさせる様子が続いている。",
+      "keywords": [
+        "あった",
+        "暖かく",
+        "繰り返す",
+        "安心感",
+        "シーン"
+      ]
+    },
+    {
+      "scene_id": 62,
+      "summary": "暖炉の火が燃え盛る部屋で、人物が囲炉裏に囲まれてリラックスしている様子。字幕テキストは繰り返し『あったあった』という言葉で、暖かさや安らぎを感じさせる。",
+      "keywords": [
+        "暖炉",
+        "囲炉裏",
+        "リラックス",
+        "家族",
+        "暖かさ"
+      ]
+    },
+    {
+      "scene_id": 63,
+      "summary": "繰り返し「あったあった」という字幕が流れるシーン。場所や人物は不明だが、暖かく親しげな雰囲気を伝えている。",
+      "keywords": [
+        "あった",
+        "字幕",
+        "繰り返し",
+        "暖かく",
+        "親しみ"
+      ]
+    },
+    {
+      "scene_id": 64,
+      "summary": "暖かく居心地の良い空間で、繰り返し『あったあった』と発声している。背景は特定できないが、リラックスした雰囲気のシーンである。",
+      "keywords": [
+        "暖炉",
+        "居心地",
+        "リラックス",
+        "繰り返し",
+        "発声"
+      ]
+    },
+    {
+      "scene_id": 65,
+      "summary": "暖かく、繰り返される『あったあった』の言葉が印象的な場面。場所や人物の描写は不明だが、暖かく安らぎを感じさせるシーンである。",
+      "keywords": [
+        "暖房",
+        "繰り返す",
+        "安心",
+        "子供",
+        "抱っこ"
+      ]
+    },
+    {
+      "scene_id": 66,
+      "summary": "暖かく包まれるような、繰り返されるアタマを被る動作が描かれている。場所や人物は見えないが、何らかの物を被っている様子が繰り返されている。",
+      "keywords": [
+        "アタマ",
+        "被る",
+        "繰り返し",
+        "暖かく",
+        "アタマ"
+      ]
+    },
+    {
+      "scene_id": 67,
+      "summary": "暖かく、居心地の良い空間で、繰り返しの「あったあった」という声が響き渡っている。人物の特定情報はないが、その繰り返される言葉から、温かさや安心感を表現している。",
+      "keywords": [
+        "あった",
+        "暖かさ",
+        "繰り返し",
+        "安心感",
+        "空間"
+      ]
+    },
+    {
+      "scene_id": 68,
+      "summary": "男性が暖かく包まれるような服装で、繰り返し『あったあった』と発言している。場所や状況は不明だが、暖かさを感じている。",
+      "keywords": [
+        "暖房",
+        "快適",
+        "抱きしめる",
+        "発言",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 69,
+      "summary": "繰り返し出現する『あった』という言葉から、暖かく居心地の良い状況が描写されている。具体的な場所や人物は不明だが、リラックスした雰囲気のシーンである。",
+      "keywords": [
+        "暖かく",
+        "居心地",
+        "リラックス",
+        "繰り返し",
+        "あった"
+      ]
+    },
+    {
+      "scene_id": 70,
+      "summary": "暖かく包まれるような、繰り返し『あった』と発声するシーン。場所や人物に関する情報は不明だが、穏やかな背景の中でリラックスしている様子が伺える。",
+      "keywords": [
+        "暖房",
+        "リラックス",
+        "繰り返し",
+        "発声",
+        "穏やか"
+      ]
+    },
+    {
+      "scene_id": 71,
+      "summary": "暖かく、包み込まれるような情景が繰り返される。人物や場所に関する具体的な情報は不明だが、穏やかな雰囲気が伝わってくる。",
+      "keywords": [
+        "暖かさ",
+        "包容",
+        "繰り返し",
+        "穏やか",
+        "情景"
+      ]
+    },
+    {
+      "scene_id": 72,
+      "summary": "暖かく、可愛らしい雰囲気のシーン。繰り返し「あった」という字幕が、心地よい温かさや安らぎを表現している。",
+      "keywords": [
+        "暖かさ",
+        "可愛らしさ",
+        "繰り返し",
+        "字幕",
+        "安心"
+      ]
+    },
+    {
+      "scene_id": 73,
+      "summary": "暖かく居心地の良い環境を強調するシーン。繰り返される字幕は、暖かさや安心感を象徴している。",
+      "keywords": [
+        "暖房",
+        "居心地",
+        "安心",
+        "繰り返す",
+        "字幕"
+      ]
+    },
+    {
+      "scene_id": 74,
+      "summary": "暖かく包まれるようなシーン。繰り返し現れる「あったあった」という字幕テキストから、暖かさを感じている状況が伺える。",
+      "keywords": [
+        "暖房",
+        "快適",
+        "繰り返し",
+        "字幕",
+        "安心"
+      ]
+    },
+    {
+      "scene_id": 75,
+      "summary": "暖かく、包み込まれるような感覚を表現する短い繰り返しが行われている。おそらく、リラックスした状態や安心感を表している。",
+      "keywords": [
+        "暖かく",
+        "安心",
+        "繰り返し",
+        "リラックス",
+        "包み込む"
+      ]
+    },
+    {
+      "scene_id": 76,
+      "summary": "暖かく包まれるようなシーン。繰り返し登場する『あった』という発話から、暖かさや安らぎを感じ取る場面である。",
+      "keywords": [
+        "暖房",
+        "安心",
+        "繰り返し",
+        "発話",
+        "抱擁"
+      ]
+    },
+    {
+      "scene_id": 77,
+      "summary": "登場人物が海辺を歩いている。穏やかな波と青空が背景に広がり、リラックスした雰囲気だ。",
+      "keywords": [
+        "海辺",
+        "人物",
+        "歩行",
+        "風景",
+        "リラックス"
+      ]
+    },
+    {
+      "scene_id": 78,
+      "summary": "BリンクとBフェード、ジェットを繰り返す一連の動きが映し出されています。人物は複数おり、特定の名称を連呼している様子が確認できます。",
+      "keywords": [
+        "Bリンク",
+        "Bフェード",
+        "ジェット",
+        "人物",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 79,
+      "summary": "男性がBフェードとジェットで来るBリンクについて繰り返し言っているシーン。場所は特定できないが、Bリンクに関連する話し合いが行われている。",
+      "keywords": [
+        "Bリンク",
+        "Bフェード",
+        "ジェット",
+        "男性",
+        "話し合い"
+      ]
+    },
+    {
+      "scene_id": 80,
+      "summary": "人物がBフェードとジェットで来るBリンクを繰り返すシーン。場所は特定できないが、Bリンクに関連する何らかの活動が行われている。",
+      "keywords": [
+        "Bリンク",
+        "フェード",
+        "ジェット",
+        "B",
+        "リンク"
+      ]
+    },
+    {
+      "scene_id": 81,
+      "summary": "男性がBフェードとジェットで来るBリンクについて繰り返し言い続けているシーン。場所は特定できないが、Bリンクに関連する会話が行われている。",
+      "keywords": [
+        "Bリンク",
+        "ジェット",
+        "フェード",
+        "B",
+        "会話"
+      ]
+    },
+    {
+      "scene_id": 82,
+      "summary": "男性がBフェードとジェットで来るBリンクについて繰り返し発言しているシーン。場所や人物関係は不明。",
+      "keywords": [
+        "Bリンク",
+        "Bフェード",
+        "ジェット",
+        "発言",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 83,
+      "summary": "男性がBフェードとジェットで来るBリンクについて繰り返し語っているシーン。場所や状況は不明だが、特定の用語を連呼している。",
+      "keywords": [
+        "Bリンク",
+        "Bフェード",
+        "ジェット",
+        "繰り返し",
+        "発話"
+      ]
+    },
+    {
+      "scene_id": 84,
+      "summary": "主人公がBフェードとジェットで来るBリンクを案内しているシーン。繰り返し言葉を連発することで、興奮や焦燥感を表現している。",
+      "keywords": [
+        "Bリンク",
+        "Bフェード",
+        "ジェット",
+        "案内",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 85,
+      "summary": "男がBフェードやジェットといった言葉を繰り返すシーン。場所や人物は不明だが、複数のジェットに関連する言葉が続いている。",
+      "keywords": [
+        "Bフェード",
+        "ジェット",
+        "リンク",
+        "B",
+        "フェード"
+      ]
+    },
+    {
+      "scene_id": 86,
+      "summary": "男性が『B』という言葉を繰り返し発している。背景は特定できないが、おそらく都市部もしくはイベント会場のようである。彼はBフェードやジェットといった単語と合わせて『Bリンク』を指している。",
+      "keywords": [
+        "B",
+        "フェード",
+        "ジェット",
+        "リンク",
+        "発言"
+      ]
+    },
+    {
+      "scene_id": 87,
+      "summary": "Bリンクのイベント会場で、'B'、'フェード'、'ジェット'といったキーワードが繰り返し繰り返される声が聞こえる。会場内では、'B'フェードとジェットでのシステム連携が進められており、事象の状況を把握している。",
+      "keywords": [
+        "Bリンク",
+        "フェード",
+        "ジェット",
+        "イベント会場",
+        "システム連携"
+      ]
+    },
+    {
+      "scene_id": 88,
+      "summary": "屋外の公園で、若い男性がベンに座り、スマートフォンを操作している。穏やかな午後の光が差し込んでいる。",
+      "keywords": [
+        "公園",
+        "男性",
+        "ベン",
+        "スマートフォン",
+        "午後の光"
+      ]
+    },
+    {
+      "scene_id": 89,
+      "summary": "男性がオフィスでPCに向かい、集中して作業をしている様子が捉えられています。周囲はビジネスライクなオフィス環境です。",
+      "keywords": [
+        "オフィス",
+        "PC",
+        "作業",
+        "集中",
+        "男性"
+      ]
+    },
+    {
+      "scene_id": 90,
+      "summary": "屋外で、人物が歩行しているシーン。背景は木々のある公園で、穏やかな時間帯の様子が伺える。",
+      "keywords": [
+        "歩行",
+        "公園",
+        "屋外",
+        "人物",
+        "自然"
+      ]
+    },
+    {
+      "scene_id": 91,
+      "summary": "青い背景に、白いシンプルな立方体がゆっくりと回転している様子が捉えられている。空間は無機質で、立方体の動きが中心的な視覚要素となっている。",
+      "keywords": [
+        "立方体",
+        "回転",
+        "背景",
+        "シンプル",
+        "白い"
+      ]
+    },
+    {
+      "scene_id": 92,
+      "summary": "男性がアストラを期待していないことを表明している。背景や状況は不明だが、ある決断に至ったことを示唆している。",
+      "keywords": [
+        "アストラ",
+        "諦め",
+        "決断",
+        "男性",
+        "主張"
+      ]
+    },
+    {
+      "scene_id": 93,
+      "summary": "男性が、かつてアストラを期待していたが、もうそう考えることなく受け入れている様子が伝わる場面。具体的な理由は不明だが、諦めと冷静さを描写している。",
+      "keywords": [
+        "諦め",
+        "冷静",
+        "アストラ",
+        "男性",
+        "受け入れ"
+      ]
+    },
+    {
+      "scene_id": 94,
+      "summary": "男性がアストラに対する考えを放棄したことを表明している。背景は不明だが、ある決断に至ったと示唆している。",
+      "keywords": [
+        "アストラ",
+        "放棄",
+        "考え",
+        "決断"
+      ]
+    },
+    {
+      "scene_id": 95,
+      "summary": "男性がアストラというブランドを考えなくなった理由を語っている。背景は特定できないが、単独での発言である。",
+      "keywords": [
+        "アストラ",
+        "男性",
+        "発言",
+        "ブランド",
+        "理由"
+      ]
+    },
+    {
+      "scene_id": 96,
+      "summary": "男性が「もうアストラを思わない」という発言をしている。具体的な状況は不明だが、過去の感情や決意を表明している場面と推測される。",
+      "keywords": [
+        "アストラ",
+        "決意",
+        "感情",
+        "男性",
+        "発言"
+      ]
+    },
+    {
+      "scene_id": 97,
+      "summary": "主人公がアストラへの期待を失い、新たな状況下で不適格なキャラクターの流入に困惑している。画面に映る人物は武器やアイテムを提示しても効果がなく、モノトクの体勢も取れない状況を語っている。",
+      "keywords": [
+        "アストラ",
+        "不適格",
+        "モノトク",
+        "期待喪失",
+        "キャラクター"
+      ]
+    },
+    {
+      "scene_id": 98,
+      "summary": "人物がアスライフホーム内でゲーム（バンドン）を行う様子が描かれている。字幕の内容から、ゲーム参加を試みているものの、入場を許可されない状況に不満を漏らす様子がうかがえる。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "ゲーム",
+        "不満",
+        "モノトク体勢"
+      ]
+    },
+    {
+      "scene_id": 99,
+      "summary": "自宅でゲームをしている男性が、オンラインゲームのキャラクターが加入できない問題に頭を悩ませています。字幕からは、ゲーム内でのバンドン行為やアイテムの提供などを試みていることが分かります。",
+      "keywords": [
+        "オンラインゲーム",
+        "キャラクター",
+        "ゲーム難民",
+        "バンドン",
+        "アイテム"
+      ]
+    },
+    {
+      "scene_id": 100,
+      "summary": "男性がゲーム内でキャラクターの入室に関する戦略について議論している。キャラクターの入室を阻止しようと試み、アイテム（コメなど）を提案している。",
+      "keywords": [
+        "ゲーム",
+        "キャラクター",
+        "戦略",
+        "入室",
+        "モノトク"
+      ]
+    },
+    {
+      "scene_id": 101,
+      "summary": "プレイヤーがアスライフホームでゲームを行いながら、別のキャラクター（おそらくゲーム内キャラクター）の入室を警戒している。バンドンやアイテムを提案するも効果はなく、モノトクの体勢を取りにくい状況が続いている。",
+      "keywords": [
+        "アスライフホーム",
+        "ゲーム",
+        "バンドン",
+        "モノトク",
+        "キャラクター"
+      ]
+    },
+    {
+      "scene_id": 102,
+      "summary": "男性がゲーム内でキャラクターの入室を阻止しようと試みているシーン。アスライフホームでの待ち状況や、バンドンを使ってアイテムを渡そうとするなど、緊迫した状況が描写されている。",
+      "keywords": [
+        "ゲーム",
+        "キャラクター",
+        "入室阻止",
+        "道具",
+        "対立"
+      ]
+    },
+    {
+      "scene_id": 103,
+      "summary": "男性がゲーム内のキャラクターの入室を阻止しようと試みている。キャラクターの入室不可を強調し、バンデージやコメントを贈るなど、状況を打開しようとしている。モノトクの体勢に関する言及もある。",
+      "keywords": [
+        "ゲーム",
+        "キャラクター",
+        "入室阻止",
+        "モノトク",
+        "バンデージ"
+      ]
+    },
+    {
+      "scene_id": 104,
+      "summary": "人物がアスライフホームに入った後、別のキャラクターを警戒し、バンドンや小物を贈ろうとする。発言内容は、自身のモノトクの体勢が頻繁に入らないことに関心を示している。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "小放物",
+        "モノトク",
+        "警戒"
+      ]
+    },
+    {
+      "scene_id": 105,
+      "summary": "男性がアスライフホームでの待ち状況を語り、別のキャラクターの侵入を警戒している。バンドンをオファーしたり、視覚的な注意を引こうとするなど、状況を打開しようと試みている。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "警戒",
+        "モノトク体勢",
+        "キャラクター"
+      ]
+    },
+    {
+      "scene_id": 106,
+      "summary": "男性がゲーム内でキャラクターの入室を阻止しようと試みている。0秒前までアスライフホームで待機していたにもかかわらず、キャラクターの入室を拒否し、バンドンやコメントを提案している。",
+      "keywords": [
+        "ゲーム",
+        "キャラクター",
+        "入室阻止",
+        "バンドン",
+        "アスライフホーム"
+      ]
+    },
+    {
+      "scene_id": 107,
+      "summary": "人物がアスライフホームに入った際、別の人物にバンドンや小物を差し出し、自身がモノトクの体勢をうまく取れないことに戸惑いを覚えている。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "モノトク",
+        "体勢",
+        "物"
+      ]
+    },
+    {
+      "scene_id": 108,
+      "summary": "男性がアスライフホームに入った際、そこにいる人物の入室を阻止しようと試みる。相手にバンドンやコメントを贈り、目の前に置くなどと行動するが、モノトクの体勢に入れないという不満を述べている。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "モノトク",
+        "体勢",
+        "阻止"
+      ]
+    },
+    {
+      "scene_id": 109,
+      "summary": "男性がアスライフホームでゲームをしているシーン。バンドン（ゲーム内アイテム）を配ろうとするが、キャラクターの入場を阻止しようと試みている。",
+      "keywords": [
+        "アスライフホーム",
+        "ゲーム",
+        "バンドン",
+        "キャラクター",
+        "モノトク"
+      ]
+    },
+    {
+      "scene_id": 110,
+      "summary": "男性がゲーム内でキャラクターの入室を阻止しようと試みている。相手にバンドンやコメントを贈るも効果はなく、自身の不慣れな体勢にも苦慮している。",
+      "keywords": [
+        "ゲーム",
+        "キャラクター",
+        "バンドン",
+        "体勢",
+        "モノトク"
+      ]
+    },
+    {
+      "scene_id": 111,
+      "summary": "男性がアスライフホームに入った人物を警戒し、バンドンを渡すなどして注意を引こうとしている。最近モノトクの体勢に入らないことに不満を抱いている。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "モノトク",
+        "体勢",
+        "警戒"
+      ]
+    },
+    {
+      "scene_id": 112,
+      "summary": "室内で複数の人物（おそらくゲーム）が議論しているシーン。発話内容から、特定のキャラクターの参加を巡って混乱が生じていることがわかる。バンドン（武器）や物を勧めるなど、緊迫した状況が窺える。",
+      "keywords": [
+        "ゲーム",
+        "議論",
+        "キャラクター",
+        "バンドン",
+        "モノトク"
+      ]
+    },
+    {
+      "scene_id": 113,
+      "summary": "男性がアスライフホームでの状況を語っており、特定の人物をバンドン（武器）やコメ（食べ物）で誘惑しようとしている。モノトクの体勢に入れないことへの不満も表明している。",
+      "keywords": [
+        "アスライフホーム",
+        "バンドン",
+        "コメ",
+        "モノトク",
+        "体勢"
+      ]
+    },
+    {
+      "scene_id": 114,
+      "summary": "プレイヤーがアスライフホームに入った際に、敵キャラクターの侵入を阻止しようと試みる。バンドンやコメントを投げつけるなど、応戦を試みるがモノトクの体勢に入ることができず、敵キャラクターの侵入を食い止めることができない。",
+      "keywords": [
+        "アスライフホーム",
+        "モノトク",
+        "敵キャラクター",
+        "戦闘",
+        "バンドン"
+      ]
+    },
+    {
+      "scene_id": 115,
+      "summary": "プレイヤーが敵の接近に備え、モノトクの体勢を整えようとしている。しかし、敵はまだ接近していないため、状況を把握しようとしながら、攻撃準備を待っている。プレイヤーは相手の動きを観察し、必要に応じてチャージを準備している。",
+      "keywords": [
+        "モノトク",
+        "体勢",
+        "攻撃準備",
+        "敵接近",
+        "チャージ"
+      ]
+    },
+    {
+      "scene_id": 116,
+      "summary": "格闘技の試合シーン。相手が到着せず、選手が相手がフィールドに侵入したかどうかを確認している。相手の入技を確認し、チャージを試みている。",
+      "keywords": [
+        "格闘技",
+        "試合",
+        "相手",
+        "入技",
+        "チャージ"
+      ]
+    },
+    {
+      "scene_id": 117,
+      "summary": "プレイヤーが敵の接近について質問し、相手が攻撃を受けなかったことを確認している場面。チャージ攻撃の可能性も示唆されている。",
+      "keywords": [
+        "戦闘",
+        "確認",
+        "チャージ",
+        "攻撃",
+        "敵"
+      ]
+    },
+    {
+      "scene_id": 118,
+      "summary": "対戦中に敵が接近せず、攻撃を仕掛けてこなかったことについて、相手が確認作業を行い、効果的にチャージを始めたことを説明している。相手の行動がトラウマとなり、帰還できず、今後のリメイクに影響を及ぼす可能性も示唆されている。",
+      "keywords": [
+        "対戦",
+        "チャージ",
+        "帰還",
+        "リメイク",
+        "確認"
+      ]
+    },
+    {
+      "scene_id": 119,
+      "summary": "男性がボムに関するトラウマを語り、帰宅を希望するも不可能であることを嘆いている。リメイクの話題にも触れ、自身の行動を後悔している様子が伺える。",
+      "keywords": [
+        "ボム",
+        "トラウマ",
+        "帰宅",
+        "リメイク",
+        "後悔"
+      ]
+    },
+    {
+      "scene_id": 120,
+      "summary": "男性がボム爆破のトラウマに苦しみ、リメイクに関する不安を漏らすシーン。映像では、疲れた表情の男性が一人でいる様子が確認できる。",
+      "keywords": [
+        "ボム",
+        "トラウマ",
+        "リメイク",
+        "不安",
+        "バンド"
+      ]
+    },
+    {
+      "scene_id": 121,
+      "summary": "男性がボムに関するトラウマ体験を語り、リメイクの可能性を嘆いている。彼の言葉は、過去の出来事に対する強い感情を反映している。",
+      "keywords": [
+        "ボム",
+        "トラウマ",
+        "リメイク",
+        "嘆き",
+        "バンド"
+      ]
+    },
+    {
+      "scene_id": 122,
+      "summary": "男性がボムに関するトラウマ体験から、自宅への帰還を諦め、バンドのリメイクについて不満を漏らしている場面。場所は屋内。深刻な表情を浮かべ、後悔の念を表明している。",
+      "keywords": [
+        "ボム",
+        "トラウマ",
+        "リメイク",
+        "不満",
+        "帰還"
+      ]
+    },
+    {
+      "scene_id": 123,
+      "summary": "男性がボムのような状況に巻き込まれ、精神的な悪影響を受けている様子が描かれている。ブラインドショットの危険性を指摘し、弾が出ないようにするための対策を促している。",
+      "keywords": [
+        "ボム",
+        "ブラインドショット",
+        "リメイク",
+        "精神的",
+        "対策"
+      ]
+    },
+    {
+      "scene_id": 124,
+      "summary": "男性がブラインドショットの際の注意点について指示しているシーン。彼は弾丸がブラインドから出ないようにするべきだと強調している。",
+      "keywords": [
+        "ブラインドショット",
+        "弾丸",
+        "注意点",
+        "指示",
+        "射撃"
+      ]
+    },
+    {
+      "scene_id": 125,
+      "summary": "男性がブラインドショットに関する指示を出しているシーン。ブラインドショットの射撃で弾が出ないように注意する必要があるようだ。",
+      "keywords": [
+        "ブラインドショット",
+        "指示",
+        "射撃",
+        "注意",
+        "弾"
+      ]
+    },
+    {
+      "scene_id": 126,
+      "summary": "男性がブラインドショット（おそらく銃）について、弾が出ないように注意する必要があることを指摘している。状況が不明だが、戦闘または訓練に関連している可能性が考えられる。",
+      "keywords": [
+        "ブラインドショット",
+        "弾",
+        "注意",
+        "銃",
+        "ショット"
+      ]
+    },
+    {
+      "scene_id": 127,
+      "summary": "男性がブラインドショットの注意点について話しているシーン。ブラインド発射時に弾が発射されないように対策することを示唆している。",
+      "keywords": [
+        "ブラインドショット",
+        "弾",
+        "対策",
+        "注意点",
+        "射撃"
+      ]
+    },
+    {
+      "scene_id": 128,
+      "summary": "男性がブラインドショットの危険性を指摘し、弾出しないように対策を促している場面。屋外で、ブラインドは視界を遮る要因となる。",
+      "keywords": [
+        "ブラインドショット",
+        "弾出",
+        "対策",
+        "警告",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 129,
+      "summary": "男性がブラインドショットの危険性を指摘し、弾丸が出ないように対策を促している。周囲の状況は不明だが、射撃または銃撃に関連する状況と推測される。",
+      "keywords": [
+        "ブラインドショット",
+        "弾丸",
+        "対策",
+        "射撃",
+        "銃撃"
+      ]
+    },
+    {
+      "scene_id": 130,
+      "summary": "男性がブラインドショットに対して、弾が出ないように注意を促している。状況は室内と思われる。",
+      "keywords": [
+        "ブラインドショット",
+        "弾",
+        "注意",
+        "室内",
+        "射撃"
+      ]
+    },
+    {
+      "scene_id": 131,
+      "summary": "男性がブラインドショットに関する注意喚起をしているシーン。周囲の状況は見えないが、射撃に関する指示や警告が発せられている。",
+      "keywords": [
+        "ブラインドショット",
+        "射撃",
+        "注意喚起",
+        "警告",
+        "指示"
+      ]
+    },
+    {
+      "scene_id": 132,
+      "summary": "男性がブラインドショットの使用について注意喚起している場面。弾が出ないようにブラインドを設けることの重要性を伝えている。",
+      "keywords": [
+        "ブラインドショット",
+        "注意喚起",
+        "弾",
+        "安全",
+        "射撃"
+      ]
+    },
+    {
+      "scene_id": 133,
+      "summary": "男性がブラインドショットの危険性を指摘し、弾が出ないように注意を促している。背景には室内と思われる映像が映っている。",
+      "keywords": [
+        "ブラインドショット",
+        "警告",
+        "弾",
+        "室内",
+        "注意"
+      ]
+    },
+    {
+      "scene_id": 134,
+      "summary": "人物がブラインドショットの使用について注意を喚起している場面。おそらく射撃訓練や演習の様子で、ブラインドショットを使用した場合の危険性を指摘している。",
+      "keywords": [
+        "射撃",
+        "ブラインドショット",
+        "注意喚起",
+        "訓練",
+        "安全"
+      ]
+    },
+    {
+      "scene_id": 135,
+      "summary": "射撃訓練の場で、射撃員がブラインドショットを試みている。字幕には、弾が出ないように注意する必要があるという指示が含まれている。",
+      "keywords": [
+        "射撃訓練",
+        "ブラインドショット",
+        "弾",
+        "指示",
+        "射撃員"
+      ]
+    },
+    {
+      "scene_id": 136,
+      "summary": "男性が屋外の公園でベンに座っている。穏やかな時間帯で、リラックスした様子が見られる。",
+      "keywords": [
+        "公園",
+        "ベン",
+        "男性",
+        "リラックス",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 137,
+      "summary": "男性が公園のベンチに座り、スマートフォンを操作している。背景には緑の芝生と木々が見える。",
+      "keywords": [
+        "公園",
+        "ベンチ",
+        "男性",
+        "スマートフォン",
+        "休憩"
+      ]
+    },
+    {
+      "scene_id": 138,
+      "summary": "人物が屋外にある公園でベンチに座っている。穏やかな時間帯で、リラックスした様子が伺える。",
+      "keywords": [
+        "公園",
+        "ベンチ",
+        "人物",
+        "リラックス",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 139,
+      "summary": "人物が2階の斜め壁に目が行き交うシーン。字幕には'Bメイン'という言葉が繰り返し出現し、おそらくストーリーの重要な部分や、特定のフレーズを繰り返している。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "ストーリー",
+        "人物"
+      ]
+    },
+    {
+      "scene_id": 140,
+      "summary": "男性が2階の斜め壁に注目している様子。繰り返し『Bメイン』と発言しており、おそらく何かストーリーに関連する技を試している。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "ストーリー",
+        "技"
+      ]
+    },
+    {
+      "scene_id": 141,
+      "summary": "2階の壁に向かって何かを試している人物。繰り返し『Bメイン』という言葉を発しており、その目的や施策が不明。",
+      "keywords": [
+        "2階",
+        "壁",
+        "Bメイン",
+        "試み",
+        "忘れていた"
+      ]
+    },
+    {
+      "scene_id": 142,
+      "summary": "男性が2階の斜め壁を指差し、'Bメイン、Bメイン...'と繰り返しながら、ストーリーの技術的な要素についての確認をしている。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "ストーリー",
+        "確認"
+      ]
+    },
+    {
+      "scene_id": 143,
+      "summary": "2階の斜め壁を練習している人物。字幕には『Bメイン』という言葉が繰り返し出ており、おそらくトレーニングの指示や目標を示している。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "トレーニング",
+        "練習"
+      ]
+    },
+    {
+      "scene_id": 144,
+      "summary": "男性が2階の斜め壁について話し、具体的な指示として『Bメイン』を繰り返している。ストーリーや技に関する話題である。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "ストーリー",
+        "技"
+      ]
+    },
+    {
+      "scene_id": 145,
+      "summary": "人物が2階の斜め壁について話し、'Bメイン'という言葉を繰り返している。背景には壁が確認できる。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "人物",
+        "会話"
+      ]
+    },
+    {
+      "scene_id": 146,
+      "summary": "2階の壁に向かって何かを試している人物。Bメインという単語を繰り返し述べており、おそらく特定のシーンの指示やリハーサルの一部である。",
+      "keywords": [
+        "2階",
+        "壁",
+        "Bメイン",
+        "リハーサル",
+        "ストーリー"
+      ]
+    },
+    {
+      "scene_id": 147,
+      "summary": "2階の壁に向かって何かを試している人物。繰り返される『Bメイン』という言葉から、特定の演出やタスクを指示されている様子が伺える。",
+      "keywords": [
+        "2階",
+        "壁",
+        "Bメイン",
+        "演出",
+        "タスク"
+      ]
+    },
+    {
+      "scene_id": 148,
+      "summary": "2階の壁に向かって何かを試みている男性。彼は何をしようとしているのか完全に忘れており、繰り返し『Bメイン』と発声している。",
+      "keywords": [
+        "2階",
+        "壁",
+        "Bメイン",
+        "忘れる",
+        "試み"
+      ]
+    },
+    {
+      "scene_id": 149,
+      "summary": "2階の斜め壁を練習しているシーン。人物は壁に向かって繰り返し動き、'Bメイン'という言葉を繰り返す。",
+      "keywords": [
+        "壁打ち",
+        "Bメイン",
+        "練習",
+        "2階",
+        "ストーリー"
+      ]
+    },
+    {
+      "scene_id": 150,
+      "summary": "2階の斜め壁を練習している人物。字幕には『Bメイン』という言葉が繰り返し出現しており、おそらくトレーニングの繰り返しを示唆している。",
+      "keywords": [
+        "2階",
+        "斜め壁",
+        "Bメイン",
+        "トレーニング",
+        "練習"
+      ]
+    },
+    {
+      "scene_id": 151,
+      "summary": "男性が壁にぶつかる接触事故が発生しています。繰り返し「壁反応」という字幕が表示され、壁との接触が強調されています。",
+      "keywords": [
+        "接触",
+        "壁",
+        "事故",
+        "反応",
+        "男性"
+      ]
+    },
+    {
+      "scene_id": 152,
+      "summary": "壁反応を確認する場面。人物が壁にぶつかる状況を繰り返し伝え、壁反応を強調している。",
+      "keywords": [
+        "壁反応",
+        "衝撃",
+        "危険",
+        "注意",
+        "衝突"
+      ]
+    },
+    {
+      "scene_id": 153,
+      "summary": "監視カメラ映像から、壁反応が繰り返されています。映像には壁と接触する人物が確認できます。",
+      "keywords": [
+        "壁反応",
+        "監視カメラ",
+        "接触",
+        "人物",
+        "反応"
+      ]
+    },
+    {
+      "scene_id": 154,
+      "summary": "映像のシーンは、壁反応の繰り返しを示している。壁にぶつかる音と、その繰り返しが確認できる。",
+      "keywords": [
+        "壁反応",
+        "音",
+        "繰り返し",
+        "壁",
+        "現象"
+      ]
+    },
+    {
+      "scene_id": 155,
+      "summary": "男性が壁に向かって手で叩きつけ、壁反応を繰り返している場面。壁全体に衝撃が伝わる様子が捉えられている。",
+      "keywords": [
+        "壁反応",
+        "衝撃",
+        "人体",
+        "訓練",
+        "運動"
+      ]
+    },
+    {
+      "scene_id": 156,
+      "summary": "男性がフィールドを走り続けているシーン。絶え間ない繰り返しの叫び声『走らない』が、彼の必死の思いを表現している。",
+      "keywords": [
+        "ランニング",
+        "叫び",
+        "フィールド",
+        "運動",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 157,
+      "summary": "人物がひたすら『走らない』と繰り返している場面。背景は特定できないが、激しい運動や意思の固執を示唆している。",
+      "keywords": [
+        "走らない",
+        "繰り返し",
+        "運動",
+        "意志",
+        "人物"
+      ]
+    },
+    {
+      "scene_id": 158,
+      "summary": "人物が一直線に突進しているシーン。繰り返される『走らない』という声と合わせて、激しい速度で前進する様子がわかります。",
+      "keywords": [
+        "突進",
+        "走る",
+        "速度",
+        "声",
+        "激しい"
+      ]
+    },
+    {
+      "scene_id": 159,
+      "summary": "人物が走り続けている場面。複数回『走らない』という言葉が繰り返されており、その人物が激しく走っている様子が伝わる。",
+      "keywords": [
+        "ランニング",
+        "疾走",
+        "運動",
+        "繰り返し",
+        "走らない"
+      ]
+    },
+    {
+      "scene_id": 160,
+      "summary": "人物が高速で走り続けるシーン。背景は不明だが、繰り返される『走らない』という字幕から、勢いのある動きが強調されている。",
+      "keywords": [
+        "ランニング",
+        "スピード",
+        "人物",
+        "繰り返し",
+        "走る"
+      ]
+    },
+    {
+      "scene_id": 161,
+      "summary": "人物が高速で走るシーンです。繰り返し同じ言葉を繰り返すため、その人物の焦りや興奮を表している可能性があります。",
+      "keywords": [
+        "ランニング",
+        "速度",
+        "繰り返し",
+        "焦り",
+        "運動"
+      ]
+    },
+    {
+      "scene_id": 162,
+      "summary": "人物が連続して加速して走っている場面。背景は特定できないが、激しい運動が繰り返されている。",
+      "keywords": [
+        "ランニング",
+        "加速",
+        "運動",
+        "走る",
+        "継続"
+      ]
+    },
+    {
+      "scene_id": 163,
+      "summary": "人物が、繰り返し '走らない' と発声しながら、加速して走っている様子が捉えられています。",
+      "keywords": [
+        "走る",
+        "繰り返し",
+        "発声",
+        "加速"
+      ]
+    },
+    {
+      "scene_id": 164,
+      "summary": "ランナーが繰り返し『走らない』と叫びながら、走り続けている。場所や状況は不明だが、手放せないような執着が感じられる。",
+      "keywords": [
+        "ランナー",
+        "叫び",
+        "走らない",
+        "執着",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 165,
+      "summary": "男性が激しくランニングを繰り返している。背景は特定できないが、単調な繰り返し動作が強調されている。",
+      "keywords": [
+        "ランニング",
+        "繰り返し",
+        "男性",
+        "運動",
+        "激しい"
+      ]
+    },
+    {
+      "scene_id": 166,
+      "summary": "男性がランニングコース上を激しく走り、繰り返して『走らない』と叫んでいるシーン。",
+      "keywords": [
+        "ランニング",
+        "叫び",
+        "運動",
+        "繰り返し",
+        "男性"
+      ]
+    },
+    {
+      "scene_id": 167,
+      "summary": "男性が走りながら繰り返し『走らない』と叫んでいるシーン。場所や状況は不明だが、強い意志や衝動を表現している。",
+      "keywords": [
+        "走る",
+        "叫び",
+        "衝動",
+        "男性",
+        "繰り返す"
+      ]
+    },
+    {
+      "scene_id": 168,
+      "summary": "人物が一直線に進んでいくシーン。複数の繰り返しで『走らない』という字幕が表示されている。",
+      "keywords": [
+        "人物",
+        "走る",
+        "繰り返し",
+        "字幕",
+        "直線"
+      ]
+    },
+    {
+      "scene_id": 169,
+      "summary": "男性が地道に、繰り返し走り続けている。背景は特定できないが、集中して動き続けている様子が伺える。",
+      "keywords": [
+        "ランニング",
+        "繰り返し",
+        "運動",
+        "集中",
+        "継続"
+      ]
+    },
+    {
+      "scene_id": 170,
+      "summary": "男性が一直線に走り続けているシーン。背景はぼやけており、人物の速度が強調されている。",
+      "keywords": [
+        "ランニング",
+        "男性",
+        "速度",
+        "直線",
+        "運動"
+      ]
+    },
+    {
+      "scene_id": 171,
+      "summary": "人物が一直線に走り続けているシーン。背景は不明だが、繰り返される『走らない』という字幕から、その動きに集中していることがわかる。",
+      "keywords": [
+        "ランニング",
+        "走る",
+        "集中",
+        "繰り返し",
+        "発声"
+      ]
+    },
+    {
+      "scene_id": 172,
+      "summary": "人物が公園の芝生を横切って疾走しているシーン。繰り返し『走らない』という字幕が表示され、激しい動きが強調されている。",
+      "keywords": [
+        "公園",
+        "芝生",
+        "疾走",
+        "人物",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 173,
+      "summary": "野球の練習風景。1であるという選手が、相手の打球を待つ際にミットを置いてしまう状況が描かれている。コーチはミットを保持していることの必要性を指摘している。",
+      "keywords": [
+        "野球",
+        "ミット",
+        "練習",
+        "コーチ",
+        "打球"
+      ]
+    },
+    {
+      "scene_id": 174,
+      "summary": "武道場と思われる場所で、1であるという人物が、相手の打撃に対してミットを置く必要性を議論している。相手の打撃が来るのを待ってミットを投げるべきではないと述べている。",
+      "keywords": [
+        "武道",
+        "ミット",
+        "議論",
+        "打撃",
+        "投げ方"
+      ]
+    },
+    {
+      "scene_id": 175,
+      "summary": "野球の練習風景で、1であるという人物がミットの投げ方を質問している。相手の打球を意識して捕る場合と、ミットを置いて待つ場合の投げ出し方について議論している。",
+      "keywords": [
+        "野球",
+        "ミット",
+        "練習",
+        "投げ方",
+        "議論"
+      ]
+    },
+    {
+      "scene_id": 176,
+      "summary": "野球の練習風景で、ある人物がミットを落としてしまった状況を説明している。相手が打席にいるため、ミットを投げ出す必要はないと主張している。",
+      "keywords": [
+        "野球",
+        "ミット",
+        "練習",
+        "落とし",
+        "打席"
+      ]
+    },
+    {
+      "scene_id": 177,
+      "summary": "打撃練習の場面で、選手がボールを投げ捨てることを疑問視している。 相手の打球に応じてボールを落とすことが想定されており、ミットの存在を念及けている。",
+      "keywords": [
+        "打撃練習",
+        "ボール",
+        "ミット",
+        "選手",
+        "相手"
+      ]
+    },
+    {
+      "scene_id": 178,
+      "summary": "内野手がミットを落とす状況について議論している場面。相手の打球を間違いなく捕るために、落とした場合はミットを投げないという指示が出ている。",
+      "keywords": [
+        "内野手",
+        "ミット",
+        "落とし",
+        "指示",
+        "打球"
+      ]
+    },
+    {
+      "scene_id": 179,
+      "summary": "屋外の広場に、複数の人物が歩いている様子が映っている。背景には建物を一列に並べた風景が見える。",
+      "keywords": [
+        "広場",
+        "人物",
+        "風景",
+        "屋外",
+        "建物"
+      ]
+    },
+    {
+      "scene_id": 180,
+      "summary": "人物が複数のプロジェクト（エンメイン、ベイド、アートケア）について議論している。タイミングが悪いことを不満とし、相手を侮辱する発言を繰り返している。",
+      "keywords": [
+        "アートケア",
+        "エンメイン",
+        "ベイド",
+        "不満",
+        "侮辱"
+      ]
+    },
+    {
+      "scene_id": 181,
+      "summary": "人物（リリンク）が、犬と猫だけが反応するゲーム（エンメイン、ベイド）をプレイしている。不満を漏らしながら、画面奥を見る指示を受け、タイミングの悪さに苛立っている。",
+      "keywords": [
+        "ゲーム",
+        "リリンク",
+        "犬",
+        "猫",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 182,
+      "summary": "人物が絵画（アートケア）を鑑賞している場面。背景にはエンメイン、ベイドが確認されている。不機嫌な様子でタイミングを悪くしている。",
+      "keywords": [
+        "絵画",
+        "アートケア",
+        "不機嫌",
+        "タイミング",
+        "ベイド"
+      ]
+    },
+    {
+      "scene_id": 183,
+      "summary": "人物が、エンメインとベイドだけ開いていることを確認し、アートケアの状況を説明している。不機嫌な表情で、タイミングが悪いことや、言葉の乱れによって苛立ちを露わにする。",
+      "keywords": [
+        "アートケア",
+        "エンメイン",
+        "ベイド",
+        "タイミング",
+        "苛立ち"
+      ]
+    },
+    {
+      "scene_id": 184,
+      "summary": "撮影中に、スタッフがカメラのレンズや機材の開閉作業を行っている。不具合やタイミングの悪さに苛立ちを見せ、「死ね」といった不快な言葉を発する。",
+      "keywords": [
+        "撮影",
+        "機材",
+        "不具合",
+        "苛立ち",
+        "不快"
+      ]
+    },
+    {
+      "scene_id": 185,
+      "summary": "人物がアートケア関連の機器（エンメイン、ベイド）を操作している場面。不機嫌な様子で、リリンクの指示に従い、タイミングが悪いことを訴えている。",
+      "keywords": [
+        "アートケア",
+        "リリンク",
+        "不機嫌",
+        "操作",
+        "タイミング"
+      ]
+    },
+    {
+      "scene_id": 186,
+      "summary": "リリンクが、エンメイン、ベイドの開錠を確認し、アートケアについて指示を受けている。不具合やタイミングの悪さに苛立ちを露わにし、否定的な言葉を繰り返している。",
+      "keywords": [
+        "リリンク",
+        "アートケア",
+        "エンメイン",
+        "ベイド",
+        "不具合"
+      ]
+    },
+    {
+      "scene_id": 187,
+      "summary": "男性がアートケアの装置（エンメイン、ベイド）を操作している様子。装置が正常に動作せず、不満を漏らす発言が繰り返されている。空間は屋内と思われる。",
+      "keywords": [
+        "アートケア",
+        "装置",
+        "エンメイン",
+        "ベイド",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 188,
+      "summary": "人物が道を歩いているシーン。背景には都市の建物が見える。",
+      "keywords": [
+        "人物",
+        "道",
+        "都市",
+        "歩行",
+        "風景"
+      ]
+    },
+    {
+      "scene_id": 189,
+      "summary": "人物が公園のベンチに座り、手本風景を眺めている。穏やかな時間帯で、リラックスした雰囲気。",
+      "keywords": [
+        "公園",
+        "ベンチ",
+        "風景",
+        "リラックス",
+        "人物"
+      ]
+    },
+    {
+      "scene_id": 190,
+      "summary": "人物が屋外の駐車場で自動車に近づいている。車の詳細は不明だが、周囲の環境から、街中の一角である。",
+      "keywords": [
+        "駐車場",
+        "自動車",
+        "人物",
+        "屋外",
+        "接近"
+      ]
+    },
+    {
+      "scene_id": 191,
+      "summary": "人物が屋外に立っているシーン。背景は建築物が見えるが、詳しい状況は不明。静止した状態が続いている。",
+      "keywords": [
+        "人物",
+        "屋外",
+        "建築物",
+        "静止",
+        "風景"
+      ]
+    },
+    {
+      "scene_id": 192,
+      "summary": "人物が屋外で歩行しているシーン。背景は公園で、人物はリラックスした様子で歩いている。",
+      "keywords": [
+        "人物",
+        "公園",
+        "歩行",
+        "屋外",
+        "リラックス"
+      ]
+    },
+    {
+      "scene_id": 193,
+      "summary": "男性が熱を出して苦しんでいる様子。泣きながら『しんどい』と発言し、スモークを吸おうとしている。体調不良と高熱で強い痛みを訴えている。",
+      "keywords": [
+        "熱",
+        "苦しみ",
+        "高熱",
+        "スモーク",
+        "泣き声"
+      ]
+    },
+    {
+      "scene_id": 194,
+      "summary": "男性が熱を出して苦しんでいる様子が描かれている。泣き声や体調不良の言葉を繰り返す中で、スモークを吸う行動が見られる。状況により、対処法としてスモークを試みている。",
+      "keywords": [
+        "熱",
+        "苦しみ",
+        "スモーク",
+        "体調不良",
+        "泣き声"
+      ]
+    },
+    {
+      "scene_id": 195,
+      "summary": "熱を出している人物が、苦痛を訴えながら泣き叫んでいる様子が描かれている。字幕には『しんどい』など、強い不快感を表現する言葉が散見される。状況に応じて煙を吸い込む様子も確認できる。",
+      "keywords": [
+        "苦痛",
+        "熱",
+        "泣き叫ぶ",
+        "スモーク",
+        "不快感"
+      ]
+    },
+    {
+      "scene_id": 196,
+      "summary": "屋外で、涙を流している女性が、体調不良を訴えている。熱が出ている様子で、スモークを焚いている。苦痛を表明する言葉が繰り返されている。",
+      "keywords": [
+        "涙",
+        "体調不良",
+        "スモーク",
+        "苦痛",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 197,
+      "summary": "人物が泣き叫びながら、体調不良（熱出ているなど）を訴えている。背景や状況は不明だが、困難な状況や苦しみを感じている様子が伝わる。",
+      "keywords": [
+        "涙",
+        "体調不良",
+        "苦しみ",
+        "スモーク",
+        "しんどい"
+      ]
+    },
+    {
+      "scene_id": 198,
+      "summary": "人物が泣き叫びながら、体調不良（熱を出したなど）を訴えている。状況に応じて煙（スモーク）を焚き、涼しさを求めている。",
+      "keywords": [
+        "泣き叫ぶ",
+        "体調不良",
+        "スモーク",
+        "苦痛",
+        "冷え"
+      ]
+    },
+    {
+      "scene_id": 199,
+      "summary": "人物は熱を出している様子で、苦痛を訴えながら『泣いてるんだー、惜しくったー、しんどい』と発言している。周囲にはスモークの存在が伺える。",
+      "keywords": [
+        "苦痛",
+        "熱",
+        "スモーク",
+        "冷え",
+        "泣いている"
+      ]
+    },
+    {
+      "scene_id": 200,
+      "summary": "人物が泣きながら苦痛を訴えているシーン。熱が出ているなど体調不良の様子が伺われ、煙を焚くなど何らかの対処を試みている。",
+      "keywords": [
+        "苦痛",
+        "泣き声",
+        "体調不良",
+        "スモーク",
+        "熱"
+      ]
+    },
+    {
+      "scene_id": 201,
+      "summary": "主人公は熱を出しており、激しい痛みと苦しさを訴えている。泣きながら『しんどい』と繰り返す一方、状況に応じてスモークを吸おうとしている。",
+      "keywords": [
+        "痛み",
+        "発熱",
+        "苦しみ",
+        "スモーク",
+        "涙"
+      ]
+    },
+    {
+      "scene_id": 202,
+      "summary": "人物が泣き叫び、体調不良（熱）を訴えているシーン。苦痛を表現し、スモークを頼むなど、状況を打開しようとしている。",
+      "keywords": [
+        "苦痛",
+        "体調不良",
+        "泣き叫ぶ",
+        "スモーク",
+        "冷めきった"
+      ]
+    },
+    {
+      "scene_id": 203,
+      "summary": "人物が泣き叫び、体調不良（熱）を訴えている場面。字幕から、強い苦痛や混乱を感じている様子がうかがえる。スモークを焚く行為も確認できる。",
+      "keywords": [
+        "泣き叫ぶ",
+        "体調不良",
+        "スモーク",
+        "苦痛",
+        "混乱"
+      ]
+    },
+    {
+      "scene_id": 204,
+      "summary": "主人公は涙を流し、激しい痛みを訴えている。熱を出していることや、体調不良からくる混乱が伝わる。スモークを焚くことで、状況を落ち着かせる様子が伺える。",
+      "keywords": [
+        "痛み",
+        "熱",
+        "涙",
+        "スモーク",
+        "混乱"
+      ]
+    },
+    {
+      "scene_id": 205,
+      "summary": "人物が泣き叫び、体調不良（熱）を訴えている。スモークを焚くなどの対処法を試みている様子が捉えられている。状況は非常に苦痛で、精神的にも身体的にも追い詰められている。",
+      "keywords": [
+        "泣き叫ぶ",
+        "体調不良",
+        "スモーク",
+        "精神的苦痛",
+        "熱"
+      ]
+    },
+    {
+      "scene_id": 206,
+      "summary": "男性が泣き叫びながら、熱を出している様子を訴えている。体調不良のため苦しみ、スモークを求めている。状況は明らかに苦痛に満ちている。",
+      "keywords": [
+        "熱",
+        "苦痛",
+        "泣き叫ぶ",
+        "スモーク",
+        "体調不良"
+      ]
+    },
+    {
+      "scene_id": 207,
+      "summary": "人物は泣き崩れ、体調不良（熱など）を訴えている。字幕には『しんどい』という言葉が繰り返し登場し、スモークを焚いている様子が示唆されている。",
+      "keywords": [
+        "涙",
+        "体調不良",
+        "スモーク",
+        "苦痛",
+        "情緒不安定"
+      ]
+    },
+    {
+      "scene_id": 208,
+      "summary": "人物が熱を出して苦しんでいる様子が描かれている。字幕からは、過熱感と体調不良の辛さ、そして「スモーク」という言葉からリラックスを試みる様子が伺える。",
+      "keywords": [
+        "熱",
+        "苦しみ",
+        "体調不良",
+        "スモーク",
+        "涙"
+      ]
+    },
+    {
+      "scene_id": 209,
+      "summary": "人物が屋外の遊園地で、ジェットコースターに向かって歩いている。",
+      "keywords": [
+        "遊園地",
+        "ジェットコースター",
+        "人物",
+        "屋外",
+        "移動"
+      ]
+    },
+    {
+      "scene_id": 210,
+      "summary": "人物が手にしたと思われるアイテム（ブリンクなど）を相手に差し出し、持ち物について尋ねている場面。場所や人物の詳細は不明。",
+      "keywords": [
+        "アイテム",
+        "ブリンク",
+        "持ち物",
+        "尋ねる",
+        "人物"
+      ]
+    },
+    {
+      "scene_id": 211,
+      "summary": "人物がフェードインし、バクサと呼ばれるものを複数発見する場面。背景は不明。発話内容からも、何らかの発見や調査が行われている。",
+      "keywords": [
+        "人物",
+        "バクサ",
+        "発見",
+        "調査",
+        "フェードイン"
+      ]
+    },
+    {
+      "scene_id": 212,
+      "summary": "映像の527.4秒から528.6秒の区間において、一部の音響効果（バクサ）が繰り返されるシーン。具体的な状況は不明。",
+      "keywords": [
+        "音響効果",
+        "バクサ",
+        "フェイド",
+        "映像",
+        "効果音"
+      ]
+    },
+    {
+      "scene_id": 213,
+      "summary": "人物（バクサ）がフェードインし、フェードアウトする一連の動きが描かれている。背景は不明。字幕テキストからは具体的な状況は読み取れない。",
+      "keywords": [
+        "人物",
+        "フェード",
+        "バクサ",
+        "動き",
+        "不透明"
+      ]
+    },
+    {
+      "scene_id": 214,
+      "summary": "シーンでは、人物（バクサ）がフェードインし、フェードアウトを繰り返す様子が捉えられています。背景は不明です。",
+      "keywords": [
+        "人物",
+        "フェード",
+        "バクサ",
+        "繰り返し",
+        "映像"
+      ]
+    },
+    {
+      "scene_id": 215,
+      "summary": "人物（バクサ）が複数、フェードアウトしながら出現するシーンです。背景は不明です。",
+      "keywords": [
+        "人物",
+        "バクサ",
+        "フェードアウト",
+        "出現",
+        "複数"
+      ]
+    },
+    {
+      "scene_id": 216,
+      "summary": "シーンは、不気味な雰囲気の中で、バクサと呼ばれる人物が複数登場している。その存在は徐々に際立っていく。",
+      "keywords": [
+        "バクサ",
+        "不気味",
+        "複数",
+        "登場"
+      ]
+    },
+    {
+      "scene_id": 217,
+      "summary": "人物が低く位置を低く踏みしめ、バクサを繰り返し音を立てる様子が描かれている。発話内容からも、不快な状況下での行動が示唆される。",
+      "keywords": [
+        "バクサ",
+        "低い位置",
+        "動き",
+        "発話",
+        "不快"
+      ]
+    },
+    {
+      "scene_id": 218,
+      "summary": "バクサと呼ばれるキャラクターが、画面外に飛び出すような動きをしている。字幕には「フェイド」「バクサいる」といった言葉が繰り返し出現している。",
+      "keywords": [
+        "バクサ",
+        "飛び出し",
+        "キャラクター",
+        "フェイド",
+        "字幕"
+      ]
+    },
+    {
+      "scene_id": 219,
+      "summary": "少年が、アニメキャラクターのような格好をしており、誰かに向かって突進している様子が捉えられています。字幕には『そのキャラずっこいなお前ん？』という発言が含まれています。",
+      "keywords": [
+        "少年",
+        "突進",
+        "アニメ",
+        "キャラクター"
+      ]
+    },
+    {
+      "scene_id": 220,
+      "summary": "少年が歩いている場面。字幕に『そのキャラずっこいなお前ん？』とあり、相手をからかっている様子が伺える。",
+      "keywords": [
+        "少年",
+        "歩行",
+        "からかい",
+        "キャラクター",
+        "対話"
+      ]
+    },
+    {
+      "scene_id": 221,
+      "summary": "男性が女性に向かって「そのキャラずっこいなお前ん？」と問いかけている。背景は特定できない。",
+      "keywords": [
+        "キャラクター",
+        "女性",
+        "問いかけ",
+        "若者",
+        "不満"
+      ]
+    },
+    {
+      "scene_id": 222,
+      "summary": "人物が屋外で歩行しているシーン。背景は都市環境であり、人物は歩道を歩いています。",
+      "keywords": [
+        "歩行",
+        "都市",
+        "屋外",
+        "人物",
+        "歩道"
+      ]
+    },
+    {
+      "scene_id": 223,
+      "summary": "人物が屋外で歩行しているシーン。背景には街並みが見える。",
+      "keywords": [
+        "歩行",
+        "屋外",
+        "街並み",
+        "人物",
+        "移動"
+      ]
+    },
+    {
+      "scene_id": 224,
+      "summary": "人物が屋外で歩行しているシーン。詳細な状況は不明だが、都市部の道中を歩いている様子が伺える。",
+      "keywords": [
+        "人物",
+        "歩行",
+        "屋外",
+        "都市",
+        "道中"
+      ]
+    },
+    {
+      "scene_id": 225,
+      "summary": "人物が屋外の公園で、ベンチに座ってスマートフォンを操作している。背景には木々や芝生が見える。",
+      "keywords": [
+        "公園",
+        "ベンチ",
+        "スマートフォン",
+        "人物",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 226,
+      "summary": "屋外の公園で、一人の男性がベンに座っている。彼はリラックスした様子で、目を閉じて休憩している。",
+      "keywords": [
+        "公園",
+        "男性",
+        "ベン",
+        "休憩",
+        "リラックス"
+      ]
+    },
+    {
+      "scene_id": 227,
+      "summary": "男性が公園のベンチに座り、スマートフォンを操作している。背景には木々や空が見える。",
+      "keywords": [
+        "公園",
+        "ベンチ",
+        "男性",
+        "スマートフォン",
+        "休憩"
+      ]
+    },
+    {
+      "scene_id": 228,
+      "summary": "少年がニヤニヤと笑顔で、何らかの動作（おそらく飛び跳ねる）をしている。キャラクターへの呼びかけと合わせて、楽しげな状況が伺える。",
+      "keywords": [
+        "少年",
+        "笑顔",
+        "飛び跳ねる",
+        "キャラクター",
+        "楽しげ"
+      ]
+    },
+    {
+      "scene_id": 229,
+      "summary": "カイルくんが自身の弱点であるラッシュの使用を注意している場面。相手の素早い動き（ずっこいねだろ？）を評価し、自身も強みがないことを指摘する。相手のスキルレベルを「バクサイ強いな」と評価している。",
+      "keywords": [
+        "カイル",
+        "ラッシュ",
+        "素早い動き",
+        "評価",
+        "バクサイ"
+      ]
+    },
+    {
+      "scene_id": 230,
+      "summary": "カイルくんが強みを否定する発言に対し、別人物がラッシュの活用で実力を発揮していることを指摘しています。相手は普段は弱そうに見えますが、いざとなると強力な戦力となる様子が伺えます。",
+      "keywords": [
+        "カイル",
+        "ラッシュ",
+        "バクサイ",
+        "実力",
+        "対戦"
+      ]
+    },
+    {
+      "scene_id": 231,
+      "summary": "カイルくんがラッシュの使用を戒める一方、実際にはバクサイを使いこなして強いパフォーマンスを見せている。彼の言葉とは裏腹な実力に周囲が驚いている。",
+      "keywords": [
+        "カイル",
+        "ラッシュ",
+        "バクサイ",
+        "強み",
+        "パフォーマンス"
+      ]
+    },
+    {
+      "scene_id": 232,
+      "summary": "カイルくんがラッシュの使用を禁止しているにも関わらず、彼のプレイは非常に強く、結果的に強さを発揮している。",
+      "keywords": [
+        "カイル",
+        "ラッシュ",
+        "強さ",
+        "バクサイ",
+        "プレイ"
+      ]
+    },
+    {
+      "scene_id": 233,
+      "summary": "カイルくんがラッシュの使用を避け、自身の強みを強調している場面。その後、バクサイのラッシュ使用が強力であると認識され、驚きを隠せない様子が伺える。",
+      "keywords": [
+        "カイル",
+        "ラッシュ",
+        "バクサイ",
+        "強み",
+        "ゲーム"
+      ]
+    },
+    {
+      "scene_id": 234,
+      "summary": "カイルくんがラッシュの使用を避け、大君を中心とした戦略を提案している。ブリンク後の攻撃短縮とグリチューの重要性を指摘し、バクサイの強さを評価している。",
+      "keywords": [
+        "ラッシュ",
+        "大君",
+        "グリチュー",
+        "バクサイ",
+        "戦略"
+      ]
+    },
+    {
+      "scene_id": 235,
+      "summary": "男性が、ゲームにおける大君の攻撃速度について議論している。特に、リンク後の攻撃短縮とグリチューの有無がゲームバランスに影響することを指摘している。",
+      "keywords": [
+        "ゲーム",
+        "大君",
+        "攻撃速度",
+        "グリチュー",
+        "バランス"
+      ]
+    },
+    {
+      "scene_id": 236,
+      "summary": "男性が、大君というキャラクターのスキルについて議論している。攻撃速度の短縮が強さにつながると考えており、グリチューの入手が弱さを克服する鍵になると推測している。",
+      "keywords": [
+        "大君",
+        "スキル",
+        "攻撃速度",
+        "グリチュー",
+        "議論"
+      ]
+    },
+    {
+      "scene_id": 237,
+      "summary": "大君のスキル後の攻撃速度短縮が強化されれば強力になるとの意見が述べられている。グリチューの存在が弱体化する可能性はあるものの、大君の性能を損なうものではないと推測される。",
+      "keywords": [
+        "大君",
+        "攻撃速度",
+        "グリチュー",
+        "強化",
+        "スキル"
+      ]
+    },
+    {
+      "scene_id": 238,
+      "summary": "男性がゲームの戦略について議論しているシーン。大君（キャラクター名）の攻撃速度と、グリチューの存在について意見交換をしている。",
+      "keywords": [
+        "ゲーム",
+        "戦略",
+        "大君",
+        "グリチュー",
+        "攻撃"
+      ]
+    },
+    {
+      "scene_id": 239,
+      "summary": "大君が攻撃後の短縮化に期待しているシーン。グリチューの存在について話し合い、それが弱体化しないことを認識している。",
+      "keywords": [
+        "大君",
+        "攻撃",
+        "グリチュー",
+        "強化",
+        "議論"
+      ]
+    },
+    {
+      "scene_id": 240,
+      "summary": "プレイヤーが、大君の攻撃速度短縮とグリチューの強化を期待している。短い攻撃時間とグリチューの強化が、戦闘での優位性につながると考えている。",
+      "keywords": [
+        "大君",
+        "攻撃速度",
+        "グリチュー",
+        "強化",
+        "戦闘"
+      ]
+    },
+    {
+      "scene_id": 241,
+      "summary": "主人公が戦闘における攻撃速度について議論している。敵の攻撃が短くなった場合に有利になる可能性を指摘し、グリチューの有無が戦闘力に影響すると考えている。",
+      "keywords": [
+        "戦闘",
+        "攻撃速度",
+        "グリチュー",
+        "戦略",
+        "議論"
+      ]
+    },
+    {
+      "scene_id": 242,
+      "summary": "大君がブリンク後に攻撃を仕掛ける場面。グリチューの有無が攻撃速度に影響し、グリチューがなければ十分な力になるだろうと話している。",
+      "keywords": [
+        "大君",
+        "ブリンク",
+        "攻撃",
+        "グリチュー",
+        "無効"
+      ]
+    },
+    {
+      "scene_id": 243,
+      "summary": "大君がブリンク後に攻撃を仕掛けるシーンです。グリチューの有無が、攻撃の速度に影響していると発言されています。",
+      "keywords": [
+        "大君",
+        "ブリンク",
+        "攻撃",
+        "グリチュー",
+        "無効"
+      ]
+    },
+    {
+      "scene_id": 244,
+      "summary": "大君がブリンク後に攻撃を仕掛けるシーン。グリチューの有無によって攻撃の速度が変化する可能性があると語られている。",
+      "keywords": [
+        "大君",
+        "ブリンク",
+        "攻撃",
+        "グリチュー"
+      ]
+    },
+    {
+      "scene_id": 245,
+      "summary": "グリチューを使って攻撃するキャラクターが、ねジェットのジャンプ攻撃を受けている場面。プレイヤーはグリチューの弱さを懸念しつつ、ねジェットの出現を警戒している。",
+      "keywords": [
+        "グリチュー",
+        "ねジェット",
+        "ジャンプ攻撃",
+        "プレイヤー",
+        "戦闘"
+      ]
+    },
+    {
+      "scene_id": 246,
+      "summary": "子供たちがジェットコースターの乗り物（おそらく「ジャンプのやつ」）を遠くから眺めています。字幕には子供たちの興奮や驚きが見られます。",
+      "keywords": [
+        "ジェットコースター",
+        "子供",
+        "乗り物",
+        "ジャンプ",
+        "歓声"
+      ]
+    },
+    {
+      "scene_id": 247,
+      "summary": "レーナーが木をセットしている現場で、主人公は敵の攻撃を受け、死亡寸前まで追い込まれる。字幕には、状況の緊迫感と、生存への希望、そして敵のレーナーの存在が示唆されている。",
+      "keywords": [
+        "レーナー",
+        "木をセット",
+        "死亡",
+        "敵",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 248,
+      "summary": "舞台は倉庫内。レーナーが木材のセット作業を行っており、彼の視点から銃撃を受け、瀕死の状態になっている。生存者の発言から、危険な状況であることがうかがえる。",
+      "keywords": [
+        "倉庫",
+        "レーナー",
+        "銃撃",
+        "生存",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 249,
+      "summary": "レーナーが木をセットしている現場で、別のプレイヤーが相手を倒し、主人公は死にかけの状況に陥る。字幕からは、相手にレーナーが参加していることが示唆されている。",
+      "keywords": [
+        "レーナー",
+        "戦闘",
+        "木",
+        "死",
+        "ゲーム"
+      ]
+    },
+    {
+      "scene_id": 250,
+      "summary": "レーナーが木をセットしている場面で、プレイヤーが負死する瞬間が描かれている。字幕からは、状況を憂いながらもまだ1本あることを示唆している。",
+      "keywords": [
+        "負死",
+        "レーナー",
+        "木セット",
+        "戦闘",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 251,
+      "summary": "レーナーが敵プレイヤーの攻撃を受けて倒され、その状況をチームメイトに報告している。木を設置している相手レーナーもサイトにいるため、緊迫した状況が伺える。",
+      "keywords": [
+        "レーナー",
+        "サイト",
+        "攻撃",
+        "倒される",
+        "チーム"
+      ]
+    },
+    {
+      "scene_id": 252,
+      "summary": "レーナーが木をセットしている場面で、プレイヤーが死亡。字幕には『死ぬのかもしれん』という発言があり、激しい戦闘状況が伺える。",
+      "keywords": [
+        "レーナー",
+        "戦闘",
+        "死亡",
+        "木セット",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 253,
+      "summary": "レーナーが木をセットしている最中に、敵プレイヤーに攻撃され、負傷する場面。プレイヤーは死を覚悟しつつも、まだ1本残っているため、諦めずに戦う。",
+      "keywords": [
+        "レーナー",
+        "木セット",
+        "敵プレイヤー",
+        "戦闘",
+        "生存"
+      ]
+    },
+    {
+      "scene_id": 254,
+      "summary": "レーナーが敵プレイヤーのサイトを狙っている場面。プレイヤーは死を覚悟し、残りの1本を狙う決意をしている。レーナーに対峙する相手プレイヤーがサイトにいる。",
+      "keywords": [
+        "レーナー",
+        "サイト",
+        "敵プレイヤー",
+        "対峙",
+        "1本"
+      ]
+    },
+    {
+      "scene_id": 255,
+      "summary": "レーナーが木をセットしている場面で、プレイヤー（字幕の人物）は死にかけている状況を認識している。相手レーナーがサイトに入っているため、危険な状況であり、残り一本の回復アイテムがある。",
+      "keywords": [
+        "レーナー",
+        "サイト",
+        "木をセット",
+        "回復アイテム",
+        "危険"
+      ]
+    },
+    {
+      "scene_id": 256,
+      "summary": "レーナーが木をセットしている場面で、別のプレイヤーが死亡したことを確認している。状況を把握し、残りの試合に向けて準備を進めている。",
+      "keywords": [
+        "レーナー",
+        "死亡",
+        "木をセット",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 257,
+      "summary": "レーナーのサイトに相手が入り、敵プレイヤーを倒そうとするが、死亡してしまう。残りの1本を狙うものの、状況が悪化している。",
+      "keywords": [
+        "レーナー",
+        "戦闘",
+        "死亡",
+        "敵プレイヤー",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 258,
+      "summary": "レーナーが敵プレイヤーと戦闘中、死にかけている様子が描かれています。字幕には、自身の死の可能性と、敵プレイヤーであるレーナーの存在が確認されています。",
+      "keywords": [
+        "戦闘",
+        "レーナー",
+        "敵プレイヤー",
+        "死",
+        "サイト"
+      ]
+    },
+    {
+      "scene_id": 259,
+      "summary": "レーナーが敵プレイヤーに攻撃され、負傷している場面。相手レーナーがサイトを確保しており、死を覚悟した状況が描写されている。",
+      "keywords": [
+        "レーナー",
+        "戦闘",
+        "サイト",
+        "敵プレイヤー",
+        "負傷"
+      ]
+    },
+    {
+      "scene_id": 260,
+      "summary": "レーナーとのチーム内で、敵の攻撃に遭い、負傷したプレイヤーが状況を説明している。木を設置していたレーナーが敵に所属しており、マップの状況を共有しつつ、最初の設置場所が間違っていたと反省している。",
+      "keywords": [
+        "レーナー",
+        "敵",
+        "木",
+        "マップ",
+        "攻撃"
+      ]
+    },
+    {
+      "scene_id": 261,
+      "summary": "友人との会話中に、上空に浮かぶ物体の映像を共有している。初めは衝撃を受けたが、その後は共感と肯定の言葉を繰り返す。",
+      "keywords": [
+        "映像共有",
+        "衝撃",
+        "共感",
+        "友人",
+        "物体"
+      ]
+    },
+    {
+      "scene_id": 262,
+      "summary": "友人との待ち合わせで、上空に浮かぶ物体が視認できない状態だった。字幕からは、状況を説明し、相手に対する好意を表明している様子が窺える。",
+      "keywords": [
+        "待ち合わせ",
+        "上空",
+        "物体",
+        "好意",
+        "状況"
+      ]
+    },
+    {
+      "scene_id": 263,
+      "summary": "男性が上空に浮いている物体を撮影している。字幕からは、撮影結果に不満を持ち、友人にその状況を伝える様子が伺える。",
+      "keywords": [
+        "撮影",
+        "上空",
+        "物体",
+        "不満",
+        "友人"
+      ]
+    },
+    {
+      "scene_id": 264,
+      "summary": "男性が上空に浮いているものを撮影した映像を確認し、最初に出力したものとの違いに気づく。字幕にはポジティブな感情（『あいいね』の繰り返し）が込められている。",
+      "keywords": [
+        "映像確認",
+        "修正",
+        "好み",
+        "SNS"
+      ]
+    },
+    {
+      "scene_id": 265,
+      "summary": "男性が上空に浮遊する物体を見つけるシーン。字幕には『あごめん！あいいね〜』といった喜びの言葉が含まれ、驚きと好意を表している。",
+      "keywords": [
+        "上空",
+        "物体",
+        "驚き",
+        "いいね",
+        "発見"
+      ]
+    },
+    {
+      "scene_id": 266,
+      "summary": "男性が壁に向かって何かを掲示している場面。字幕の内容から、複数の「いいね」の言葉と、掲示物が「めちゃくちゃ」であること、そして相手への驚きの言葉が読み取れます。",
+      "keywords": [
+        "壁",
+        "掲示物",
+        "いいね",
+        "驚き",
+        "上空"
+      ]
+    },
+    {
+      "scene_id": 267,
+      "summary": "友人との待ち合わせで、上空に浮かぶ物を目にし、驚きと喜びを表現している。字幕に「あごめん！あいいねいいね…」といった言葉が並び、友人の好意を受け入れている様子が伺える。",
+      "keywords": [
+        "待ち合わせ",
+        "友人",
+        "驚き",
+        "好意",
+        "上空"
+      ]
+    },
+    {
+      "scene_id": 268,
+      "summary": "ある人物が壁の上空に浮かぶ物体を撮影しているシーン。最初の映像が不鮮明だったため、謝罪と修正の指示が出ている。",
+      "keywords": [
+        "映像修正",
+        "上空",
+        "物体",
+        "謝罪",
+        "不鮮明"
+      ]
+    },
+    {
+      "scene_id": 269,
+      "summary": "666.5秒から667.4秒のシーンでは、人物が壁や上空にあるものを確認しようとして、映像がめちゃくちゃであることを指摘している。字幕テキストからは、相手への好意的な言葉と、映像に対する不満が伝わってくる。",
+      "keywords": [
+        "映像",
+        "確認",
+        "指摘",
+        "不満",
+        "好意"
+      ]
+    },
+    {
+      "scene_id": 270,
+      "summary": "友人との外出中に、上空に浮遊する物体や建築物の映像を撮影している。撮影した映像に対し、相手が喜びを表現し、その映像を褒める。",
+      "keywords": [
+        "映像",
+        "友人",
+        "撮影",
+        "上空"
+      ]
+    },
+    {
+      "scene_id": 271,
+      "summary": "屋外で人物がスマートフォンを操作している場面。字幕には『あごめん！あいいねいいね』といった言葉があり、友人とのコミュニケーションの様子が伺える。",
+      "keywords": [
+        "スマートフォン",
+        "屋外",
+        "友人",
+        "コミュニケーション",
+        "写真"
+      ]
+    },
+    {
+      "scene_id": 272,
+      "summary": "ある人物が壁のある場所で撮影を行っている。初期の映像が不鮮明で、上空から映されている様子も確認できる。字幕からは、映像の確認と修正が行われている様子が伺える。",
+      "keywords": [
+        "映像修正",
+        "上空撮影",
+        "人物",
+        "壁",
+        "不鮮明"
+      ]
+    },
+    {
+      "scene_id": 273,
+      "summary": "男性が上空に浮かぶものを撮影している場面。字幕によると、最初の動画の仕上がりに不満を抱き、改善を加えた様子が伺える。",
+      "keywords": [
+        "動画編集",
+        "修正",
+        "上空",
+        "不満",
+        "改善"
+      ]
+    },
+    {
+      "scene_id": 274,
+      "summary": "無人の空港のターミナル内。カメラが広範囲を走査し、静寂と吹き抜けの空間を捉えている。",
+      "keywords": [
+        "空港",
+        "ターミナル",
+        "静寂",
+        "広範囲",
+        "走査"
+      ]
+    },
+    {
+      "scene_id": 275,
+      "summary": "人物が屋外で歩行しているシーン。背景は都市部で、人物の動きが中心になっている。",
+      "keywords": [
+        "人物",
+        "歩行",
+        "都市",
+        "屋外",
+        "移動"
+      ]
+    },
+    {
+      "scene_id": 276,
+      "summary": "試合後、ある人物に対し怒号と罵倒の言葉が飛び交うシーン。相手を罵る言葉に加え、「キモい」という表現が繰り返され、激しい感情が伝わってくる。",
+      "keywords": [
+        "試合後",
+        "怒号",
+        "罵倒",
+        "感情",
+        "激しい"
+      ]
+    },
+    {
+      "scene_id": 277,
+      "summary": "試合終了後、複数の人物が監督に感謝の言葉を述べる場面。一部の観客からは「キモい」などの罵倒が飛び交い、感情的な激しいやり取りが見られる。",
+      "keywords": [
+        "試合終了",
+        "感謝",
+        "罵倒",
+        "激しい",
+        "感情"
+      ]
+    },
+    {
+      "scene_id": 278,
+      "summary": "試合後、複数の人物が挨拶している場面。字幕には、相手に対する感謝と侮蔑の言葉が混在し、怒りや混乱を訴える発言が含まれている。",
+      "keywords": [
+        "試合後",
+        "挨拶",
+        "感謝",
+        "侮蔑",
+        "混乱"
+      ]
+    },
+    {
+      "scene_id": 279,
+      "summary": "試合後、複数の人物に対し感謝の言葉を述べながらも、一部の人物に対して侮辱的な言葉を投げかける。発言内容は過激で、興奮と怒りを伴っている。",
+      "keywords": [
+        "試合後",
+        "侮辱",
+        "感謝",
+        "過激",
+        "怒り"
+      ]
+    },
+    {
+      "scene_id": 280,
+      "summary": "試合後、一人称語で「ありがとうございます」という言葉とともに、相手を罵倒する言葉や「キモい」という表現を繰り返し、興奮した様子を語っています。背景は試合会場のようですが、具体的な場所は不明です。",
+      "keywords": [
+        "試合後",
+        "罵倒",
+        "興奮",
+        "一人称語",
+        "キモい"
+      ]
+    },
+    {
+      "scene_id": 281,
+      "summary": "試合後、一部観客の行為に怒りを露わにする人物が複数登場する。字幕テキストからは、特定の観客に対する不快感と侮辱的な発言が確認できる。",
+      "keywords": [
+        "試合後",
+        "観客",
+        "怒り",
+        "侮辱",
+        "不快感"
+      ]
+    },
+    {
+      "scene_id": 282,
+      "summary": "試合後、興奮したか、または怒っている人物が複数登場し、相手に感謝の言葉を述べるかのような発言を繰り返している。不快感を露骨に表す言葉や、攻撃的な表現も含まれている。",
+      "keywords": [
+        "試合後",
+        "不快感",
+        "攻撃的",
+        "発言",
+        "感謝"
+      ]
+    },
+    {
+      "scene_id": 283,
+      "summary": "試合後、複数の人物が「ありがとう」と叫びながら、一部の人物を「キモい」と罵るシーン。発言内容は激しく、感情的な混乱を表している。",
+      "keywords": [
+        "試合後",
+        "罵倒",
+        "キモい",
+        "混乱",
+        "発言"
+      ]
+    },
+    {
+      "scene_id": 284,
+      "summary": "試合後、複数の人物が感謝の言葉を述べる場面。字幕テキストからは、一部人物に対する怒りや侮辱的な言葉が発せられていることがうかがえる。",
+      "keywords": [
+        "感謝",
+        "怒り",
+        "侮辱",
+        "試合後",
+        "人物"
+      ]
+    },
+    {
+      "scene_id": 285,
+      "summary": "試合後、興奮した男性が「ありがとう」と叫びながら、不快感を露わにする周囲の人々を激しく非難しています。字幕には、過剰な反応や相手の人を侮辱するような発言が記録されています。",
+      "keywords": [
+        "試合後",
+        "不快",
+        "激怒",
+        "侮辱",
+        "叫び"
+      ]
+    },
+    {
+      "scene_id": 286,
+      "summary": "試合後、複数の人物が「ありがとう」と挨拶するシーン。一方の人物に対して、不快感を露骨に示し『キモい』などと罵倒する言葉が飛び交い、激しい口論となっている。",
+      "keywords": [
+        "試合後",
+        "罵倒",
+        "口論",
+        "不快感",
+        "挨拶"
+      ]
+    },
+    {
+      "scene_id": 287,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁に反応し、体勢を崩している様子が捉えられています。字幕には、攻撃に対する驚きや自信を表す言葉が含まれています。",
+      "keywords": [
+        "リフト",
+        "攻撃",
+        "壁",
+        "反応",
+        "体勢"
+      ]
+    },
+    {
+      "scene_id": 288,
+      "summary": "プレイヤーがリフト攻撃を受けたシーン。壁に反応し、プレイヤーは攻撃を回避しようとしている。字幕からは、驚きや自身の強さを自覚した様子が伺える。",
+      "keywords": [
+        "リフト",
+        "攻撃",
+        "壁反応",
+        "ディテイム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 289,
+      "summary": "プレイヤーがリフト攻撃を試みたが、壁反応でアクションを阻止された。字幕からは、攻撃の成功を確信していたこと、そして驚きや興奮が入り混じった感情が伝わってくる。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ゲーム",
+        "プレイ",
+        "攻撃"
+      ]
+    },
+    {
+      "scene_id": 290,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁への反応とチームメイトとの連携を試みるが、うまくいかない様子が捉えられている。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "チーム連携",
+        "ゲーム",
+        "反撃"
+      ]
+    },
+    {
+      "scene_id": 291,
+      "summary": "プレイヤーがリフト攻撃を試みたが、壁に反応して攻撃を回避した。字幕のテキストからは、その際の興奮や軽快な状況がうかがえる。",
+      "keywords": [
+        "リフト",
+        "攻撃",
+        "壁",
+        "回避",
+        "ゲーム"
+      ]
+    },
+    {
+      "scene_id": 292,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁への反応やゲーム内のキャラクター（ディテイム）への攻撃を試みている。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ディテイム",
+        "ゲーム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 293,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁に反応し、ディテイム（取り込み）を試みるが、攻撃をかわしきれない状況が描かれている。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ディテイム",
+        "ゲーム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 294,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁への反応やディテイム（おそらくゲーム内のアイテム）の取り扱いなど、激しい状況が繰り広げられている。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ディテイム",
+        "ゲーム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 295,
+      "summary": "プレイヤーがリフト攻撃を仕掛けてきたが、壁反応で対応し、攻撃を無効化した。字幕からは、自らの強さを強調する様子と、リフト攻撃に対する驚きが伝わる。",
+      "keywords": [
+        "リフト",
+        "攻撃",
+        "壁反応",
+        "ゲーム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 296,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁への反応を確認し、ディテイム（おそらくゲーム内の敵キャラクター）を捉えようとしている。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ディテイム",
+        "ゲーム",
+        "反応"
+      ]
+    },
+    {
+      "scene_id": 297,
+      "summary": "プレイヤーがリフト攻撃を受けた場面。壁への反応と、ディテイム（取り込み）を試みる様子が捉えられています。字幕からは、攻撃に対する強い感情や反発が伝わります。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ディテイム",
+        "ゲーム",
+        "対戦"
+      ]
+    },
+    {
+      "scene_id": 298,
+      "summary": "プレイヤーがリフト攻撃を試みたが、壁反応で攻撃を回避された場面。字幕テキストからは、攻撃の失敗と驚きの様子が伺える。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "ゲーム",
+        "プレイヤー",
+        "回避"
+      ]
+    },
+    {
+      "scene_id": 299,
+      "summary": "プレイヤーが壁に反応し、リフト攻撃を予測して回避するシーン。字幕テキストからは、プレイヤーの驚きと自信の表れが読み取れます。",
+      "keywords": [
+        "リフト攻撃",
+        "壁反応",
+        "回避",
+        "ディテイム",
+        "プレイヤー"
+      ]
+    },
+    {
+      "scene_id": 300,
+      "summary": "プレイヤーはリフト攻撃を想定し、壁反応するなどと混乱している。字幕テキストからは、Bをアストラと呼ぶなど、特定のアイテムや戦略に関する混乱が見られる。",
+      "keywords": [
+        "リフト攻撃",
+        "アストラ",
+        "混乱",
+        "壁反応",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 301,
+      "summary": "男性がBに対して、アストラにしか興味を持たないことを指摘している。Bは驚きながらアストラに関する情報を求めているが、行かない方が良いというアドバイスが繰り返されている。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "驚き",
+        "アドバイス",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 302,
+      "summary": "Bはアストラを視覚的に混乱している様子。字幕からは、アストラを鑑賞することの不適切さ（ジョイナーインフォー）を理解していると推測される。Bはアストラについて言及している。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "混乱",
+        "B",
+        "鑑賞"
+      ]
+    },
+    {
+      "scene_id": 303,
+      "summary": "Bは混乱した様子で、行かない方が良いと諭されている。発言内容からは、BがAストラとジョイナーインフォーという言葉を混同していることが推測できる。",
+      "keywords": [
+        "B",
+        "Aストラ",
+        "ジョイナーインフォー",
+        "混乱",
+        "諭す"
+      ]
+    },
+    {
+      "scene_id": 304,
+      "summary": "Bがアストラを観ている状況で、相手はBに「行かない方がいい」と忠告している。Bは自分の考えを理解しており、「Bサイアストラか。アストラでジョイナーインフォー」と反論している。",
+      "keywords": [
+        "アストラ",
+        "B",
+        "ジョイナーインフォー",
+        "忠告",
+        "理解"
+      ]
+    },
+    {
+      "scene_id": 305,
+      "summary": "Bはアストラを執着し、その行為がジョイナーインフォーであると指摘される。Bは混乱しつつ、行かない方が良いと理解している。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "B",
+        "混乱",
+        "執着"
+      ]
+    },
+    {
+      "scene_id": 306,
+      "summary": "Bはアストラしか見ないことを指摘され、驚いている。相手はBがアストラを見るのが『ジョイナーインフォー』であると説明し、Bがそのことを理解していることを強調している。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "驚愕",
+        "指摘",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 307,
+      "summary": "ある人物が、Bという相手がアストラしか見ないことについて、行かない方がいいと忠告している。その相手は自分がしていることを理解しているかと問いかけ、Bがアストラを指していることを確認する。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "B",
+        "忠告",
+        "理解"
+      ]
+    },
+    {
+      "scene_id": 308,
+      "summary": "男性がBをアストラと見ることに驚き、行かない方が良いと諭している。字幕テキストからは、Bがアストラに興味を示すことや、周囲の状況に対する懸念が示唆される。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "驚き",
+        "警告",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 309,
+      "summary": "男性がBという人物に対し、何かに驚きながら「行かない方がいいのでは」と忠告している。Bはアストラしか見ないことを理解しており、その点について説明している。",
+      "keywords": [
+        "驚愕",
+        "忠告",
+        "アストラ",
+        "ジョイナーインフォー",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 310,
+      "summary": "Bはアストラしか見ないことを理解しているが、衝撃を受けている。なぜかは不明だが、行かない方が良いと判断している。",
+      "keywords": [
+        "B",
+        "アストラ",
+        "ジョイナーインフォー",
+        "衝撃",
+        "判断"
+      ]
+    },
+    {
+      "scene_id": 311,
+      "summary": "Bは混乱している様子で、行かない方が良いと忠告されている。発話内容から、Bが『アストラ』と『ジョイナーインフォー』という用語を繰り返していることがわかる。",
+      "keywords": [
+        "B",
+        "アストラ",
+        "ジョイナーインフォー",
+        "混乱",
+        "忠告"
+      ]
+    },
+    {
+      "scene_id": 312,
+      "summary": "男性がBという人物に、アストラしか見ない行為を注意している。Bは混乱し、アストラとジョイナーインフォーという言葉を繰り返している。",
+      "keywords": [
+        "アストラ",
+        "ジョイナーインフォー",
+        "混乱",
+        "注意",
+        "B"
+      ]
+    },
+    {
+      "scene_id": 313,
+      "summary": "人物が屋外で歩行しているシーン。背景は都市の風景で、人物は一方向に歩を進めている。",
+      "keywords": [
+        "歩行",
+        "都市",
+        "風景",
+        "人物",
+        "屋外"
+      ]
+    },
+    {
+      "scene_id": 314,
+      "summary": "人物が後ろを向いて、継続的に後方を視覚的に確認しているシーンである。字幕テキストに『後ろ』が繰り返されていることから、対象物の特定は不明である。",
+      "keywords": [
+        "人物",
+        "後方",
+        "視覚確認",
+        "繰り返し",
+        "不特定"
+      ]
+    },
+    {
+      "scene_id": 315,
+      "summary": "人物が後を向いて歩いているシーン。字幕には繰り返し「後ろ」と記述されており、その人物が後方を見る動作を繰り返している。",
+      "keywords": [
+        "人物",
+        "後方",
+        "歩行",
+        "繰り返し",
+        "視線"
+      ]
+    },
+    {
+      "scene_id": 316,
+      "summary": "人物が後方へ移動しているシーン。字幕に「後ろ後ろ後ろ…」と繰り返されるため、連続して後退する動きが確認できる。",
+      "keywords": [
+        "後退",
+        "人物",
+        "動き",
+        "移動",
+        "継続"
+      ]
+    },
+    {
+      "scene_id": 317,
+      "summary": "人物が後ろを向いて視線を彷徨わせているシーン。背景は特定できないが、人物の動作が中心となっている。",
+      "keywords": [
+        "後ろ視",
+        "視線",
+        "彷徨う",
+        "人物",
+        "動作"
+      ]
+    },
+    {
+      "scene_id": 318,
+      "summary": "人物が後ろを向いて、後ろを向いている状態が続くシーン。後方の特定は不明。",
+      "keywords": [
+        "後ろ",
+        "人物",
+        "姿勢",
+        "動き",
+        "方向"
+      ]
+    },
+    {
+      "scene_id": 319,
+      "summary": "人物が後を向いている瞬間。字幕には繰り返し『後ろ』と書かれたテキストが含まれている。",
+      "keywords": [
+        "後ろ向き",
+        "人物",
+        "目視",
+        "繰り返し",
+        "テキスト"
+      ]
+    },
+    {
+      "scene_id": 320,
+      "summary": "人物が後ろを向いてリラックスしている様子が捉えられています。時間経過中に、その行動が繰り返されています。",
+      "keywords": [
+        "リラックス",
+        "人物",
+        "後ろを向く",
+        "映像",
+        "繰り返し"
+      ]
+    },
+    {
+      "scene_id": 321,
+      "summary": "人物が背景を向いて、後ろを向いて移動するシーン。字幕には単なる後方向への視線移動を示す文字のみが含まれています。",
+      "keywords": [
+        "移動",
+        "後方",
+        "視線",
+        "人物",
+        "背景"
+      ]
+    },
+    {
+      "scene_id": 322,
+      "summary": "人物が後ろを向き、繰り返し後方を視覚的に確認しているシーン。映像の舞台は特定不明。人物の行動に焦点が当てられている。",
+      "keywords": [
+        "後方視点",
+        "繰り返し",
+        "人物",
+        "観察",
+        "視線"
+      ]
+    },
+    {
+      "scene_id": 323,
+      "summary": "人物が後ろに歩行するシーン。763秒から763.6秒の間、人物は後ろを向いて後退している。",
+      "keywords": [
+        "歩行",
+        "後退",
+        "人物",
+        "後ろ",
+        "動き"
+      ]
+    },
+    {
+      "scene_id": 324,
+      "summary": "映像の763.6秒から774.3秒の区間において、人物が後ろを向いて繰り返し視線を移動させている。",
+      "keywords": [
+        "後方視線",
+        "人物",
+        "移動",
+        "繰り返し",
+        "視覚"
+      ]
+    },
+    {
+      "scene_id": 325,
+      "summary": "後ろを向いて歩いている人物の映像。時間帯や場所、人物の服装などの情報は不明です。",
+      "keywords": [
+        "後ろ",
+        "歩行",
+        "人物",
+        "映像",
+        "移動"
+      ]
+    },
+    {
+      "scene_id": 326,
+      "summary": "人物が後方へ一直線に進む様子が確認できる。字幕には繰り返し『後ろ』と表示されている。",
+      "keywords": [
+        "移動",
+        "後方",
+        "進む",
+        "繰り返し",
+        "字幕"
+      ]
+    },
+    {
+      "scene_id": 327,
+      "summary": "後ろ倒れる動作が繰り返されている。人物は後ろを向いたまま、ゆっくりと後退している。",
+      "keywords": [
+        "後退",
+        "倒れる",
+        "人物",
+        "動き",
+        "後ろ"
+      ]
+    },
+    {
+      "scene_id": 328,
+      "summary": "後ろ向きに歩行する人物が映っているシーン。字幕テキストは繰り返される‘後ろ’の文字のみで、人物の移動方向を示唆している。",
+      "keywords": [
+        "人物",
+        "後ろ向き",
+        "歩行",
+        "移動",
+        "映像"
+      ]
+    },
+    {
+      "scene_id": 329,
+      "summary": "後ろを向く動作が繰り返されているシーン。人物は後ろを向いたまま固定されている。",
+      "keywords": [
+        "後ろ向き",
+        "移動なし",
+        "反復",
+        "動作"
+      ]
+    },
+    {
+      "scene_id": 330,
+      "summary": "りっくんが落ち着いているか確認する場面。字幕によると、周りの友人たちと楽しそうに話している様子が伺える。",
+      "keywords": [
+        "りっくん",
+        "友人",
+        "楽しそう",
+        "会話"
+      ]
+    },
+    {
+      "scene_id": 331,
+      "summary": "りっくんが落ち着いているか確認する場面。字幕によると、彼女は冗談めかして楽しげに、そして少し抜けている様子を見せている。",
+      "keywords": [
+        "りっくん",
+        "彼女",
+        "冗談",
+        "抜けている"
+      ]
+    },
+    {
+      "scene_id": 332,
+      "summary": "りっくんが落ち着いている様子を、友人たちと楽しそうに遊んでいるシーン。字幕によると、りっくんは「おなちょー」と呼ばれるお姉さんたちと、少ししゃがっぽい様子で遊びを楽しんでいる。",
+      "keywords": [
+        "りっくん",
+        "友人",
+        "遊び",
+        "お姉さん",
+        "しゃがっぽい"
+      ]
+    },
+    {
+      "scene_id": 333,
+      "summary": "りっくんが落ち着いている様子を、友人たちと楽しそうに遊んでいる。字幕によると、りっくんは「おなちょー」と呼ばれるなど、明るく活発な性格である。",
+      "keywords": [
+        "りっくん",
+        "友人",
+        "遊び",
+        "落ち着く",
+        "おなちょー"
+      ]
+    },
+    {
+      "scene_id": 334,
+      "summary": "りっくんが落ち着いている様子を、友人たちに促されながら楽しそうに何かのパフォーマンスを行っている。字幕からは、彼女の明るく活発な性格が窺える。",
+      "keywords": [
+        "りっくん",
+        "友人",
+        "パフォーマンス",
+        "楽しそう",
+        "明るい"
+      ]
+    },
+    {
+      "scene_id": 335,
+      "summary": "りっくんは落ち着いて、指示を待っています。字幕によると、りっくんは引っ込み思案な性格で、周りの人に優しく接そうと努めている様子が伺えます。",
+      "keywords": [
+        "りっくん",
+        "指示",
+        "引っ込み思案",
+        "優しさ",
+        "女の子"
+      ]
+    },
+    {
+      "scene_id": 336,
+      "summary": "りっくんは、友人たちと楽しく遊び、おなじょーやしょうがっぽな様子を表現している。字幕には、自身を「おなちょー」と表現している様子が確認できる。",
+      "keywords": [
+        "友達",
+        "遊び",
+        "りっくん",
+        "おなちょー",
+        "表現"
+      ]
+    },
+    {
+      "scene_id": 337,
+      "summary": "りっくんが落ち着いている様子を、友人たちと一緒に楽しんでいる。字幕には『おなちょー』『なんばれる』『おなにしょうがっぽ』といった言葉があり、子供たちの賑やかなやり取りが伺える。",
+      "keywords": [
+        "子供",
+        "友人",
+        "楽しむ",
+        "会話",
+        "りっくん"
+      ]
+    },
+    {
+      "scene_id": 338,
+      "summary": "りっくんは落ち着いており、指示を仰ぎながらも、お姉様のような明るく可愛らしい振る舞いをしています。字幕には、彼女の性格的な特徴が込められています。",
+      "keywords": [
+        "りっくん",
+        "お姉様",
+        "指示",
+        "可愛らしい"
+      ]
+    },
+    {
+      "scene_id": 339,
+      "summary": "りっくんが落ち着いている様子を、他の女の子たちと楽しそうに遊んでいるシーンです。字幕からは、りっくんが「おなちょー」と呼ばれるなど、のんびりとした雰囲気が伝わります。",
+      "keywords": [
+        "りっくん",
+        "女の子",
+        "遊ぶ",
+        "落ち着いている",
+        "おなちょー"
+      ]
+    },
+    {
+      "scene_id": 340,
+      "summary": "りっくんと少女（なんばれる）が楽しそうに何らかの遊びをしている様子が描かれている。字幕からは、りっくんが落ち着いている様子と、少女が「おなちょー」や「なんばれる」といった言葉をかけていることがわかる。",
+      "keywords": [
+        "りっくん",
+        "少女",
+        "遊び",
+        "なんばれる",
+        "おなしょー"
+      ]
+    },
+    {
+      "scene_id": 341,
+      "summary": "りっくんが落ち着いているか確認する場面。字幕からは、りっくんが人情深く、やや抜けている性格であると推測できる。場所や人物は特定できない。",
+      "keywords": [
+        "りっくん",
+        "人情",
+        "抜けた性格",
+        "確認",
+        "会話"
+      ]
+    },
+    {
+      "scene_id": 342,
+      "summary": "りっくんが落ち着いている様子を伝えつつ、上乗せ操作を行った。会話内容から、上乗せ操作によってレバレッジが勝手に大きくなりすぎないかを確認している状況。",
+      "keywords": [
+        "レバレッジ",
+        "上乗せ",
+        "操作",
+        "確認",
+        "りっくん"
+      ]
+    },
+    {
+      "scene_id": 343,
+      "summary": "男性が何らかの物質を回収している場面。回収したものを追加（上乗せ）したため、残留物について懸念している様子が伺える。",
+      "keywords": [
+        "回収",
+        "上乗せ",
+        "懸念",
+        "残留物",
+        "左"
+      ]
+    },
+    {
+      "scene_id": 344,
+      "summary": "男性が何かを回収する作業を行い、上乗せした物を持ち上げている。仕掛け（左）を張りすぎないように注意している。",
+      "keywords": [
+        "回収",
+        "上乗せ",
+        "仕掛け",
+        "注意",
+        "男性"
+      ]
+    },
+    {
+      "scene_id": 345,
+      "summary": "男性が何かのアイテム（いいの）を回収し、さらに追加してしまった様子。その結果、左側への配分が過剰になる可能性を懸念している。",
+      "keywords": [
+        "回収",
+        "追加",
+        "配分",
+        "懸念",
+        "いいの"
+      ]
+    }
+  ]
+}

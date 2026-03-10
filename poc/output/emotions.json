@@ -1,0 +1,879 @@
+{
+  "entries": [
+    {
+      "start": 0.031,
+      "end": 22.967,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49817579984664917,
+        "valence": 0.5018309950828552,
+        "dominance": 0.49755775928497314
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.9070208072662354,
+          "sadness": 0.016635121777653694,
+          "anticipation": 0.029656754806637764,
+          "surprise": 0.005815768148750067,
+          "anger": 0.009570939466357231,
+          "fear": 0.006521755363792181,
+          "disgust": 0.012011008337140083,
+          "trust": 0.012767983600497246
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0676,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 24.702,
+      "end": 48.926,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981737434864044,
+        "valence": 0.501587986946106,
+        "dominance": 0.49858614802360535
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.014413708820939064,
+          "sadness": 0.6068239212036133,
+          "anticipation": 0.02468079887330532,
+          "surprise": 0.032195135951042175,
+          "anger": 0.10488523542881012,
+          "fear": 0.10597875714302063,
+          "disgust": 0.08155950158834457,
+          "trust": 0.029462862759828568
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 49.206,
+      "end": 54.591,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49819374084472656,
+        "valence": 0.5016675591468811,
+        "dominance": 0.4977031350135803
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.11737748980522156,
+          "sadness": 0.22805646061897278,
+          "anticipation": 0.14776641130447388,
+          "surprise": 0.04941746965050697,
+          "anger": 0.13058660924434662,
+          "fear": 0.10666651278734207,
+          "disgust": 0.12222274392843246,
+          "trust": 0.09790629148483276
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 55.313,
+      "end": 67.973,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49818485975265503,
+        "valence": 0.5016854405403137,
+        "dominance": 0.49778103828430176
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.01174375880509615,
+          "sadness": 0.5407969355583191,
+          "anticipation": 0.02401423081755638,
+          "surprise": 0.03073243238031864,
+          "anger": 0.12916553020477295,
+          "fear": 0.13070978224277496,
+          "disgust": 0.10250664502382278,
+          "trust": 0.030330708250403404
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 72.661,
+      "end": 94.534,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.498155802488327,
+        "valence": 0.5017589330673218,
+        "dominance": 0.4975152015686035
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.0537136048078537,
+          "sadness": 0.3449461758136749,
+          "anticipation": 0.04316150024533272,
+          "surprise": 0.0677720382809639,
+          "anger": 0.13312172889709473,
+          "fear": 0.13512346148490906,
+          "disgust": 0.14290751516819,
+          "trust": 0.07925401628017426
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 96.134,
+      "end": 125.331,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49817490577697754,
+        "valence": 0.5016259551048279,
+        "dominance": 0.4979306757450104
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.045413535088300705,
+          "sadness": 0.2636796236038208,
+          "anticipation": 0.054148152470588684,
+          "surprise": 0.06771489977836609,
+          "anger": 0.1894645243883133,
+          "fear": 0.13640427589416504,
+          "disgust": 0.1644122451543808,
+          "trust": 0.0787627175450325
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 126.172,
+      "end": 155.065,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49812012910842896,
+        "valence": 0.5016434192657471,
+        "dominance": 0.4980301558971405
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.04818916693329811,
+          "sadness": 0.4650781452655792,
+          "anticipation": 0.07526879757642746,
+          "surprise": 0.036786120384931564,
+          "anger": 0.07983783632516861,
+          "fear": 0.1494455188512802,
+          "disgust": 0.09019583463668823,
+          "trust": 0.05519858002662659
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 157.475,
+      "end": 186.857,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49816638231277466,
+        "valence": 0.5016828179359436,
+        "dominance": 0.49805694818496704
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.12889857590198517,
+          "sadness": 0.15196268260478973,
+          "anticipation": 0.14968495070934296,
+          "surprise": 0.031641796231269836,
+          "anger": 0.17182427644729614,
+          "fear": 0.07825858145952225,
+          "disgust": 0.17882414162158966,
+          "trust": 0.10890501737594604
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7425,
+      "fused_arousal": 0.9157
+    },
+    {
+      "start": 188.356,
+      "end": 209.335,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49819469451904297,
+        "valence": 0.5014120936393738,
+        "dominance": 0.49835413694381714
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.22661589086055756,
+          "sadness": 0.08456254005432129,
+          "anticipation": 0.22034434974193573,
+          "surprise": 0.035539645701646805,
+          "anger": 0.07337973266839981,
+          "fear": 0.05709024518728256,
+          "disgust": 0.1779433637857437,
+          "trust": 0.12452418357133865
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0674,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 213.972,
+      "end": 235.187,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49818840622901917,
+        "valence": 0.501599907875061,
+        "dominance": 0.49770596623420715
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.12052331864833832,
+          "sadness": 0.2008313089609146,
+          "anticipation": 0.08657926321029663,
+          "surprise": 0.08714617043733597,
+          "anger": 0.12984441220760345,
+          "fear": 0.1192144900560379,
+          "disgust": 0.1395457684993744,
+          "trust": 0.11631535738706589
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 236.416,
+      "end": 265.967,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49820414185523987,
+        "valence": 0.5017578601837158,
+        "dominance": 0.4978736937046051
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.046928927302360535,
+          "sadness": 0.3274019658565521,
+          "anticipation": 0.06366997212171555,
+          "surprise": 0.06098061800003052,
+          "anger": 0.13747529685497284,
+          "fear": 0.13963331282138824,
+          "disgust": 0.13560627400875092,
+          "trust": 0.08830366283655167
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 266.723,
+      "end": 289.137,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981685280799866,
+        "valence": 0.5017654895782471,
+        "dominance": 0.49765995144844055
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.044111963361501694,
+          "sadness": 0.31054389476776123,
+          "anticipation": 0.04744422063231468,
+          "surprise": 0.06545302271842957,
+          "anger": 0.19757138192653656,
+          "fear": 0.12852278351783752,
+          "disgust": 0.1293293833732605,
+          "trust": 0.07702338695526123
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 291.732,
+      "end": 316.086,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981856942176819,
+        "valence": 0.5016818046569824,
+        "dominance": 0.497618168592453
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.06928175687789917,
+          "sadness": 0.24353064596652985,
+          "anticipation": 0.06598071753978729,
+          "surprise": 0.07066141813993454,
+          "anger": 0.1691981554031372,
+          "fear": 0.13405759632587433,
+          "disgust": 0.14033402502536774,
+          "trust": 0.10695568472146988
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 317.078,
+      "end": 341.348,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.498198539018631,
+        "valence": 0.5015864968299866,
+        "dominance": 0.4980430006980896
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.11360643059015274,
+          "sadness": 0.22020390629768372,
+          "anticipation": 0.10722451657056808,
+          "surprise": 0.05354485660791397,
+          "anger": 0.15146228671073914,
+          "fear": 0.10744959115982056,
+          "disgust": 0.13685262203216553,
+          "trust": 0.10965584218502045
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 346.289,
+      "end": 374.777,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49818167090415955,
+        "valence": 0.5018242001533508,
+        "dominance": 0.49769827723503113
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.26713788509368896,
+          "sadness": 0.13856454193592072,
+          "anticipation": 0.16540446877479553,
+          "surprise": 0.041912809014320374,
+          "anger": 0.10362595319747925,
+          "fear": 0.07213940471410751,
+          "disgust": 0.10195936262607574,
+          "trust": 0.1092555820941925
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0676,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 376.006,
+      "end": 398.959,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981655776500702,
+        "valence": 0.5014320611953735,
+        "dominance": 0.49840879440307617
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.4740051329135895,
+          "sadness": 0.08046244084835052,
+          "anticipation": 0.10341604053974152,
+          "surprise": 0.027300598099827766,
+          "anger": 0.09545339643955231,
+          "fear": 0.0543336421251297,
+          "disgust": 0.07968007773160934,
+          "trust": 0.0853487104177475
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0674,
+      "fused_arousal": 1.0157
+    },
+    {
+      "start": 405.014,
+      "end": 432.0,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49818816781044006,
+        "valence": 0.5016336441040039,
+        "dominance": 0.49812254309654236
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.29021939635276794,
+          "sadness": 0.1534583866596222,
+          "anticipation": 0.1269395500421524,
+          "surprise": 0.052350930869579315,
+          "anger": 0.08904667943716049,
+          "fear": 0.06742691248655319,
+          "disgust": 0.10782402008771896,
+          "trust": 0.11273402720689774
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0675,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 432.841,
+      "end": 460.637,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.498220831155777,
+        "valence": 0.5015707612037659,
+        "dominance": 0.49854061007499695
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.30345436930656433,
+          "sadness": 0.16550950706005096,
+          "anticipation": 0.1244429424405098,
+          "surprise": 0.03709884360432625,
+          "anger": 0.0970676839351654,
+          "fear": 0.07076656073331833,
+          "disgust": 0.10871601849794388,
+          "trust": 0.09294405579566956
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0675,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 463.098,
+      "end": 484.853,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4982426166534424,
+        "valence": 0.5015172958374023,
+        "dominance": 0.49830156564712524
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.13019174337387085,
+          "sadness": 0.1890048384666443,
+          "anticipation": 0.12226010859012604,
+          "surprise": 0.05802502855658531,
+          "anger": 0.16005122661590576,
+          "fear": 0.08311371505260468,
+          "disgust": 0.13987527787685394,
+          "trust": 0.11747808754444122
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7674,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 497.135,
+      "end": 518.337,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981825351715088,
+        "valence": 0.5016746520996094,
+        "dominance": 0.4977474808692932
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.36945992708206177,
+          "sadness": 0.17830830812454224,
+          "anticipation": 0.1075262501835823,
+          "surprise": 0.03917856514453888,
+          "anger": 0.06243596225976944,
+          "fear": 0.06341391056776047,
+          "disgust": 0.10271819680929184,
+          "trust": 0.07695889472961426
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0675,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 522.641,
+      "end": 523.362,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49821338057518005,
+        "valence": 0.5012784004211426,
+        "dominance": 0.49837973713874817
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.1285536140203476,
+          "sadness": 0.1916850060224533,
+          "anticipation": 0.1424112468957901,
+          "surprise": 0.0752892941236496,
+          "anger": 0.11825209856033325,
+          "fear": 0.11230605095624924,
+          "disgust": 0.11231373250484467,
+          "trust": 0.11918897181749344
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7673,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 526.075,
+      "end": 538.617,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4982045590877533,
+        "valence": 0.5016160607337952,
+        "dominance": 0.4977198541164398
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.7944576740264893,
+          "sadness": 0.029251476749777794,
+          "anticipation": 0.07735296338796616,
+          "surprise": 0.009571648202836514,
+          "anger": 0.019423410296440125,
+          "fear": 0.01580394059419632,
+          "disgust": 0.024736935272812843,
+          "trust": 0.0294019877910614
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0675,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 541.347,
+      "end": 547.438,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981979429721832,
+        "valence": 0.5017775893211365,
+        "dominance": 0.49828144907951355
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.0009333502384833992,
+          "sadness": 0.98988276720047,
+          "anticipation": 0.0009020555880852044,
+          "surprise": 0.0006623672088608146,
+          "anger": 0.0019993081223219633,
+          "fear": 0.0015783666167408228,
+          "disgust": 0.0034459198359400034,
+          "trust": 0.0005957565736025572
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7676,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 556.134,
+      "end": 556.635,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981194734573364,
+        "valence": 0.5018557906150818,
+        "dominance": 0.4983694851398468
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.08918783068656921,
+          "sadness": 0.20109687745571136,
+          "anticipation": 0.11599814146757126,
+          "surprise": 0.07468528300523758,
+          "anger": 0.1661117970943451,
+          "fear": 0.1375318020582199,
+          "disgust": 0.10895489156246185,
+          "trust": 0.10643331706523895
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7676,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 556.715,
+      "end": 564.57,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981639087200165,
+        "valence": 0.5014321208000183,
+        "dominance": 0.49848687648773193
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.06879628449678421,
+          "sadness": 0.2928552031517029,
+          "anticipation": 0.09972438961267471,
+          "surprise": 0.06983710080385208,
+          "anger": 0.11050046235322952,
+          "fear": 0.1448735147714615,
+          "disgust": 0.11575229465961456,
+          "trust": 0.09766069799661636
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7674,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 565.023,
+      "end": 590.76,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981597661972046,
+        "valence": 0.5016246438026428,
+        "dominance": 0.4979006350040436
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.11258305609226227,
+          "sadness": 0.2620856761932373,
+          "anticipation": 0.10305308550596237,
+          "surprise": 0.07188136130571365,
+          "anger": 0.12053431570529938,
+          "fear": 0.11495083570480347,
+          "disgust": 0.10690325498580933,
+          "trust": 0.10800834000110626
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 591.533,
+      "end": 612.023,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49815917015075684,
+        "valence": 0.5015048980712891,
+        "dominance": 0.4980081021785736
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.8099082708358765,
+          "sadness": 0.0483061708509922,
+          "anticipation": 0.025430886074900627,
+          "surprise": 0.011330454610288143,
+          "anger": 0.026536742225289345,
+          "fear": 0.015499557368457317,
+          "disgust": 0.03981555253267288,
+          "trust": 0.023172348737716675
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0674,
+      "fused_arousal": 1.0157
+    },
+    {
+      "start": 616.171,
+      "end": 643.444,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49821242690086365,
+        "valence": 0.5014530420303345,
+        "dominance": 0.4988701343536377
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.04599359259009361,
+          "sadness": 0.26906126737594604,
+          "anticipation": 0.057141922414302826,
+          "surprise": 0.1300179809331894,
+          "anger": 0.1593037098646164,
+          "fear": 0.15867817401885986,
+          "disgust": 0.09880684316158295,
+          "trust": 0.0809965431690216
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7674,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 645.314,
+      "end": 673.785,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981895983219147,
+        "valence": 0.5017095804214478,
+        "dominance": 0.4974405765533447
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.07006362080574036,
+          "sadness": 0.35336440801620483,
+          "anticipation": 0.04892957583069801,
+          "surprise": 0.07016235589981079,
+          "anger": 0.10105586796998978,
+          "fear": 0.14762328565120697,
+          "disgust": 0.13480570912361145,
+          "trust": 0.0739952027797699
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 678.895,
+      "end": 708.784,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49816450476646423,
+        "valence": 0.5018376708030701,
+        "dominance": 0.49779343605041504
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.032496463507413864,
+          "sadness": 0.2805529832839966,
+          "anticipation": 0.0462288074195385,
+          "surprise": 0.09613621234893799,
+          "anger": 0.22147488594055176,
+          "fear": 0.12834906578063965,
+          "disgust": 0.12878826260566711,
+          "trust": 0.06597331911325455
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7676,
+      "fused_arousal": 0.7907
+    },
+    {
+      "start": 710.873,
+      "end": 729.878,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981503486633301,
+        "valence": 0.501716673374176,
+        "dominance": 0.49747979640960693
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.047432754188776016,
+          "sadness": 0.194089874625206,
+          "anticipation": 0.3573165237903595,
+          "surprise": 0.027935493737459183,
+          "anger": 0.06588176637887955,
+          "fear": 0.18501785397529602,
+          "disgust": 0.055294137448072433,
+          "trust": 0.06703148782253265
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.9675,
+      "fused_arousal": 0.9657
+    },
+    {
+      "start": 733.081,
+      "end": 751.393,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49819716811180115,
+        "valence": 0.5016750693321228,
+        "dominance": 0.49753037095069885
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.06895511597394943,
+          "sadness": 0.2748314440250397,
+          "anticipation": 0.08355418592691422,
+          "surprise": 0.06993666291236877,
+          "anger": 0.13291822373867035,
+          "fear": 0.1699330061674118,
+          "disgust": 0.10458464920520782,
+          "trust": 0.09528673440217972
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 752.673,
+      "end": 781.633,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981694221496582,
+        "valence": 0.5018717646598816,
+        "dominance": 0.4977341890335083
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.18221676349639893,
+          "sadness": 0.06534905731678009,
+          "anticipation": 0.10979015380144119,
+          "surprise": 0.10252103209495544,
+          "anger": 0.17828860878944397,
+          "fear": 0.08441530913114548,
+          "disgust": 0.14088349044322968,
+          "trust": 0.13653564453125
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 1.0676,
+      "fused_arousal": 1.0158
+    },
+    {
+      "start": 783.048,
+      "end": 809.241,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.4981769323348999,
+        "valence": 0.5017649531364441,
+        "dominance": 0.49728527665138245
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.1464061141014099,
+          "sadness": 0.2543381154537201,
+          "anticipation": 0.09397588670253754,
+          "surprise": 0.06364267319440842,
+          "anger": 0.11710862070322037,
+          "fear": 0.11397533118724823,
+          "disgust": 0.10664203763008118,
+          "trust": 0.10391123592853546
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7675,
+      "fused_arousal": 0.7908
+    },
+    {
+      "start": 811.617,
+      "end": 818.488,
+      "speech_category": null,
+      "dimensional": {
+        "arousal": 0.49818155169487,
+        "valence": 0.5015214085578918,
+        "dominance": 0.4985733926296234
+      },
+      "text_emotions": {
+        "scores": {
+          "joy": 0.026218514889478683,
+          "sadness": 0.3927866220474243,
+          "anticipation": 0.04788781329989433,
+          "surprise": 0.04970700666308403,
+          "anger": 0.08032093942165375,
+          "fear": 0.24315720796585083,
+          "disgust": 0.10222824662923813,
+          "trust": 0.05769362300634384
+        }
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7674,
+      "fused_arousal": 0.7908
+    }
+  ]
+}
