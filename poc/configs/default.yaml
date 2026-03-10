@@ -1,0 +1,65 @@
+# VODAI PoC デフォルト設定
+
+# LLM プロバイダー設定
+# provider: "ollama" (ローカル開発) or "openai" (本番)
+llm:
+  provider: ollama
+  ollama:
+    base_url: http://localhost:11434/v1
+    model: gemma3:4b
+  openai:
+    model_correction: gpt-4.1
+    model_summary: gpt-4o
+
+# 音声抽出
+audio:
+  sample_rate: 16000
+  channels: 1
+  format: wav
+
+# ASR (WhisperX)
+# モデルサイズ: tiny < base < small < medium < large-v3
+# CPU環境では medium 以下を推奨（large-v3 は GPU 前提）
+asr:
+  model_name: medium
+  language: ja
+  batch_size: 16
+  compute_type: int8
+
+# 誤字補正
+correction:
+  chunk_size: 10
+  max_retries: 3
+  temperature: 0.1
+  confidence_threshold: 0.7
+
+# シーン検出
+scene:
+  threshold: 27.0
+  min_scene_len: 15
+  max_frames: 5
+
+# シーン要約
+scene_summary:
+  max_tokens: 500
+
+# 感情推定
+emotion:
+  speech:
+    model: FunAudioLLM/SenseVoiceSmall
+    language: ja
+  dimensional:
+    model: audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim
+  text:
+    model: Mizuiro-sakura/luke-japanese-large-sentiment-analysis-wrime
+  fusion:
+    speech_weight: 0.4
+    text_weight: 0.6
+
+# 出力
+output:
+  formats:
+    - json
+    - srt
+    - vtt
+  dir: poc/output
