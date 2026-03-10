@@ -22,6 +22,8 @@ env/
 *.swo
 *~
 
+poc/input/
+
 # Environment
 .env
 
