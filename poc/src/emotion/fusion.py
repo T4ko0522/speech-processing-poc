@@ -9,6 +9,7 @@ from poc.src.pipeline.models import (
     EmotionCategory,
     EmotionTimeline,
     FusedEmotion,
+    ProsodyFeatures,
     TextEmotion,
     TranscriptSegment,
 )
@@ -53,12 +54,20 @@ EMOTION_AROUSAL_MAP = {
 }
 
 
-def _get_dominant_text_emotion(text_emotion: TextEmotion) -> tuple[str, float]:
-    """テキスト感情から支配的なラベルとスコアを取得."""
-    if not text_emotion.scores:
-        return "neutral", 0.0
-    label = max(text_emotion.scores, key=text_emotion.scores.get)
-    return label, text_emotion.scores[label]
+def _text_scores_to_va(scores: dict[str, float]) -> tuple[float, float]:
+    """全8感情スコアの加重和で valence/arousal を算出する."""
+    total = sum(scores.values())
+    if total == 0:
+        return 0.5, 0.5
+    valence = sum(
+        EMOTION_VALENCE_MAP.get(label, 0.5) * (score / total)
+        for label, score in scores.items()
+    )
+    arousal = sum(
+        EMOTION_AROUSAL_MAP.get(label, 0.5) * (score / total)
+        for label, score in scores.items()
+    )
+    return valence, arousal
 
 
 def fuse_emotions(
@@ -66,27 +75,40 @@ def fuse_emotions(
     speech_emotions: dict[int, EmotionCategory] | None = None,
     dimensional_emotions: dict[int, DimensionalEmotion] | None = None,
     text_emotions: dict[int, TextEmotion] | None = None,
+    prosody_results: dict[int, ProsodyFeatures] | None = None,
     *,
     speech_weight: float = 0.4,
     text_weight: float = 0.6,
+    dimensional_weight: float = 0.2,
+    neutral_zone: list[float] | None = None,
 ) -> EmotionTimeline:
     """3モデルの感情推定結果を Late Fusion で統合する.
-
-    重み付け: speech_weight (デフォルト 0.4) / text_weight (デフォルト 0.6)
-    次元感情は arousal/valence として直接使用
 
     Args:
         segments: 字幕セグメントリスト
         speech_emotions: 音声カテゴリカル感情
         dimensional_emotions: 次元感情
         text_emotions: テキスト感情
+        prosody_results: prosody特徴量
         speech_weight: 音声感情の重み
         text_weight: テキスト感情の重み
+        dimensional_weight: 次元感情のブレンド比率 (0-1)
+        neutral_zone: neutralゾーンの範囲 [lower, upper]
 
     Returns:
         EmotionTimeline: 融合済み感情タイムライン
     """
-    logger.info("感情融合開始", speech_weight=speech_weight, text_weight=text_weight)
+    if neutral_zone is None:
+        neutral_zone = [0.35, 0.65]
+    neutral_lower, neutral_upper = neutral_zone
+
+    logger.info(
+        "感情融合開始",
+        speech_weight=speech_weight,
+        text_weight=text_weight,
+        dimensional_weight=dimensional_weight,
+        neutral_zone=neutral_zone,
+    )
 
     entries: list[FusedEmotion] = []
 
@@ -94,8 +116,9 @@ def fuse_emotions(
         speech_cat = speech_emotions.get(seg.id) if speech_emotions else None
         dim = dimensional_emotions.get(seg.id) if dimensional_emotions else None
         text_emo = text_emotions.get(seg.id) if text_emotions else None
+        prosody = prosody_results.get(seg.id) if prosody_results else None
 
-        # Valence 融合
+        # Valence/Arousal 融合
         fused_valence = 0.5
         fused_arousal = 0.5
         sources = 0
@@ -107,10 +130,9 @@ def fuse_emotions(
             fused_arousal = sa * speech_weight
             sources += speech_weight
 
-        if text_emo:
-            text_label, _ = _get_dominant_text_emotion(text_emo)
-            tv = EMOTION_VALENCE_MAP.get(text_label, 0.5)
-            ta = EMOTION_AROUSAL_MAP.get(text_label, 0.5)
+        if text_emo and text_emo.scores:
+            # スコア加重方式: 全8感情の分布情報を活用
+            tv, ta = _text_scores_to_va(text_emo.scores)
             fused_valence += tv * text_weight
             fused_arousal += ta * text_weight
             sources += text_weight
@@ -119,13 +141,16 @@ def fuse_emotions(
             fused_valence /= sources
             fused_arousal /= sources
 
-        # 次元感情がある場合は加重平均で統合
+        # 次元感情がある場合は低い比率でブレンド（信頼性が低いため）
         if dim:
-            fused_valence = fused_valence * 0.5 + dim.valence * 0.5
-            fused_arousal = fused_arousal * 0.5 + dim.arousal * 0.5
+            cat_weight = 1.0 - dimensional_weight
+            fused_valence = fused_valence * cat_weight + dim.valence * dimensional_weight
+            fused_arousal = fused_arousal * cat_weight + dim.arousal * dimensional_weight
 
-        # 融合ラベル決定
-        fused_label = _determine_fused_label(fused_valence, fused_arousal)
+        # 融合ラベル決定（拡大neutralゾーン）
+        fused_label = _determine_fused_label(
+            fused_valence, fused_arousal, neutral_lower, neutral_upper
+        )
 
         entries.append(
             FusedEmotion(
@@ -134,6 +159,7 @@ def fuse_emotions(
                 speech_category=speech_cat,
                 dimensional=dim,
                 text_emotions=text_emo,
+                prosody=prosody,
                 fused_label=fused_label,
                 fused_valence=round(fused_valence, 4),
                 fused_arousal=round(fused_arousal, 4),
@@ -144,15 +170,20 @@ def fuse_emotions(
     return EmotionTimeline(entries=entries)
 
 
-def _determine_fused_label(valence: float, arousal: float) -> str:
+def _determine_fused_label(
+    valence: float,
+    arousal: float,
+    neutral_lower: float = 0.35,
+    neutral_upper: float = 0.65,
+) -> str:
     """valence/arousal の値から感情ラベルを決定（Russell's circumplex model）."""
-    if valence >= 0.6 and arousal >= 0.6:
+    if valence >= neutral_upper and arousal >= neutral_upper:
         return "happy"
-    elif valence >= 0.6 and arousal < 0.4:
+    elif valence >= neutral_upper and arousal < neutral_lower:
         return "calm"
-    elif valence < 0.4 and arousal >= 0.6:
+    elif valence < neutral_lower and arousal >= neutral_upper:
         return "angry"
-    elif valence < 0.4 and arousal < 0.4:
+    elif valence < neutral_lower and arousal < neutral_lower:
         return "sad"
     else:
         return "neutral"
