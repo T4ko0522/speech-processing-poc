@@ -16,7 +16,8 @@ _original_torch_load = torch.load
 
 @functools.wraps(_original_torch_load)
 def _patched_torch_load(*args, **kwargs):
-    kwargs["weights_only"] = False
+    if "weights_only" not in kwargs:
+        kwargs["weights_only"] = False
     return _original_torch_load(*args, **kwargs)
 
 
