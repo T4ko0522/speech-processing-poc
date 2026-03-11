@@ -6,9 +6,10 @@ import functools
 import os
 import sys
 
-# PyTorch 2.6+ 互換パッチ: pyannote.audio が omegaconf 型を含む
-# チェックポイントを torch.load で読み込むため、他のライブラリが
-# torch.load の参照をキャッシュする前にパッチを当てる必要がある。
+# PyTorch 2.6+ 互換パッチ: pyannote.audio のチェックポイントが omegaconf の
+# 多数の内部型（ListConfig, DictConfig, ContainerMetadata 等）を含むため、
+# weights_only=True では読み込めない。読み込み対象は HuggingFace の信頼済み
+# モデルのみであるため、weights_only=False をデフォルトにする。
 import torch
 
 _original_torch_load = torch.load
@@ -16,8 +17,7 @@ _original_torch_load = torch.load
 
 @functools.wraps(_original_torch_load)
 def _patched_torch_load(*args, **kwargs):
-    if "weights_only" not in kwargs:
-        kwargs["weights_only"] = False
+    kwargs["weights_only"] = False
     return _original_torch_load(*args, **kwargs)
 
 
