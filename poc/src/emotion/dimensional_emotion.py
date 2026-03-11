@@ -62,6 +62,7 @@ def analyze_dimensional_emotion(
     *,
     model_name: str = "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
     device: str = "cpu",
+    preloaded_audio: tuple | None = None,
 ) -> dict[int, DimensionalEmotion]:
     """audeering の wav2vec2 モデルで arousal/valence/dominance を推定する.
 
@@ -73,6 +74,7 @@ def analyze_dimensional_emotion(
         segments: 字幕セグメントリスト（時間区間参照用）
         model_name: HuggingFace モデル名
         device: デバイス (cpu/cuda)
+        preloaded_audio: (audio_array, sample_rate) のタプル。指定時はファイル読み込みをスキップ
 
     Returns:
         セグメントID → DimensionalEmotion のマッピング
@@ -84,8 +86,11 @@ def analyze_dimensional_emotion(
     model.to(device)
     model.eval()
 
-    # 音声読み込み
-    audio, sr = librosa.load(str(audio_path), sr=16000, mono=True)
+    # 音声読み込み（プリロード済みならスキップ）
+    if preloaded_audio is not None:
+        audio, sr = preloaded_audio
+    else:
+        audio, sr = librosa.load(str(audio_path), sr=16000, mono=True)
 
     results: dict[int, DimensionalEmotion] = {}
 
