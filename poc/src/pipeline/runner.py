@@ -242,14 +242,19 @@ def run_pipeline(
     # prosody
     t0 = time.monotonic()
     prosody_results = None
-    try:
-        from poc.src.emotion.prosody import analyze_prosody
+    prosody_cfg = emotion_cfg.get("prosody", {})
+    if prosody_cfg.get("enabled", True):
+        try:
+            from poc.src.emotion.prosody import analyze_prosody
 
-        prosody_results = analyze_prosody(audio_path, segments)
-        _record_timing(timings, "emotion_prosody", t0)
-    except Exception:
-        _record_timing(timings, "emotion_prosody", t0, status="failed", skip_reason="推定エラー")
-        logger.warning("prosody推定スキップ")
+            prosody_results = analyze_prosody(audio_path, segments)
+            _record_timing(timings, "emotion_prosody", t0)
+        except Exception:
+            _record_timing(timings, "emotion_prosody", t0, status="failed", skip_reason="推定エラー")
+            logger.warning("prosody推定スキップ")
+    else:
+        _record_timing(timings, "emotion_prosody", t0, status="skipped", skip_reason="設定で無効")
+        logger.info("prosody推定スキップ（emotion.prosody.enabled=false）")
 
     # 融合
     t0 = time.monotonic()
