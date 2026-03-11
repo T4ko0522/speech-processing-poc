@@ -23,6 +23,7 @@ env/
 *~
 
 poc/input/
+poc/output/frames/
 
 # Environment
 .env
