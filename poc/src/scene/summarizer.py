@@ -130,7 +130,7 @@ def summarize_scenes(
     consecutive_failures = 0
     max_consecutive_failures = 3
 
-    for boundary in boundaries:
+    for idx, boundary in enumerate(boundaries):
         logger.info("シーン要約生成中", scene_id=boundary.scene_id)
 
         image_b64 = None
@@ -167,10 +167,18 @@ def summarize_scenes(
                 SceneSummary(scene_id=boundary.scene_id, summary="", keywords=[])
             )
             if consecutive_failures >= max_consecutive_failures:
-                remaining = len(boundaries) - boundary.scene_id - 1
+                # 残りシーンを空summaryで埋める
+                for remaining_boundary in boundaries[idx + 1 :]:
+                    summaries.append(
+                        SceneSummary(
+                            scene_id=remaining_boundary.scene_id,
+                            summary="",
+                            keywords=[],
+                        )
+                    )
                 logger.error(
                     "連続失敗のためシーン要約を打ち切り",
-                    remaining_scenes=remaining,
+                    remaining_scenes=len(boundaries) - idx - 1,
                 )
                 break
 
