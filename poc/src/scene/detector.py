@@ -128,7 +128,18 @@ def detect_scenes(
     logger.info("シーン検出完了（マージ前）", scenes_count=len(boundaries))
 
     # 短シーンのマージ
+    pre_merge_frames = {b.frame_path for b in boundaries if b.frame_path}
     boundaries = _merge_short_scenes(boundaries, merge_threshold)
+    post_merge_frames = {b.frame_path for b in boundaries if b.frame_path}
+
+    # マージで不要になったフレーム画像を削除
+    orphan_frames = pre_merge_frames - post_merge_frames
+    for frame in orphan_frames:
+        p = Path(frame)
+        if p.exists():
+            p.unlink()
+    if orphan_frames:
+        logger.info("不要フレーム削除", count=len(orphan_frames))
 
     logger.info("シーン検出完了", scenes_count=len(boundaries))
     return boundaries
