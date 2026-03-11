@@ -79,11 +79,11 @@ def run_pipeline(
     out_path.mkdir(parents=True, exist_ok=True)
 
     # ===== LLM クライアント初期化 =====
-    llm_cfg = config.get("llm", {})
-    provider = llm_cfg.get("provider", "openai")
+    llm_cfg = config["llm"]
+    provider = llm_cfg["provider"]
     llm_client = None
     try:
-        llm_client, _ = create_llm_client(llm_cfg, openai_api_key)
+        llm_client = create_llm_client(llm_cfg, openai_api_key)
         logger.info("LLMプロバイダー初期化", provider=provider)
     except ValueError as e:
         logger.warning("LLMクライアント初期化失敗、補正・要約はスキップ", error=str(e))
@@ -93,15 +93,15 @@ def run_pipeline(
     logger.info("パイプライン開始", input=str(video_path))
 
     # ===== Step 1: 音声抽出 (Fatal) =====
-    audio_cfg = config.get("audio", {})
+    audio_cfg = config["audio"]
     audio_path = out_path / "audio.wav"
     t0 = time.monotonic()
     try:
         extract_audio(
             video_path,
             audio_path,
-            sample_rate=audio_cfg.get("sample_rate", 16000),
-            channels=audio_cfg.get("channels", 1),
+            sample_rate=audio_cfg["sample_rate"],
+            channels=audio_cfg["channels"],
         )
         _record_timing(timings, "audio_extract", t0)
     except Exception as e:
@@ -110,15 +110,15 @@ def run_pipeline(
         raise
 
     # ===== Step 2: 文字起こし (Fatal) =====
-    asr_cfg = config.get("asr", {})
+    asr_cfg = config["asr"]
     t0 = time.monotonic()
     try:
         raw_transcript = transcribe(
             audio_path,
-            model_name=asr_cfg.get("model_name", "large-v3"),
-            language=asr_cfg.get("language", "ja"),
-            batch_size=asr_cfg.get("batch_size", 16),
-            compute_type=asr_cfg.get("compute_type", "float32"),
+            model_name=asr_cfg["model_name"],
+            language=asr_cfg["language"],
+            batch_size=asr_cfg["batch_size"],
+            compute_type=asr_cfg["compute_type"],
             device=device,
             hf_token=hf_token,
         )
@@ -134,17 +134,17 @@ def run_pipeline(
     # ===== Step 3: 誤字補正 (リトライ後スキップ可) =====
     t0 = time.monotonic()
     if llm_client:
-        corr_cfg = config.get("correction", {})
+        corr_cfg = config["correction"]
         correction_model = get_model_for_task(llm_cfg, "correction")
         try:
             fixed, corr_retries = correct_transcript(
                 raw_transcript,
                 client=llm_client,
                 model=correction_model,
-                chunk_size=corr_cfg.get("chunk_size", 10),
-                temperature=corr_cfg.get("temperature", 0.1),
-                confidence_threshold=corr_cfg.get("confidence_threshold", 0.7),
-                max_retries=corr_cfg.get("max_retries", 3),
+                chunk_size=corr_cfg["chunk_size"],
+                temperature=corr_cfg["temperature"],
+                confidence_threshold=corr_cfg["confidence_threshold"],
+                max_retries=corr_cfg["max_retries"],
             )
             result.fixed_transcript = fixed
             segments = fixed.segments
@@ -157,16 +157,16 @@ def run_pipeline(
         logger.warning("LLM未設定、誤字補正スキップ")
 
     # ===== Step 4: シーン検出 (スキップ可) =====
-    scene_cfg = config.get("scene", {})
+    scene_cfg = config["scene"]
     boundaries = []
     t0 = time.monotonic()
     try:
         boundaries = detect_scenes(
             video_path,
             out_path,
-            threshold=scene_cfg.get("threshold", 27.0),
-            min_scene_len=scene_cfg.get("min_scene_len", 15),
-            merge_threshold=scene_cfg.get("merge_threshold", 2.0),
+            threshold=scene_cfg["threshold"],
+            min_scene_len=scene_cfg["min_scene_len"],
+            merge_threshold=scene_cfg["merge_threshold"],
         )
         _record_timing(timings, "scene_detect", t0)
     except Exception:
@@ -176,7 +176,7 @@ def run_pipeline(
     # ===== Step 5: シーン要約 (スキップ可) =====
     t0 = time.monotonic()
     if boundaries and llm_client:
-        summary_cfg = config.get("scene_summary", {})
+        summary_cfg = config["scene_summary"]
         summary_model = get_model_for_task(llm_cfg, "summary")
         # Ollama のローカルモデルは基本 Vision 非対応
         supports_vision = provider == "openai"
@@ -186,7 +186,7 @@ def run_pipeline(
                 segments,
                 client=llm_client,
                 model=summary_model,
-                max_tokens=summary_cfg.get("max_tokens", 500),
+                max_tokens=summary_cfg["max_tokens"],
                 supports_vision=supports_vision,
             )
             result.scenes = scenes_result
@@ -202,22 +202,29 @@ def run_pipeline(
         _record_timing(timings, "scene_summary", t0, status="skipped", skip_reason="シーン未検出")
 
     # ===== Step 6: 感情推定 (スキップ可) =====
-    emotion_cfg = config.get("emotion", {})
+    emotion_cfg = config["emotion"]
     dimensional_emotions = None
     text_emotions = None
+
+    # 感情推定用に音声を一度だけロード
+    import librosa as _librosa
+
+    _emotion_audio: tuple | None = None
+    try:
+        _emotion_audio = _librosa.load(str(audio_path), sr=audio_cfg["sample_rate"], mono=True)
+    except Exception:
+        logger.warning("感情推定用の音声ロード失敗")
 
     # 次元感情
     t0 = time.monotonic()
     try:
-        dim_cfg = emotion_cfg.get("dimensional", {})
+        dim_cfg = emotion_cfg["dimensional"]
         dimensional_emotions = analyze_dimensional_emotion(
             audio_path,
             segments,
-            model_name=dim_cfg.get(
-                "model",
-                "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
-            ),
+            model_name=dim_cfg["model"],
             device=device,
+            preloaded_audio=_emotion_audio,
         )
         _record_timing(timings, "emotion_dimensional", t0)
     except Exception:
@@ -227,13 +234,10 @@ def run_pipeline(
     # テキスト感情
     t0 = time.monotonic()
     try:
-        text_cfg = emotion_cfg.get("text", {})
+        text_cfg = emotion_cfg["text"]
         text_emotions = analyze_text_emotion(
             segments,
-            model_name=text_cfg.get(
-                "model",
-                "Mizuiro-sakura/luke-japanese-large-sentiment-analysis-wrime",
-            ),
+            model_name=text_cfg["model"],
             device=device,
         )
         _record_timing(timings, "emotion_text", t0)
@@ -244,12 +248,12 @@ def run_pipeline(
     # prosody
     t0 = time.monotonic()
     prosody_results = None
-    prosody_cfg = emotion_cfg.get("prosody", {})
-    if prosody_cfg.get("enabled", True):
+    prosody_cfg = emotion_cfg["prosody"]
+    if prosody_cfg["enabled"]:
         try:
             from poc.src.emotion.prosody import analyze_prosody
 
-            prosody_results = analyze_prosody(audio_path, segments)
+            prosody_results = analyze_prosody(audio_path, segments, preloaded_audio=_emotion_audio)
             _record_timing(timings, "emotion_prosody", t0)
         except Exception:
             _record_timing(timings, "emotion_prosody", t0, status="failed", skip_reason="推定エラー")
@@ -260,16 +264,16 @@ def run_pipeline(
 
     # 融合
     t0 = time.monotonic()
-    fusion_cfg = emotion_cfg.get("fusion", {})
+    fusion_cfg = emotion_cfg["fusion"]
     if dimensional_emotions or text_emotions:
         timeline = fuse_emotions(
             segments,
             dimensional_emotions=dimensional_emotions,
             text_emotions=text_emotions,
             prosody_results=prosody_results,
-            text_weight=fusion_cfg.get("text_weight", 0.6),
-            dimensional_weight=fusion_cfg.get("dimensional_weight", 0.2),
-            neutral_zone=fusion_cfg.get("neutral_zone", [0.35, 0.65]),
+            text_weight=fusion_cfg["text_weight"],
+            dimensional_weight=fusion_cfg["dimensional_weight"],
+            neutral_zone=fusion_cfg["neutral_zone"],
         )
         result.emotions = timeline
         _record_timing(timings, "emotion_fusion", t0)
@@ -282,7 +286,6 @@ def run_pipeline(
     result.step_timings = timings
     files = write_results(result, out_path)
     _record_timing(timings, "output", t0)
-    result.step_timings = timings
 
     total_duration = round(time.monotonic() - pipeline_start, 3)
     logger.info("パイプライン完了", output_files=len(files), total_duration=total_duration)
