@@ -18,6 +18,7 @@ def analyze_prosody(
     segments: list[TranscriptSegment],
     *,
     sr: int = 16000,
+    preloaded_audio: tuple | None = None,
 ) -> dict[int, ProsodyFeatures]:
     """音声セグメントごとにprosody特徴を抽出する.
 
@@ -25,13 +26,17 @@ def analyze_prosody(
         audio_path: 音声ファイルパス
         segments: 字幕セグメントリスト
         sr: サンプリングレート
+        preloaded_audio: (audio_array, sample_rate) のタプル。指定時はファイル読み込みをスキップ
 
     Returns:
         segment_id → ProsodyFeatures のマッピング
     """
     logger.info("prosody特徴抽出開始", segments=len(segments))
 
-    y, sr_actual = librosa.load(str(audio_path), sr=sr)
+    if preloaded_audio is not None:
+        y, sr_actual = preloaded_audio
+    else:
+        y, sr_actual = librosa.load(str(audio_path), sr=sr)
     duration_total = len(y) / sr_actual
 
     results: dict[int, ProsodyFeatures] = {}
