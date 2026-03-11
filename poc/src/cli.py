@@ -68,11 +68,18 @@ def _setup_logging() -> None:
     type=click.Path(exists=True),
     help="設定ファイルパス (デフォルト: poc/configs/default.yaml)",
 )
+@click.option(
+    "--export-video",
+    is_flag=True,
+    default=False,
+    help="感情ラベル付き動画をエクスポートする",
+)
 def main(
     input_file: str,
     output_dir: str,
     device: str,
     config: str | None,
+    export_video: bool,
 ) -> None:
     """VODAI 動画解析PoC CLI.
 
@@ -110,6 +117,7 @@ def main(
             config_path=config,
             openai_api_key=openai_api_key,
             hf_token=hf_token,
+            export_video=export_video,
         )
         console.print(f"\n[green]完了！[/green] 出力ディレクトリ: {output_dir}")
 

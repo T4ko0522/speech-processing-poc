@@ -56,6 +56,7 @@ def run_pipeline(
     config_path: str | None = None,
     openai_api_key: str | None = None,
     hf_token: str | None = None,
+    export_video: bool = False,
 ) -> PipelineResult:
     """パイプライン全体を実行する."""
     from poc.src.asr.audio_extract import extract_audio
@@ -321,7 +322,42 @@ def run_pipeline(
             skip_reason="感情データなし",
         )
 
-    # ===== Step 7: 出力書き出し =====
+    # ===== Step 7: 感情ラベル付き動画エクスポート (スキップ可) =====
+    if export_video:
+        t0 = time.monotonic()
+        if result.emotions and result.emotions.entries:
+            try:
+                from poc.src.io.video_export import export_video_with_emotions
+
+                video_out = out_path / "emotion_overlay.mp4"
+                export_cfg = config.get("video_export", {})
+                export_video_with_emotions(
+                    video_path,
+                    video_out,
+                    result.emotions,
+                    font_name=export_cfg.get("font_name"),
+                    font_size=export_cfg.get("font_size", 48),
+                )
+                _record_timing(timings, "video_export", t0)
+            except Exception as e:
+                _record_timing(
+                    timings,
+                    "video_export",
+                    t0,
+                    status="failed",
+                    skip_reason=str(e),
+                )
+                logger.warning("動画エクスポートスキップ", error=str(e))
+        else:
+            _record_timing(
+                timings,
+                "video_export",
+                t0,
+                status="skipped",
+                skip_reason="感情データなし",
+            )
+
+    # ===== Step 8: 出力書き出し =====
     t0 = time.monotonic()
     result.step_timings = timings
     files = write_results(result, out_path)
