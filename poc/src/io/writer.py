@@ -85,6 +85,12 @@ def write_results(result: PipelineResult, output_dir: str | Path) -> dict[str, P
     # report.json
     step_timings_data = [t.model_dump() for t in result.step_timings] if result.step_timings else []
     total_duration = sum(t.duration_seconds for t in result.step_timings) if result.step_timings else 0.0
+
+    total_steps = len(result.step_timings) if result.step_timings else 0
+    failed_steps = sum(1 for t in result.step_timings if t.status == "failed") if result.step_timings else 0
+    skipped_steps = sum(1 for t in result.step_timings if t.status == "skipped") if result.step_timings else 0
+    total_retries = sum(t.retry_count for t in result.step_timings) if result.step_timings else 0
+
     report = {
         "input_file": result.input_file,
         "raw_segments": len(result.raw_transcript.segments) if result.raw_transcript else 0,
@@ -95,6 +101,9 @@ def write_results(result: PipelineResult, output_dir: str | Path) -> dict[str, P
         "output_files": {k: str(v) for k, v in files.items()},
         "step_timings": step_timings_data,
         "total_duration": round(total_duration, 3),
+        "failure_rate": round(failed_steps / total_steps, 4) if total_steps > 0 else 0.0,
+        "skip_rate": round(skipped_steps / total_steps, 4) if total_steps > 0 else 0.0,
+        "total_retries": total_retries,
     }
     p = out / "report.json"
     p.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")

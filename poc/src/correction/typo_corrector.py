@@ -33,8 +33,12 @@ def _call_llm(
     model: str,
     temperature: float,
     max_retries: int = 3,
-) -> dict:
-    """LLM に誤字補正リクエストを送信."""
+) -> tuple[dict, int]:
+    """LLM に誤字補正リクエストを送信.
+
+    Returns:
+        (解析結果dict, リトライ回数)
+    """
     from tenacity import Retrying
 
     retryer = Retrying(
@@ -42,6 +46,7 @@ def _call_llm(
         wait=wait_exponential(multiplier=1, min=2, max=30),
         reraise=True,
     )
+    result = None
     for attempt in retryer:
         with attempt:
             response = client.chat.completions.create(
@@ -60,7 +65,9 @@ def _call_llm(
                 lines = text.split("\n")
                 lines = [l for l in lines if not l.startswith("```")]
                 text = "\n".join(lines)
-            return json.loads(text)
+            result = json.loads(text)
+    retries = retryer.statistics.get("attempt_number", 1) - 1
+    return result, retries
 
 
 def correct_transcript(
@@ -72,7 +79,7 @@ def correct_transcript(
     temperature: float = 0.1,
     confidence_threshold: float = 0.7,
     max_retries: int = 3,
-) -> FixedTranscript:
+) -> tuple[FixedTranscript, int]:
     """字幕テキストの誤字を LLM でチャンク単位に補正する.
 
     Args:
@@ -85,12 +92,13 @@ def correct_transcript(
         max_retries: LLM呼び出しの最大リトライ回数
 
     Returns:
-        FixedTranscript: 補正済み字幕 + diff ログ
+        (FixedTranscript, リトライ回数)
     """
     prompt = _load_prompt()
 
     fixed_segments: list[TranscriptSegment] = []
     diffs: list[CorrectionDiff] = []
+    total_retries = 0
 
     # チャンク分割
     chunks: list[list[TranscriptSegment]] = []
@@ -105,9 +113,12 @@ def correct_transcript(
         logger.info("誤字補正チャンク処理中", chunk=chunk_idx + 1, total=len(chunks))
 
         try:
-            result = _call_llm(client, prompt, chunk_data, model, temperature, max_retries)
+            result, retries = _call_llm(client, prompt, chunk_data, model, temperature, max_retries)
+            total_retries += retries
             consecutive_failures = 0
         except Exception as e:
+            # 全リトライ消費 (初回 + max_retries-1 回リトライ)
+            total_retries += max_retries - 1
             consecutive_failures += 1
             logger.warning(
                 "誤字補正API失敗、未補正で通過",
@@ -151,9 +162,9 @@ def correct_transcript(
             else:
                 fixed_segments.append(seg)
 
-    logger.info("誤字補正完了", total_diffs=len(diffs))
+    logger.info("誤字補正完了", total_diffs=len(diffs), total_retries=total_retries)
     return FixedTranscript(
         language=transcript.language,
         segments=fixed_segments,
         diffs=diffs,
-    )
+    ), total_retries

@@ -33,6 +33,7 @@ def _record_timing(
     start_time: float,
     status: str = "completed",
     skip_reason: str | None = None,
+    retry_count: int = 0,
 ) -> None:
     """ステップの計測結果を記録する."""
     duration = time.monotonic() - start_time
@@ -42,6 +43,7 @@ def _record_timing(
             duration_seconds=round(duration, 3),
             status=status,
             skip_reason=skip_reason,
+            retry_count=retry_count,
         )
     )
 
@@ -135,7 +137,7 @@ def run_pipeline(
         corr_cfg = config.get("correction", {})
         correction_model = get_model_for_task(llm_cfg, "correction")
         try:
-            fixed = correct_transcript(
+            fixed, corr_retries = correct_transcript(
                 raw_transcript,
                 client=llm_client,
                 model=correction_model,
@@ -146,7 +148,7 @@ def run_pipeline(
             )
             result.fixed_transcript = fixed
             segments = fixed.segments
-            _record_timing(timings, "correction", t0)
+            _record_timing(timings, "correction", t0, retry_count=corr_retries)
         except Exception:
             _record_timing(timings, "correction", t0, status="failed", skip_reason="API失敗")
             logger.warning("誤字補正スキップ（API失敗）")
@@ -179,7 +181,7 @@ def run_pipeline(
         # Ollama のローカルモデルは基本 Vision 非対応
         supports_vision = provider == "openai"
         try:
-            scenes_result = summarize_scenes(
+            scenes_result, summary_retries = summarize_scenes(
                 boundaries,
                 segments,
                 client=llm_client,
@@ -188,7 +190,7 @@ def run_pipeline(
                 supports_vision=supports_vision,
             )
             result.scenes = scenes_result
-            _record_timing(timings, "scene_summary", t0)
+            _record_timing(timings, "scene_summary", t0, retry_count=summary_retries)
         except Exception:
             _record_timing(timings, "scene_summary", t0, status="failed", skip_reason="API失敗")
             logger.warning("シーン要約スキップ（API失敗）")

@@ -8,7 +8,7 @@ from pathlib import Path
 
 import structlog
 from openai import OpenAI
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import stop_after_attempt, wait_exponential
 
 from poc.src.pipeline.models import (
     SceneBoundary,
@@ -48,11 +48,9 @@ def _get_subtitles_for_scene(
     return "\n".join(texts)
 
 
-@retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, min=2, max=30),
-    reraise=True,
-)
+_LLM_VISION_MAX_ATTEMPTS = 3
+
+
 def _call_llm_vision(
     client: OpenAI,
     prompt: str,
@@ -63,8 +61,20 @@ def _call_llm_vision(
     model: str,
     max_tokens: int,
     supports_vision: bool = True,
-) -> dict:
-    """LLM にシーン要約リクエストを送信."""
+) -> tuple[dict, int]:
+    """LLM にシーン要約リクエストを送信.
+
+    Returns:
+        (解析結果dict, リトライ回数)
+    """
+    from tenacity import Retrying
+
+    retryer = Retrying(
+        stop=stop_after_attempt(_LLM_VISION_MAX_ATTEMPTS),
+        wait=wait_exponential(multiplier=1, min=2, max=30),
+        reraise=True,
+    )
+
     user_content: list[dict] = []
 
     # Vision 対応モデルのみ画像を送信
@@ -84,23 +94,28 @@ def _call_llm_vision(
 
     user_content.append({"type": "text", "text": context})
 
-    response = client.chat.completions.create(
-        model=model,
-        max_tokens=max_tokens,
-        messages=[
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": user_content},
-        ],
-    )
-    content = response.choices[0].message.content
+    result = None
+    for attempt in retryer:
+        with attempt:
+            response = client.chat.completions.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[
+                    {"role": "system", "content": prompt},
+                    {"role": "user", "content": user_content},
+                ],
+            )
+            content = response.choices[0].message.content
 
-    # JSON部分を抽出（Ollamaはマークダウンで囲む場合がある）
-    text = content.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+            # JSON部分を抽出（Ollamaはマークダウンで囲む場合がある）
+            text = content.strip()
+            if text.startswith("```"):
+                lines = text.split("\n")
+                lines = [l for l in lines if not l.startswith("```")]
+                text = "\n".join(lines)
+            result = json.loads(text)
+    retries = retryer.statistics.get("attempt_number", 1) - 1
+    return result, retries
 
 
 def summarize_scenes(
@@ -111,7 +126,7 @@ def summarize_scenes(
     model: str,
     max_tokens: int = 500,
     supports_vision: bool = True,
-) -> ScenesResult:
+) -> tuple[ScenesResult, int]:
     """各シーンの代表フレームと字幕から要約を生成する.
 
     Args:
@@ -123,10 +138,11 @@ def summarize_scenes(
         supports_vision: Vision（画像入力）対応かどうか
 
     Returns:
-        ScenesResult: シーン境界 + 要約
+        (ScenesResult, リトライ回数)
     """
     prompt = _load_prompt()
     summaries: list[SceneSummary] = []
+    total_retries = 0
     consecutive_failures = 0
     max_consecutive_failures = 3
 
@@ -142,11 +158,12 @@ def summarize_scenes(
         )
 
         try:
-            result = _call_llm_vision(
+            result, retries = _call_llm_vision(
                 client, prompt, image_b64, subtitle_text,
                 boundary.start, boundary.end, model, max_tokens,
                 supports_vision=supports_vision,
             )
+            total_retries += retries
             summaries.append(
                 SceneSummary(
                     scene_id=boundary.scene_id,
@@ -156,6 +173,8 @@ def summarize_scenes(
             )
             consecutive_failures = 0
         except Exception as e:
+            # 全リトライ消費
+            total_retries += _LLM_VISION_MAX_ATTEMPTS - 1
             consecutive_failures += 1
             logger.warning(
                 "シーン要約失敗、スキップ",
@@ -182,5 +201,5 @@ def summarize_scenes(
                 )
                 break
 
-    logger.info("シーン要約完了", count=len(summaries))
-    return ScenesResult(boundaries=boundaries, summaries=summaries)
+    logger.info("シーン要約完了", count=len(summaries), total_retries=total_retries)
+    return ScenesResult(boundaries=boundaries, summaries=summaries), total_retries

@@ -126,6 +126,7 @@ class StepTiming(BaseModel):
     duration_seconds: float
     status: str = "completed"  # "completed" / "skipped" / "failed"
     skip_reason: str | None = None
+    retry_count: int = 0
 
 
 class PipelineResult(BaseModel):
