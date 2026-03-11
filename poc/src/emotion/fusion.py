@@ -73,9 +73,13 @@ def fuse_emotions(
         dimensional_emotions: 次元感情
         text_emotions: テキスト感情
         prosody_results: prosody特徴量
-        text_weight: テキスト感情の重み
-        dimensional_weight: 次元感情のブレンド比率 (0-1)
+        text_weight: テキスト感情の重み (0-1)
+        dimensional_weight: 次元感情の重み (0-1)
         neutral_zone: neutralゾーンの範囲 [lower, upper]
+
+    Note:
+        text_weight と dimensional_weight は内部で正規化される。
+        例: text_weight=0.6, dimensional_weight=0.2 → 実効 0.75:0.25
 
     Returns:
         EmotionTimeline: 融合済み感情タイムライン
@@ -99,18 +103,31 @@ def fuse_emotions(
         prosody = prosody_results.get(seg.id) if prosody_results else None
 
         # Valence/Arousal 融合
-        fused_valence = 0.5
-        fused_arousal = 0.5
+        has_text = text_emo is not None and bool(text_emo.scores)
+        has_dim = dim is not None
 
-        if text_emo and text_emo.scores:
-            # スコア加重方式: 全8感情の分布情報を活用
-            fused_valence, fused_arousal = _text_scores_to_va(text_emo.scores)
+        if has_text:
+            text_v, text_a = _text_scores_to_va(text_emo.scores)
+        else:
+            text_v, text_a = 0.5, 0.5
 
-        # 次元感情がある場合はブレンド
-        if dim:
-            cat_weight = 1.0 - dimensional_weight
-            fused_valence = fused_valence * cat_weight + dim.valence * dimensional_weight
-            fused_arousal = fused_arousal * cat_weight + dim.arousal * dimensional_weight
+        if has_text and has_dim:
+            # 両方ある場合: text_weight と dimensional_weight を正規化してブレンド
+            w_sum = text_weight + dimensional_weight
+            tw = text_weight / w_sum
+            dw = dimensional_weight / w_sum
+            fused_valence = text_v * tw + dim.valence * dw
+            fused_arousal = text_a * tw + dim.arousal * dw
+        elif has_text:
+            fused_valence, fused_arousal = text_v, text_a
+        elif has_dim:
+            fused_valence, fused_arousal = dim.valence, dim.arousal
+        else:
+            fused_valence, fused_arousal = 0.5, 0.5
+
+        # 0〜1 にクリップ
+        fused_valence = max(0.0, min(1.0, fused_valence))
+        fused_arousal = max(0.0, min(1.0, fused_arousal))
 
         # 融合ラベル決定（拡大neutralゾーン）
         fused_label = _determine_fused_label(
