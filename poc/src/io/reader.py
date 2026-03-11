@@ -40,5 +40,7 @@ def validate_input(file_path: str | Path) -> Path:
             f"対応形式: {', '.join(sorted(supported))}"
         )
 
-    logger.info("入力ファイル検証OK", path=str(path), size_mb=path.stat().st_size / 1024 / 1024)
+    logger.info(
+        "入力ファイル検証OK", path=str(path), size_mb=path.stat().st_size / 1024 / 1024
+    )
     return path

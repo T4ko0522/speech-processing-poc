@@ -19,7 +19,9 @@ from poc.src.pipeline.models import (
 
 logger = structlog.get_logger(__name__)
 
-PROMPT_PATH = Path(__file__).resolve().parent.parent.parent / "prompts" / "scene_summary.txt"
+PROMPT_PATH = (
+    Path(__file__).resolve().parent.parent.parent / "prompts" / "scene_summary.txt"
+)
 
 
 def _load_prompt() -> str:
@@ -146,14 +148,18 @@ def summarize_scenes(
         if boundary.frame_path and Path(boundary.frame_path).exists():
             image_b64 = _encode_image(boundary.frame_path)
 
-        subtitle_text = _get_subtitles_for_scene(
-            segments, boundary.start, boundary.end
-        )
+        subtitle_text = _get_subtitles_for_scene(segments, boundary.start, boundary.end)
 
         try:
             result, retries = _call_llm_vision(
-                client, prompt, image_b64, subtitle_text,
-                boundary.start, boundary.end, model, max_tokens,
+                client,
+                prompt,
+                image_b64,
+                subtitle_text,
+                boundary.start,
+                boundary.end,
+                model,
+                max_tokens,
                 supports_vision=supports_vision,
             )
             total_retries += retries

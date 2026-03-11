@@ -96,7 +96,9 @@ def main(
     hf_token = os.getenv("HF_TOKEN")
 
     if not openai_api_key:
-        console.print("[yellow]注意: OPENAI_API_KEY 未設定。Ollama設定があればローカルLLMを使用します。[/yellow]")
+        console.print(
+            "[yellow]注意: OPENAI_API_KEY 未設定。Ollama設定があればローカルLLMを使用します。[/yellow]"
+        )
 
     from poc.src.pipeline.runner import run_pipeline
 

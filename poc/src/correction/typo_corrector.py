@@ -19,7 +19,9 @@ from poc.src.pipeline.models import (
 
 logger = structlog.get_logger(__name__)
 
-PROMPT_PATH = Path(__file__).resolve().parent.parent.parent / "prompts" / "typo_correction.txt"
+PROMPT_PATH = (
+    Path(__file__).resolve().parent.parent.parent / "prompts" / "typo_correction.txt"
+)
 
 
 def _load_prompt() -> str:
@@ -107,7 +109,9 @@ def correct_transcript(
         logger.info("誤字補正チャンク処理中", chunk=chunk_idx + 1, total=len(chunks))
 
         try:
-            result, retries = _call_llm(client, prompt, chunk_data, model, temperature, max_retries)
+            result, retries = _call_llm(
+                client, prompt, chunk_data, model, temperature, max_retries
+            )
             total_retries += retries
             consecutive_failures = 0
         except Exception as e:
@@ -140,7 +144,11 @@ def correct_transcript(
                 confidence = item.get("confidence", 1.0)
                 was_corrected = item.get("corrected", False)
 
-                if was_corrected and confidence >= confidence_threshold and corrected_text != seg.text:
+                if (
+                    was_corrected
+                    and confidence >= confidence_threshold
+                    and corrected_text != seg.text
+                ):
                     diffs.append(
                         CorrectionDiff(
                             segment_id=seg.id,

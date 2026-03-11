@@ -105,7 +105,9 @@ def run_pipeline(
         )
         _record_timing(timings, "audio_extract", t0)
     except Exception as e:
-        _record_timing(timings, "audio_extract", t0, status="failed", skip_reason=str(e))
+        _record_timing(
+            timings, "audio_extract", t0, status="failed", skip_reason=str(e)
+        )
         logger.error("音声抽出失敗（Fatal）", error=str(e))
         raise
 
@@ -150,10 +152,14 @@ def run_pipeline(
             segments = fixed.segments
             _record_timing(timings, "correction", t0, retry_count=corr_retries)
         except Exception:
-            _record_timing(timings, "correction", t0, status="failed", skip_reason="API失敗")
+            _record_timing(
+                timings, "correction", t0, status="failed", skip_reason="API失敗"
+            )
             logger.warning("誤字補正スキップ（API失敗）")
     else:
-        _record_timing(timings, "correction", t0, status="skipped", skip_reason="LLM未設定")
+        _record_timing(
+            timings, "correction", t0, status="skipped", skip_reason="LLM未設定"
+        )
         logger.warning("LLM未設定、誤字補正スキップ")
 
     # ===== Step 4: シーン検出 (スキップ可) =====
@@ -170,7 +176,9 @@ def run_pipeline(
         )
         _record_timing(timings, "scene_detect", t0)
     except Exception:
-        _record_timing(timings, "scene_detect", t0, status="failed", skip_reason="検出エラー")
+        _record_timing(
+            timings, "scene_detect", t0, status="failed", skip_reason="検出エラー"
+        )
         logger.warning("シーン検出スキップ（エラー）")
 
     # ===== Step 5: シーン要約 (スキップ可) =====
@@ -192,14 +200,20 @@ def run_pipeline(
             result.scenes = scenes_result
             _record_timing(timings, "scene_summary", t0, retry_count=summary_retries)
         except Exception:
-            _record_timing(timings, "scene_summary", t0, status="failed", skip_reason="API失敗")
+            _record_timing(
+                timings, "scene_summary", t0, status="failed", skip_reason="API失敗"
+            )
             logger.warning("シーン要約スキップ（API失敗）")
             result.scenes = ScenesResult(boundaries=boundaries)
     elif boundaries:
-        _record_timing(timings, "scene_summary", t0, status="skipped", skip_reason="LLM未設定")
+        _record_timing(
+            timings, "scene_summary", t0, status="skipped", skip_reason="LLM未設定"
+        )
         result.scenes = ScenesResult(boundaries=boundaries)
     else:
-        _record_timing(timings, "scene_summary", t0, status="skipped", skip_reason="シーン未検出")
+        _record_timing(
+            timings, "scene_summary", t0, status="skipped", skip_reason="シーン未検出"
+        )
 
     # ===== Step 6: 感情推定 (スキップ可) =====
     emotion_cfg = config["emotion"]
@@ -211,7 +225,9 @@ def run_pipeline(
 
     _emotion_audio: tuple | None = None
     try:
-        _emotion_audio = _librosa.load(str(audio_path), sr=audio_cfg["sample_rate"], mono=True)
+        _emotion_audio = _librosa.load(
+            str(audio_path), sr=audio_cfg["sample_rate"], mono=True
+        )
     except Exception:
         logger.warning("感情推定用の音声ロード失敗")
 
@@ -228,7 +244,13 @@ def run_pipeline(
         )
         _record_timing(timings, "emotion_dimensional", t0)
     except Exception:
-        _record_timing(timings, "emotion_dimensional", t0, status="failed", skip_reason="推定エラー")
+        _record_timing(
+            timings,
+            "emotion_dimensional",
+            t0,
+            status="failed",
+            skip_reason="推定エラー",
+        )
         logger.warning("次元感情推定スキップ")
 
     # テキスト感情
@@ -242,7 +264,9 @@ def run_pipeline(
         )
         _record_timing(timings, "emotion_text", t0)
     except Exception:
-        _record_timing(timings, "emotion_text", t0, status="failed", skip_reason="推定エラー")
+        _record_timing(
+            timings, "emotion_text", t0, status="failed", skip_reason="推定エラー"
+        )
         logger.warning("テキスト感情推定スキップ")
 
     # prosody
@@ -253,13 +277,23 @@ def run_pipeline(
         try:
             from poc.src.emotion.prosody import analyze_prosody
 
-            prosody_results = analyze_prosody(audio_path, segments, preloaded_audio=_emotion_audio)
+            prosody_results = analyze_prosody(
+                audio_path, segments, preloaded_audio=_emotion_audio
+            )
             _record_timing(timings, "emotion_prosody", t0)
         except Exception:
-            _record_timing(timings, "emotion_prosody", t0, status="failed", skip_reason="推定エラー")
+            _record_timing(
+                timings,
+                "emotion_prosody",
+                t0,
+                status="failed",
+                skip_reason="推定エラー",
+            )
             logger.warning("prosody推定スキップ")
     else:
-        _record_timing(timings, "emotion_prosody", t0, status="skipped", skip_reason="設定で無効")
+        _record_timing(
+            timings, "emotion_prosody", t0, status="skipped", skip_reason="設定で無効"
+        )
         logger.info("prosody推定スキップ（emotion.prosody.enabled=false）")
 
     # 融合
@@ -279,7 +313,13 @@ def run_pipeline(
         _record_timing(timings, "emotion_fusion", t0)
     else:
         result.emotions = EmotionTimeline(entries=[])
-        _record_timing(timings, "emotion_fusion", t0, status="skipped", skip_reason="感情データなし")
+        _record_timing(
+            timings,
+            "emotion_fusion",
+            t0,
+            status="skipped",
+            skip_reason="感情データなし",
+        )
 
     # ===== Step 7: 出力書き出し =====
     t0 = time.monotonic()
@@ -288,6 +328,8 @@ def run_pipeline(
     _record_timing(timings, "output", t0)
 
     total_duration = round(time.monotonic() - pipeline_start, 3)
-    logger.info("パイプライン完了", output_files=len(files), total_duration=total_duration)
+    logger.info(
+        "パイプライン完了", output_files=len(files), total_duration=total_duration
+    )
 
     return result

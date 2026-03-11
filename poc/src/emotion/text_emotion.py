@@ -5,6 +5,8 @@ from __future__ import annotations
 import structlog
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
+from poc.src.pipeline.models import TextEmotion, TranscriptSegment
+
 # transformers 5.x の MLukeTokenizer バグ回避:
 # vocab が dict で渡されるが Unigram は list[tuple] を期待する
 from transformers.models.mluke import tokenization_mluke as _mluke_mod
@@ -20,20 +22,18 @@ def _patched_mluke_init(self, *args, **kwargs):
 
 _mluke_mod.MLukeTokenizer.__init__ = _patched_mluke_init
 
-from poc.src.pipeline.models import TextEmotion, TranscriptSegment
-
 logger = structlog.get_logger(__name__)
 
 # WRIME 8感情ラベル
 WRIME_LABELS = [
-    "joy",        # 喜び
-    "sadness",    # 悲しみ
+    "joy",  # 喜び
+    "sadness",  # 悲しみ
     "anticipation",  # 期待
-    "surprise",   # 驚き
-    "anger",      # 怒り
-    "fear",       # 恐れ
-    "disgust",    # 嫌悪
-    "trust",      # 信頼
+    "surprise",  # 驚き
+    "anger",  # 怒り
+    "fear",  # 恐れ
+    "disgust",  # 嫌悪
+    "trust",  # 信頼
 ]
 
 
@@ -66,9 +66,7 @@ def analyze_text_emotion(
 
     for seg in segments:
         if not seg.text.strip():
-            results[seg.id] = TextEmotion(
-                scores={label: 0.0 for label in WRIME_LABELS}
-            )
+            results[seg.id] = TextEmotion(scores={label: 0.0 for label in WRIME_LABELS})
             continue
 
         inputs = tokenizer(

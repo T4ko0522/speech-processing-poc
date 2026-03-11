@@ -64,7 +64,9 @@ def analyze_prosody(
             sr=sr_actual,
         )
         voiced_f0 = f0[voiced_flag] if voiced_flag is not None else np.array([])
-        voiced_f0 = voiced_f0[~np.isnan(voiced_f0)] if len(voiced_f0) > 0 else np.array([])
+        voiced_f0 = (
+            voiced_f0[~np.isnan(voiced_f0)] if len(voiced_f0) > 0 else np.array([])
+        )
 
         if len(voiced_f0) > 0:
             f0_mean = float(np.mean(voiced_f0))
