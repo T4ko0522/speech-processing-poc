@@ -15,7 +15,6 @@ llm:
 audio:
   sample_rate: 16000
   channels: 1
-  format: wav
 
 # ASR (WhisperX)
 # モデルサイズ: tiny < base < small < medium < large-v3
@@ -40,7 +39,6 @@ scene:
   threshold: 40.0         # 27.0 → 40.0: 検出感度を下げてシーン数を圧縮
   min_scene_len: 45       # 15 → 45: 30fpsで約1.5秒
   merge_threshold: 2.0    # この秒数未満の短シーンを次シーンにマージ
-  max_frames: 5
 
 # シーン要約
 scene_summary:
