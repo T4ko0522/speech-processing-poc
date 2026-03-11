@@ -3,13 +3,13 @@
 from __future__ import annotations
 
 import base64
-import json
 from pathlib import Path
 
 import structlog
 from openai import OpenAI
 from tenacity import stop_after_attempt, wait_exponential
 
+from poc.src.llm import parse_llm_json
 from poc.src.pipeline.models import (
     SceneBoundary,
     SceneSummary,
@@ -106,14 +106,7 @@ def _call_llm_vision(
                 ],
             )
             content = response.choices[0].message.content
-
-            # JSON部分を抽出（Ollamaはマークダウンで囲む場合がある）
-            text = content.strip()
-            if text.startswith("```"):
-                lines = text.split("\n")
-                lines = [l for l in lines if not l.startswith("```")]
-                text = "\n".join(lines)
-            result = json.loads(text)
+            result = parse_llm_json(content)
     retries = retryer.statistics.get("attempt_number", 1) - 1
     return result, retries
 
