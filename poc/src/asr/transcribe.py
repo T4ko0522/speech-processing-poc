@@ -2,11 +2,9 @@
 
 from __future__ import annotations
 
-import functools
 from pathlib import Path
 
 import structlog
-import torch
 import whisperx
 
 from poc.src.pipeline.models import RawTranscript, TranscriptSegment, WordSegment
@@ -14,37 +12,13 @@ from poc.src.pipeline.models import RawTranscript, TranscriptSegment, WordSegmen
 logger = structlog.get_logger(__name__)
 
 
-_torch_load_patched = False
-
-
-def _patch_torch_load() -> None:
-    """PyTorch 2.6+ の weights_only=True デフォルトを回避する.
-
-    pyannote.audio が omegaconf 型を含むチェックポイントを読み込むため、
-    weights_only=False をデフォルトにする。
-    """
-    global _torch_load_patched
-    if _torch_load_patched:
-        return
-    _original = torch.load
-
-    @functools.wraps(_original)
-    def _patched(*args, **kwargs):
-        if "weights_only" not in kwargs:
-            kwargs["weights_only"] = False
-        return _original(*args, **kwargs)
-
-    torch.load = _patched
-    _torch_load_patched = True
-
-
 def transcribe(
     audio_path: Path,
     *,
-    model_name: str = "large-v3",
+    model_name: str = "medium",
     language: str = "ja",
     batch_size: int = 16,
-    compute_type: str = "float32",
+    compute_type: str = "int8",
     device: str = "cpu",
     hf_token: str | None = None,
 ) -> RawTranscript:
@@ -68,8 +42,6 @@ def transcribe(
         language=language,
         device=device,
     )
-
-    _patch_torch_load()
 
     model = whisperx.load_model(
         model_name,
