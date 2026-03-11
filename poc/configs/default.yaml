@@ -8,8 +8,8 @@ llm:
     base_url: http://localhost:11434/v1
     model: gemma3:4b
   openai:
-    model_correction: gpt-4.1
-    model_summary: gpt-4o
+    model_correction: gpt-5.1-mini 
+    model_summary: gpt-5.1-mini
 
 # 音声抽出
 audio:
@@ -22,9 +22,11 @@ audio:
 # CPU環境では medium 以下を推奨（large-v3 は GPU 前提）
 asr:
   model_name: medium
+  # model_name: large-v3
   language: ja
   batch_size: 16
   compute_type: int8
+  # compute_type: float16
 
 # 誤字補正
 correction:
