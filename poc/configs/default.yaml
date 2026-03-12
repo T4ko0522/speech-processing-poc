@@ -50,6 +50,7 @@ emotion:
     model: audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim
   speech:
     model: ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition
+    temperature: 0.5        # softmax 温度スケーリング（低いほど分布が尖る）
   prosody:
     enabled: true
   fusion:
