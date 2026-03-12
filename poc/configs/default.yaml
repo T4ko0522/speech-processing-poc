@@ -48,14 +48,15 @@ scene_summary:
 emotion:
   dimensional:
     model: audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim
-  text:
-    model: Mizuiro-sakura/luke-japanese-large-sentiment-analysis-wrime
+  speech:
+    model: ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition
   prosody:
     enabled: true
   fusion:
-    text_weight: 0.6
-    dimensional_weight: 0.2     # 次元感情のブレンド比率（0.5→0.2に低減）
-    neutral_zone: [0.35, 0.65]  # neutralゾーン拡大（0.4-0.6→0.35-0.65）
+    speech_weight: 0.5          # SER の重み
+    dimensional_weight: 0.3     # 次元感情の重み
+    prosody_boost: 0.2          # prosody による arousal 調整の最大幅
+    neutral_zone: [0.45, 0.55]  # neutralゾーン縮小（0.35-0.65→0.45-0.55）
 
 # 動画エクスポート（--export-video 指定時）
 video_export:

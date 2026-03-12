@@ -83,10 +83,11 @@ class DimensionalEmotion(BaseModel):
     dominance: float
 
 
-class TextEmotion(BaseModel):
-    """テキスト感情（WRIME 8感情）."""
+class SpeechEmotion(BaseModel):
+    """音声カテゴリカル感情（SER 8感情）."""
 
     scores: dict[str, float] = Field(default_factory=dict)
+    top_label: str = ""
 
 
 class ProsodyFeatures(BaseModel):
@@ -106,7 +107,7 @@ class FusedEmotion(BaseModel):
     start: float
     end: float
     dimensional: DimensionalEmotion | None = None
-    text_emotions: TextEmotion | None = None
+    speech_emotions: SpeechEmotion | None = None
     prosody: ProsodyFeatures | None = None
     fused_label: str = ""
     fused_valence: float = 0.0

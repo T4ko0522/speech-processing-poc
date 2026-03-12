@@ -1,4 +1,4 @@
-"""Late Fusion: テキスト感情 + 次元感情 → EmotionTimeline."""
+"""Late Fusion: SER + 次元感情 + prosody → EmotionTimeline."""
 
 from __future__ import annotations
 
@@ -9,77 +9,90 @@ from poc.src.pipeline.models import (
     EmotionTimeline,
     FusedEmotion,
     ProsodyFeatures,
-    TextEmotion,
+    SpeechEmotion,
     TranscriptSegment,
 )
 
 logger = structlog.get_logger(__name__)
 
-# テキスト感情ラベル → valence マッピング（WRIME 8感情用）
+# SER 8ラベル → valence マッピング
 EMOTION_VALENCE_MAP = {
-    "joy": 0.8,
-    "trust": 0.6,
-    "anticipation": 0.6,
-    "surprise": 0.5,
-    "fear": 0.3,
-    "sadness": 0.2,
-    "anger": 0.2,
+    "happy": 0.8,
+    "calm": 0.65,
+    "surprised": 0.55,
+    "neutral": 0.5,
+    "fearful": 0.3,
+    "sad": 0.2,
+    "angry": 0.2,
     "disgust": 0.15,
 }
 
-# テキスト感情ラベル → arousal マッピング（WRIME 8感情用）
+# SER 8ラベル → arousal マッピング
 EMOTION_AROUSAL_MAP = {
-    "anger": 0.8,
-    "surprise": 0.75,
-    "joy": 0.7,
-    "fear": 0.7,
-    "anticipation": 0.6,
-    "disgust": 0.5,
-    "trust": 0.4,
-    "sadness": 0.25,
+    "angry": 0.85,
+    "surprised": 0.8,
+    "happy": 0.7,
+    "fearful": 0.7,
+    "disgust": 0.55,
+    "neutral": 0.45,
+    "calm": 0.25,
+    "sad": 0.2,
 }
 
 
-def _text_scores_to_va(scores: dict[str, float]) -> tuple[float, float]:
-    """全8感情スコアの加重和で valence/arousal を算出する."""
-    total = sum(scores.values())
-    if total == 0:
-        return 0.5, 0.5
-    valence = sum(
-        EMOTION_VALENCE_MAP.get(label, 0.5) * (score / total)
-        for label, score in scores.items()
-    )
-    arousal = sum(
-        EMOTION_AROUSAL_MAP.get(label, 0.5) * (score / total)
-        for label, score in scores.items()
-    )
+def _ser_to_va(top_label: str) -> tuple[float, float]:
+    """SER の top_label から valence/arousal を直接マッピングする."""
+    valence = EMOTION_VALENCE_MAP.get(top_label, 0.5)
+    arousal = EMOTION_AROUSAL_MAP.get(top_label, 0.5)
     return valence, arousal
+
+
+def _compute_prosody_modifier(prosody: ProsodyFeatures) -> float:
+    """F0・エネルギーから arousal 調整値を算出する.
+
+    F0 が高い／エネルギーが大きい → arousal を上げる方向 (+)
+    F0 が低い／エネルギーが小さい → arousal を下げる方向 (-)
+
+    Returns:
+        -1.0 〜 +1.0 の範囲の調整係数（±0.15 にスケールされる前の値）
+    """
+    modifier = 0.0
+
+    # F0 による調整: 200Hz を基準、±100Hz で ±0.5
+    if prosody.f0_mean > 0:
+        f0_centered = (prosody.f0_mean - 200.0) / 100.0
+        modifier += max(-0.5, min(0.5, f0_centered))
+
+    # エネルギーによる調整: 0.02 を基準、±0.02 で ±0.5
+    if prosody.energy_mean > 0:
+        energy_centered = (prosody.energy_mean - 0.02) / 0.02
+        modifier += max(-0.5, min(0.5, energy_centered))
+
+    return max(-1.0, min(1.0, modifier))
 
 
 def fuse_emotions(
     segments: list[TranscriptSegment],
     dimensional_emotions: dict[int, DimensionalEmotion] | None = None,
-    text_emotions: dict[int, TextEmotion] | None = None,
+    speech_emotions: dict[int, SpeechEmotion] | None = None,
     prosody_results: dict[int, ProsodyFeatures] | None = None,
     *,
-    text_weight: float = 0.6,
-    dimensional_weight: float = 0.2,
+    speech_weight: float = 0.5,
+    dimensional_weight: float = 0.3,
+    prosody_boost: float = 0.2,
     neutral_zone: list[float] | None = None,
 ) -> EmotionTimeline:
-    """テキスト感情と次元感情を Late Fusion で統合する.
+    """SER と次元感情を Late Fusion で統合する.
 
     Args:
         segments: 字幕セグメントリスト
         dimensional_emotions: 次元感情
-        text_emotions: テキスト感情
+        speech_emotions: 音声カテゴリカル感情 (SER)
         prosody_results: prosody特徴量
-        text_weight: テキスト感情の重み (0-1)
+        speech_weight: SER の重み (0-1)
         dimensional_weight: 次元感情の重み (0-1)
+        prosody_boost: prosody 調整の最大幅
         neutral_zone: neutralゾーンの範囲 [lower, upper]
-
-    Note:
-        text_weight と dimensional_weight は内部で正規化される。
-        例: text_weight=0.6, dimensional_weight=0.2 → 実効 0.75:0.25
 
     Returns:
         EmotionTimeline: 融合済み感情タイムライン
@@ -90,8 +103,9 @@ def fuse_emotions(
 
     logger.info(
         "感情融合開始",
-        text_weight=text_weight,
+        speech_weight=speech_weight,
         dimensional_weight=dimensional_weight,
+        prosody_boost=prosody_boost,
         neutral_zone=neutral_zone,
     )
 
@@ -99,31 +113,35 @@ def fuse_emotions(
 
     for seg in segments:
         dim = dimensional_emotions.get(seg.id) if dimensional_emotions else None
-        text_emo = text_emotions.get(seg.id) if text_emotions else None
+        speech_emo = speech_emotions.get(seg.id) if speech_emotions else None
         prosody = prosody_results.get(seg.id) if prosody_results else None
 
         # Valence/Arousal 融合
-        has_text = text_emo is not None and bool(text_emo.scores)
+        has_speech = speech_emo is not None and bool(speech_emo.top_label)
         has_dim = dim is not None
 
-        if has_text:
-            text_v, text_a = _text_scores_to_va(text_emo.scores)
+        if has_speech:
+            ser_v, ser_a = _ser_to_va(speech_emo.top_label)
         else:
-            text_v, text_a = 0.5, 0.5
+            ser_v, ser_a = 0.5, 0.5
 
-        if has_text and has_dim:
-            # 両方ある場合: text_weight と dimensional_weight を正規化してブレンド
-            w_sum = text_weight + dimensional_weight
-            tw = text_weight / w_sum
+        if has_speech and has_dim:
+            w_sum = speech_weight + dimensional_weight
+            sw = speech_weight / w_sum
             dw = dimensional_weight / w_sum
-            fused_valence = text_v * tw + dim.valence * dw
-            fused_arousal = text_a * tw + dim.arousal * dw
-        elif has_text:
-            fused_valence, fused_arousal = text_v, text_a
+            fused_valence = ser_v * sw + dim.valence * dw
+            fused_arousal = ser_a * sw + dim.arousal * dw
+        elif has_speech:
+            fused_valence, fused_arousal = ser_v, ser_a
         elif has_dim:
             fused_valence, fused_arousal = dim.valence, dim.arousal
         else:
             fused_valence, fused_arousal = 0.5, 0.5
+
+        # prosody による arousal 調整
+        if prosody is not None:
+            prosody_modifier = _compute_prosody_modifier(prosody)
+            fused_arousal += prosody_modifier * prosody_boost
 
         # 0〜1 にクリップ
         fused_valence = max(0.0, min(1.0, fused_valence))
@@ -139,7 +157,7 @@ def fuse_emotions(
                 start=seg.start,
                 end=seg.end,
                 dimensional=dim,
-                text_emotions=text_emo,
+                speech_emotions=speech_emo,
                 prosody=prosody,
                 fused_label=fused_label,
                 fused_valence=round(fused_valence, 4),
