@@ -62,6 +62,7 @@ emotion:
 # 動画エクスポート（--export-video 指定時）
 video_export:
   font_size: 48
+  transcript_font_size: 32  # トランスクリプト字幕のフォントサイズ
   # font_name: "Yu Gothic"  # fontconfig フォント名（省略時はOSデフォルト）
 
 # 出力

@@ -335,12 +335,23 @@ def run_pipeline(
 
                 video_out = out_path / "emotion_overlay.mp4"
                 export_cfg = config.get("video_export", {})
+                # トランスクリプトセグメントを取得（fixed > raw の優先順）
+                transcript_segs = None
+                if result.fixed_transcript and result.fixed_transcript.segments:
+                    transcript_segs = result.fixed_transcript.segments
+                elif result.raw_transcript and result.raw_transcript.segments:
+                    transcript_segs = result.raw_transcript.segments
+
                 export_video_with_emotions(
                     video_path,
                     video_out,
                     result.emotions,
+                    transcript_segments=transcript_segs,
                     font_name=export_cfg.get("font_name"),
                     font_size=export_cfg.get("font_size", 48),
+                    transcript_font_size=export_cfg.get(
+                        "transcript_font_size", 32
+                    ),
                 )
                 _record_timing(timings, "video_export", t0)
             except Exception as e:

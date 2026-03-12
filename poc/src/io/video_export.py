@@ -8,7 +8,7 @@ from pathlib import Path
 
 import structlog
 
-from poc.src.pipeline.models import EmotionTimeline
+from poc.src.pipeline.models import EmotionTimeline, TranscriptSegment
 
 logger = structlog.get_logger(__name__)
 
@@ -51,19 +51,24 @@ def export_video_with_emotions(
     output_path: Path,
     emotions: EmotionTimeline,
     *,
+    transcript_segments: list[TranscriptSegment] | None = None,
     font_name: str | None = None,
     font_size: int = 48,
+    transcript_font_size: int = 32,
 ) -> Path:
-    """感情ラベルをオーバーレイした動画をエクスポートする.
+    """感情ラベルとトランスクリプト字幕をオーバーレイした動画をエクスポートする.
 
     各感情区間中、画面中央に fused_label テキストを表示する。
+    トランスクリプトがある場合、画面下部に字幕テキストを表示する。
 
     Args:
         video_path: 入力動画ファイルパス
         output_path: 出力動画ファイルパス
         emotions: 感情タイムライン
+        transcript_segments: トランスクリプトのセグメントリスト
         font_name: fontconfig フォント名 (None で OS デフォルト)
-        font_size: フォントサイズ
+        font_size: 感情ラベルのフォントサイズ
+        transcript_font_size: トランスクリプト字幕のフォントサイズ
 
     Returns:
         生成された動画ファイルのパス
@@ -82,6 +87,7 @@ def export_video_with_emotions(
         input=str(video_path),
         output=str(output_path),
         entries=len(emotions.entries),
+        transcript_segments=len(transcript_segments) if transcript_segments else 0,
         font=resolved_font,
     )
 
@@ -92,6 +98,8 @@ def export_video_with_emotions(
     escaped_font = _escape_drawtext_value(resolved_font)
 
     drawtext_parts = []
+
+    # --- 感情ラベル（画面中央）---
     for entry in emotions.entries:
         label = entry.fused_label
         if not label:
@@ -111,6 +119,26 @@ def export_video_with_emotions(
             f":enable=between(t\\,{entry.start}\\,{entry.end})"
         )
         drawtext_parts.append(dt)
+
+    # --- トランスクリプト字幕（画面下部）---
+    if transcript_segments:
+        for seg in transcript_segments:
+            if not seg.text.strip():
+                continue
+            escaped_text = _escape_drawtext_value(seg.text.strip())
+
+            dt = (
+                f"drawtext="
+                f"font={escaped_font}"
+                f":text={escaped_text}"
+                f":fontsize={transcript_font_size}"
+                f":fontcolor=white"
+                f":borderw=2:bordercolor=black"
+                f":x=(w-text_w)/2:y=h-text_h-40"
+                f":box=1:boxcolor=black@0.6:boxborderw=8"
+                f":enable=between(t\\,{seg.start}\\,{seg.end})"
+            )
+            drawtext_parts.append(dt)
 
     if not drawtext_parts:
         logger.warning("有効な感情ラベルがないため、動画エクスポートをスキップ")
