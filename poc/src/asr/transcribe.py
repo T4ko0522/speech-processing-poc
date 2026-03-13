@@ -125,10 +125,34 @@ def _run_diarization(
         max_speakers=max_speakers,
     )
 
-    diarize_model = DiarizationPipeline(
-        use_auth_token=hf_token,
-        device=device,
-    )
+    # pyannote.audio 3.x は内部で hf_hub_download(use_auth_token=...) を呼ぶが、
+    # huggingface_hub >= 1.0 で use_auth_token が廃止されたため token に変換する
+    import functools
+    import huggingface_hub as _hfh
+    import pyannote.audio.core.pipeline as _pa_pipeline
+    import pyannote.audio.core.model as _pa_model
+
+    _orig_download = _hfh.hf_hub_download
+
+    @functools.wraps(_orig_download)
+    def _patched_download(*args, **kwargs):
+        if "use_auth_token" in kwargs:
+            kwargs["token"] = kwargs.pop("use_auth_token")
+        return _orig_download(*args, **kwargs)
+
+    # huggingface_hub 本体と pyannote のローカル参照の両方をパッチ
+    _hfh.hf_hub_download = _patched_download
+    _pa_pipeline.hf_hub_download = _patched_download
+    _pa_model.hf_hub_download = _patched_download
+    try:
+        diarize_model = DiarizationPipeline(
+            use_auth_token=hf_token,
+            device=device,
+        )
+    finally:
+        _hfh.hf_hub_download = _orig_download
+        _pa_pipeline.hf_hub_download = _orig_download
+        _pa_model.hf_hub_download = _orig_download
 
     diarize_segments = diarize_model(
         audio,

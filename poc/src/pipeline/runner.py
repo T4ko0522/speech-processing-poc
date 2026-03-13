@@ -67,7 +67,7 @@ def run_pipeline(
     from poc.src.emotion.speech_emotion import analyze_speech_emotion
     from poc.src.io.reader import validate_input
     from poc.src.io.writer import write_results
-    from poc.src.llm import create_llm_client, get_model_for_task
+    from poc.src.llm import check_llm_connection, create_llm_client, get_model_for_task
     from poc.src.scene.detector import detect_scenes
     from poc.src.scene.summarizer import summarize_scenes
 
@@ -85,7 +85,11 @@ def run_pipeline(
     llm_client = None
     try:
         llm_client = create_llm_client(llm_cfg, openai_api_key)
+        check_llm_connection(llm_cfg, llm_client)
         logger.info("LLMプロバイダー初期化", provider=provider)
+    except ConnectionError as e:
+        llm_client = None
+        logger.warning("LLM接続失敗、補正・要約はスキップ", error=str(e))
     except ValueError as e:
         logger.warning("LLMクライアント初期化失敗、補正・要約はスキップ", error=str(e))
 
@@ -231,7 +235,32 @@ def run_pipeline(
             str(audio_path), sr=audio_cfg["sample_rate"], mono=True
         )
     except Exception:
-        logger.warning("感情推定用の音声ロード失敗")
+        # librosa (PySoundFile/audioread) が失敗した場合、wave stdlib でフォールバック
+        import wave as _wave
+
+        import numpy as _np
+
+        try:
+            with _wave.open(str(audio_path), "rb") as wf:
+                sr = wf.getframerate()
+                n_channels = wf.getnchannels()
+                audio_data = wf.readframes(wf.getnframes())
+                audio_arr = (
+                    _np.frombuffer(audio_data, dtype=_np.int16).astype(_np.float32)
+                    / 32768.0
+                )
+                if n_channels > 1:
+                    audio_arr = audio_arr.reshape(-1, n_channels).mean(axis=1)
+                target_sr = audio_cfg["sample_rate"]
+                if sr != target_sr:
+                    audio_arr = _librosa.resample(
+                        audio_arr, orig_sr=sr, target_sr=target_sr
+                    )
+                    sr = target_sr
+                _emotion_audio = (audio_arr, sr)
+            logger.info("音声ロード完了（waveフォールバック）")
+        except Exception:
+            logger.warning("感情推定用の音声ロード失敗")
 
     # 次元感情
     t0 = time.monotonic()

@@ -135,7 +135,8 @@ def correct_transcript(
                 break
             continue
 
-        result_map = {item["id"]: item for item in result.get("segments", [])}
+        segments = result.get("segments", []) if isinstance(result, dict) else result
+        result_map = {item["id"]: item for item in segments}
 
         for seg in chunk:
             if seg.id in result_map:

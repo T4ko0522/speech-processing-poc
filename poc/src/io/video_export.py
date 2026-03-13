@@ -62,6 +62,13 @@ def _build_speaker_color_map(
     return {spk: SPEAKER_COLORS[i % len(SPEAKER_COLORS)] for i, spk in enumerate(seen)}
 
 
+def _split_lines(text: str, max_chars: int = 28) -> list[str]:
+    """テキストを指定文字数ごとに分割してリストで返す."""
+    if len(text) <= max_chars:
+        return [text]
+    return [text[i : i + max_chars] for i in range(0, len(text), max_chars)]
+
+
 def _escape_drawtext_value(value: str) -> str:
     r"""drawtext フィルタのオプション値をエスケープする.
 
@@ -71,6 +78,9 @@ def _escape_drawtext_value(value: str) -> str:
     value = value.replace("\\", "\\\\")
     value = value.replace(":", "\\:")
     value = value.replace("'", "\\'")
+    value = value.replace("[", "\\[")
+    value = value.replace("]", "\\]")
+    value = value.replace(";", "\\;")
     return value
 
 
@@ -82,7 +92,7 @@ def export_video_with_emotions(
     transcript_segments: list[TranscriptSegment] | None = None,
     font_name: str | None = None,
     font_size: int = 48,
-    transcript_font_size: int = 32,
+    transcript_font_size: int = 24,
 ) -> Path:
     """感情ラベルとトランスクリプト字幕をオーバーレイした動画をエクスポートする.
 
@@ -151,6 +161,8 @@ def export_video_with_emotions(
     # --- トランスクリプト字幕（画面下部）---
     if transcript_segments:
         speaker_colors = _build_speaker_color_map(transcript_segments)
+        line_height = transcript_font_size + 8
+        bottom_margin = 40
 
         for seg in transcript_segments:
             if not seg.text.strip():
@@ -160,21 +172,28 @@ def export_video_with_emotions(
             display_text = (
                 f"[{label}] {seg.text.strip()}" if label else seg.text.strip()
             )
-            escaped_text = _escape_drawtext_value(display_text)
+            lines = _split_lines(display_text, max_chars=28)
             font_color = speaker_colors.get(seg.speaker, "white")
 
-            dt = (
-                f"drawtext="
-                f"font={escaped_font}"
-                f":text={escaped_text}"
-                f":fontsize={transcript_font_size}"
-                f":fontcolor={font_color}"
-                f":borderw=2:bordercolor=black"
-                f":x=(w-text_w)/2:y=h-text_h-40"
-                f":box=1:boxcolor=black@0.6:boxborderw=8"
-                f":enable=between(t\\,{seg.start}\\,{seg.end})"
-            )
-            drawtext_parts.append(dt)
+            # 各行を個別の drawtext として下から積み上げる
+            total_lines = len(lines)
+            for line_idx, line in enumerate(lines):
+                escaped_line = _escape_drawtext_value(line)
+                # 最下行が bottom_margin の位置、上の行ほど高くなる
+                y_offset = bottom_margin + (total_lines - 1 - line_idx) * line_height
+
+                dt = (
+                    f"drawtext="
+                    f"font={escaped_font}"
+                    f":text={escaped_line}"
+                    f":fontsize={transcript_font_size}"
+                    f":fontcolor={font_color}"
+                    f":borderw=2:bordercolor=black"
+                    f":x=(w-text_w)/2:y=h-text_h-{y_offset}"
+                    f":box=1:boxcolor=black@0.6:boxborderw=8"
+                    f":enable=between(t\\,{seg.start}\\,{seg.end})"
+                )
+                drawtext_parts.append(dt)
 
     if not drawtext_parts:
         logger.warning("有効な感情ラベルがないため、動画エクスポートをスキップ")
@@ -203,7 +222,7 @@ def export_video_with_emotions(
     logger.debug("ffmpeg コマンド実行", filter_count=len(drawtext_parts))
 
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True)
+        proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
         if proc.returncode != 0:
             stderr_tail = proc.stderr[-1000:] if proc.stderr else "no stderr"
             raise RuntimeError(f"動画エクスポートに失敗しました: {stderr_tail}")

@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import json
 
+import urllib.error
+import urllib.request
+
 from openai import OpenAI
 
 
@@ -43,12 +46,62 @@ def create_llm_client(
 
     if provider == "ollama":
         ollama_cfg = config["ollama"]
-        return OpenAI(base_url=ollama_cfg["base_url"], api_key="ollama")
+        timeout = ollama_cfg.get("timeout", 30)
+        return OpenAI(
+            base_url=ollama_cfg["base_url"],
+            api_key="ollama",
+            timeout=timeout,
+        )
 
     # OpenAI
     if not openai_api_key:
         raise ValueError("OpenAI プロバイダーには OPENAI_API_KEY が必要です")
-    return OpenAI(api_key=openai_api_key)
+    openai_cfg = config.get("openai", {})
+    timeout = openai_cfg.get("timeout", 60)
+    return OpenAI(api_key=openai_api_key, timeout=timeout)
+
+
+def check_llm_connection(config: dict, client: OpenAI) -> None:
+    """LLM サーバーへの疎通を確認する.
+
+    接続できない場合は ConnectionError を送出する。
+
+    Args:
+        config: llm セクションの設定 dict
+        client: 生成済みの OpenAI 互換クライアント
+    """
+    provider = config["provider"]
+
+    if provider == "ollama":
+        ollama_cfg = config["ollama"]
+        # /v1 を除いたベース URL でヘルスチェック
+        base = ollama_cfg["base_url"].replace("/v1", "")
+        try:
+            req = urllib.request.Request(base, method="GET")
+            with urllib.request.urlopen(req, timeout=5):
+                pass
+        except urllib.error.HTTPError as e:
+            raise ConnectionError(
+                f"Ollamaサーバーが異常なステータスを返しました: {e.code}\n"
+                f"  → 接続先: {base}"
+            )
+        except (urllib.error.URLError, OSError):
+            raise ConnectionError(
+                "Ollamaサーバーに接続できません。\n"
+                "  → 'ollama serve' を実行してサーバーを起動してください\n"
+                f"  → 接続先: {base}"
+            )
+    else:
+        # OpenAI: models.list() で疎通確認
+        try:
+            client.models.list()
+        except Exception as e:
+            raise ConnectionError(
+                "OpenAI APIに接続できません。\n"
+                "  → OPENAI_API_KEY が正しいか確認してください\n"
+                "  → ネットワーク接続を確認してください\n"
+                f"  → エラー: {e}"
+            )
 
 
 def get_model_for_task(
