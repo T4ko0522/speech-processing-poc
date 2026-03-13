@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import platform
+import re
 import subprocess
 from pathlib import Path
 
@@ -21,6 +22,9 @@ EMOTION_COLORS = {
     "neutral": "white",
 }
 
+# 話者ごとの字幕カラーパレット (ffmpeg hex format)
+SPEAKER_COLORS = ["#00BFFF", "#FFD700", "#FF69B4", "#7CFC00"]
+
 # fontconfig 用フォント名（OS 別）
 _FONT_NAMES = {
     "Windows": "Yu Gothic",
@@ -32,6 +36,30 @@ _FONT_NAMES = {
 def _default_font_name() -> str:
     """OS に応じたデフォルト fontconfig フォント名を返す."""
     return _FONT_NAMES.get(platform.system(), "sans-serif")
+
+
+def _speaker_label(speaker: str | None) -> str | None:
+    """SPEAKER_XX を '話者N' 形式に変換する.
+
+    speaker が None または解析不能な場合は None を返す。
+    """
+    if speaker is None:
+        return None
+    m = re.search(r"(\d+)$", speaker)
+    if m is None:
+        return speaker
+    return f"話者{int(m.group(1)) + 1}"
+
+
+def _build_speaker_color_map(
+    segments: list[TranscriptSegment],
+) -> dict[str | None, str]:
+    """セグメントからユニーク話者を収集し、出現順に色を割り当てる."""
+    seen: list[str] = []
+    for seg in segments:
+        if seg.speaker is not None and seg.speaker not in seen:
+            seen.append(seg.speaker)
+    return {spk: SPEAKER_COLORS[i % len(SPEAKER_COLORS)] for i, spk in enumerate(seen)}
 
 
 def _escape_drawtext_value(value: str) -> str:
@@ -122,17 +150,25 @@ def export_video_with_emotions(
 
     # --- トランスクリプト字幕（画面下部）---
     if transcript_segments:
+        speaker_colors = _build_speaker_color_map(transcript_segments)
+
         for seg in transcript_segments:
             if not seg.text.strip():
                 continue
-            escaped_text = _escape_drawtext_value(seg.text.strip())
+
+            label = _speaker_label(seg.speaker)
+            display_text = (
+                f"[{label}] {seg.text.strip()}" if label else seg.text.strip()
+            )
+            escaped_text = _escape_drawtext_value(display_text)
+            font_color = speaker_colors.get(seg.speaker, "white")
 
             dt = (
                 f"drawtext="
                 f"font={escaped_font}"
                 f":text={escaped_text}"
                 f":fontsize={transcript_font_size}"
-                f":fontcolor=white"
+                f":fontcolor={font_color}"
                 f":borderw=2:bordercolor=black"
                 f":x=(w-text_w)/2:y=h-text_h-40"
                 f":box=1:boxcolor=black@0.6:boxborderw=8"
