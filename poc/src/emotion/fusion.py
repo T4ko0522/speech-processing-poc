@@ -80,7 +80,7 @@ def fuse_emotions(
     speech_weight: float = 0.5,
     dimensional_weight: float = 0.3,
     prosody_boost: float = 0.2,
-    neutral_zone: list[float] | None = None,
+    neutral_zone: list[float],
 ) -> EmotionTimeline:
     """SER と次元感情を Late Fusion で統合する.
 
@@ -97,8 +97,6 @@ def fuse_emotions(
     Returns:
         EmotionTimeline: 融合済み感情タイムライン
     """
-    if neutral_zone is None:
-        neutral_zone = [0.35, 0.65]
     neutral_lower, neutral_upper = neutral_zone
 
     logger.info(
@@ -172,8 +170,8 @@ def fuse_emotions(
 def _determine_fused_label(
     valence: float,
     arousal: float,
-    neutral_lower: float = 0.35,
-    neutral_upper: float = 0.65,
+    neutral_lower: float,
+    neutral_upper: float,
 ) -> str:
     """valence/arousal の値から感情ラベルを決定（Russell's circumplex model）."""
     if valence >= neutral_upper and arousal >= neutral_upper:
