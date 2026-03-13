@@ -13,7 +13,6 @@ dependencies = [
     "tenacity>=8.0",
     "scenedetect[opencv]>=0.6",
     "transformers>=4.30",
-    "sentencepiece>=0.1",
     "librosa>=0.10",
     "srt>=3.5",
     "structlog>=23.0",
