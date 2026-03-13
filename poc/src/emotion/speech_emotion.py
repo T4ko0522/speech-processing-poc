@@ -8,14 +8,27 @@ import librosa
 import structlog
 import torch
 import torch.nn as nn
-from transformers import Wav2Vec2FeatureExtractor, Wav2Vec2Model, Wav2Vec2PreTrainedModel
+from transformers import (
+    Wav2Vec2FeatureExtractor,
+    Wav2Vec2Model,
+    Wav2Vec2PreTrainedModel,
+)
 
 from poc.src.pipeline.models import SpeechEmotion, TranscriptSegment
 
 logger = structlog.get_logger(__name__)
 
 # モデルの出力ラベル (8感情)
-SER_LABELS = ["angry", "calm", "disgust", "fearful", "happy", "neutral", "sad", "surprised"]
+SER_LABELS = [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised",
+]
 
 
 class _ClassificationHead(nn.Module):
