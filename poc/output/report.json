@@ -1,0 +1,92 @@
+{
+  "input_file": "poc\\input\\test.mp4",
+  "raw_segments": 13,
+  "fixed_segments": 13,
+  "correction_diffs": 5,
+  "scenes": 20,
+  "emotion_entries": 13,
+  "output_files": {
+    "transcript_raw": "poc\\output\\transcript_raw.json",
+    "transcript_fixed": "poc\\output\\transcript_fixed.json",
+    "scenes": "poc\\output\\scenes.json",
+    "emotions": "poc\\output\\emotions.json",
+    "srt": "poc\\output\\output.srt",
+    "vtt": "poc\\output\\output.vtt"
+  },
+  "step_timings": [
+    {
+      "step_name": "audio_extract",
+      "duration_seconds": 0.25,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "transcribe",
+      "duration_seconds": 313.406,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "correction",
+      "duration_seconds": 117.422,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "scene_detect",
+      "duration_seconds": 3.906,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "scene_summary",
+      "duration_seconds": 244.937,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 10
+    },
+    {
+      "step_name": "emotion_dimensional",
+      "duration_seconds": 26.844,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "emotion_speech",
+      "duration_seconds": 38.641,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "emotion_prosody",
+      "duration_seconds": 50.265,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "emotion_fusion",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    },
+    {
+      "step_name": "video_export",
+      "duration_seconds": 13.75,
+      "status": "completed",
+      "skip_reason": null,
+      "retry_count": 0
+    }
+  ],
+  "total_duration": 809.421,
+  "failure_rate": 0.0,
+  "skip_rate": 0.0,
+  "total_retries": 10
+}

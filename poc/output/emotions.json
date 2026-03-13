@@ -1,0 +1,433 @@
+{
+  "entries": [
+    {
+      "start": 9.312,
+      "end": 38.323,
+      "dimensional": {
+        "arousal": 0.9327638149261475,
+        "valence": 0.574517548084259,
+        "dominance": 0.8813244700431824
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.4442065358161926,
+          "calm": 0.0001507800043327734,
+          "disgust": 0.0036206564400345087,
+          "fearful": 0.014012075029313564,
+          "happy": 0.5333356261253357,
+          "neutral": 0.0007051522843539715,
+          "sad": 0.0012945429189130664,
+          "surprised": 0.0026746434159576893
+        },
+        "top_label": "happy"
+      },
+      "prosody": {
+        "speech_rate": 3.0,
+        "f0_mean": 182.1,
+        "f0_std": 208.58,
+        "f0_range": 916.67,
+        "energy_mean": 0.160002,
+        "energy_std": 0.155215
+      },
+      "fused_label": "happy",
+      "fused_valence": 0.7154,
+      "fused_arousal": 0.8515
+    },
+    {
+      "start": 40.97,
+      "end": 69.036,
+      "dimensional": {
+        "arousal": 0.841913640499115,
+        "valence": 0.6520655155181885,
+        "dominance": 0.7853628396987915
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.006809709593653679,
+          "calm": 0.000555217731744051,
+          "disgust": 0.0020067847799509764,
+          "fearful": 0.8808025121688843,
+          "happy": 0.05232694000005722,
+          "neutral": 0.0005588971544057131,
+          "sad": 0.05275765433907509,
+          "surprised": 0.004182129632681608
+        },
+        "top_label": "fearful"
+      },
+      "prosody": {
+        "speech_rate": 7.52,
+        "f0_mean": 113.63,
+        "f0_std": 67.28,
+        "f0_range": 306.73,
+        "energy_mean": 0.099229,
+        "energy_std": 0.097621
+      },
+      "fused_label": "angry",
+      "fused_valence": 0.432,
+      "fused_arousal": 0.7532
+    },
+    {
+      "start": 73.538,
+      "end": 76.262,
+      "dimensional": {
+        "arousal": 0.48768651485443115,
+        "valence": 0.5383039712905884,
+        "dominance": 0.5400526523590088
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.01497284509241581,
+          "calm": 0.0011211815290153027,
+          "disgust": 0.007752785924822092,
+          "fearful": 0.7453296780586243,
+          "happy": 0.07645464688539505,
+          "neutral": 0.0015830621123313904,
+          "sad": 0.14650501310825348,
+          "surprised": 0.006280825473368168
+        },
+        "top_label": "fearful"
+      },
+      "prosody": {
+        "speech_rate": 2.2,
+        "f0_mean": 173.43,
+        "f0_std": 92.13,
+        "f0_range": 299.68,
+        "energy_mean": 0.02246,
+        "energy_std": 0.027721
+      },
+      "fused_label": "angry",
+      "fused_valence": 0.3894,
+      "fused_arousal": 0.5918
+    },
+    {
+      "start": 77.824,
+      "end": 78.966,
+      "dimensional": {
+        "arousal": 0.3626120388507843,
+        "valence": 0.5585677623748779,
+        "dominance": 0.36235201358795166
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0005808553542010486,
+          "calm": 0.09381556510925293,
+          "disgust": 0.015293347649276257,
+          "fearful": 0.008262988179922104,
+          "happy": 0.004836943466216326,
+          "neutral": 0.011391809210181236,
+          "sad": 0.8656953573226929,
+          "surprised": 0.00012308094301261008
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 9.63,
+        "f0_mean": 104.6,
+        "f0_std": 7.25,
+        "f0_range": 28.81,
+        "energy_mean": 0.07959,
+        "energy_std": 0.041429
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.3345,
+      "fused_arousal": 0.261
+    },
+    {
+      "start": 80.047,
+      "end": 102.499,
+      "dimensional": {
+        "arousal": 0.36129963397979736,
+        "valence": 0.41945239901542664,
+        "dominance": 0.3984217047691345
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0016662419075146317,
+          "calm": 0.004965684842318296,
+          "disgust": 0.009014382027089596,
+          "fearful": 0.29647770524024963,
+          "happy": 0.008302105590701103,
+          "neutral": 0.001598623814061284,
+          "sad": 0.6767970323562622,
+          "surprised": 0.0011782500660046935
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 7.39,
+        "f0_mean": 112.7,
+        "f0_std": 28.35,
+        "f0_range": 205.45,
+        "energy_mean": 0.040201,
+        "energy_std": 0.03876
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.2823,
+      "fused_arousal": 0.2605
+    },
+    {
+      "start": 109.786,
+      "end": 137.278,
+      "dimensional": {
+        "arousal": 0.4032416045665741,
+        "valence": 0.46317341923713684,
+        "dominance": 0.42635196447372437
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0019566703122109175,
+          "calm": 0.00397585378959775,
+          "disgust": 0.010101024992763996,
+          "fearful": 0.33843323588371277,
+          "happy": 0.007626478560268879,
+          "neutral": 0.0012687278212979436,
+          "sad": 0.6346789598464966,
+          "surprised": 0.001959034940227866
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 3.82,
+        "f0_mean": 132.21,
+        "f0_std": 66.39,
+        "f0_range": 354.72,
+        "energy_mean": 0.035476,
+        "energy_std": 0.041027
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.2987,
+      "fused_arousal": 0.2762
+    },
+    {
+      "start": 139.148,
+      "end": 165.882,
+      "dimensional": {
+        "arousal": 0.5712834596633911,
+        "valence": 0.5535693764686584,
+        "dominance": 0.5713702440261841
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.002172420034185052,
+          "calm": 0.00656649935990572,
+          "disgust": 0.013404169119894505,
+          "fearful": 0.3082762658596039,
+          "happy": 0.008283806964755058,
+          "neutral": 0.0015183729119598866,
+          "sad": 0.6559762358665466,
+          "surprised": 0.0038021442014724016
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 3.85,
+        "f0_mean": 127.92,
+        "f0_std": 50.25,
+        "f0_range": 400.76,
+        "energy_mean": 0.039522,
+        "energy_std": 0.045474
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.3326,
+      "fused_arousal": 0.3392
+    },
+    {
+      "start": 167.06,
+      "end": 184.423,
+      "dimensional": {
+        "arousal": 0.68651282787323,
+        "valence": 0.40819770097732544,
+        "dominance": 0.6445320248603821
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0020586259197443724,
+          "calm": 0.004494614899158478,
+          "disgust": 0.013105805031955242,
+          "fearful": 0.2520442605018616,
+          "happy": 0.00816574040800333,
+          "neutral": 0.0013806041097268462,
+          "sad": 0.717419445514679,
+          "surprised": 0.001330926432274282
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 6.1,
+        "f0_mean": 106.91,
+        "f0_std": 26.06,
+        "f0_range": 100.36,
+        "energy_mean": 0.061368,
+        "energy_std": 0.075502
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.2781,
+      "fused_arousal": 0.3824
+    },
+    {
+      "start": 184.443,
+      "end": 191.592,
+      "dimensional": {
+        "arousal": 0.47695159912109375,
+        "valence": 0.5923181772232056,
+        "dominance": 0.510699450969696
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.002159623894840479,
+          "calm": 0.007221093401312828,
+          "disgust": 0.051225561648607254,
+          "fearful": 0.06265035271644592,
+          "happy": 0.004413227085024118,
+          "neutral": 0.0013726718025282025,
+          "sad": 0.8699820637702942,
+          "surprised": 0.0009754004422575235
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 6.85,
+        "f0_mean": 100.58,
+        "f0_std": 22.56,
+        "f0_range": 103.26,
+        "energy_mean": 0.05363,
+        "energy_std": 0.048469
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.3471,
+      "fused_arousal": 0.3039
+    },
+    {
+      "start": 193.975,
+      "end": 196.358,
+      "dimensional": {
+        "arousal": 0.5558090806007385,
+        "valence": 0.514037549495697,
+        "dominance": 0.5765158534049988
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.026789048686623573,
+          "calm": 0.021954897791147232,
+          "disgust": 0.12052716314792633,
+          "fearful": 0.07628230005502701,
+          "happy": 0.12420228868722916,
+          "neutral": 0.016372457146644592,
+          "sad": 0.6101834774017334,
+          "surprised": 0.003688342636451125
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 12.59,
+        "f0_mean": 97.53,
+        "f0_std": 18.94,
+        "f0_range": 79.24,
+        "energy_mean": 0.079789,
+        "energy_std": 0.044021
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.3178,
+      "fused_arousal": 0.3334
+    },
+    {
+      "start": 197.823,
+      "end": 226.918,
+      "dimensional": {
+        "arousal": 0.5429094433784485,
+        "valence": 0.5271579623222351,
+        "dominance": 0.5418659448623657
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0023857897613197565,
+          "calm": 0.004226302728056908,
+          "disgust": 0.026924848556518555,
+          "fearful": 0.14345920085906982,
+          "happy": 0.005138365086168051,
+          "neutral": 0.0010917953914031386,
+          "sad": 0.8157467842102051,
+          "surprised": 0.001026870682835579
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 3.27,
+        "f0_mean": 113.9,
+        "f0_std": 41.31,
+        "f0_range": 188.77,
+        "energy_mean": 0.041149,
+        "energy_std": 0.056945
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.3227,
+      "fused_arousal": 0.3286
+    },
+    {
+      "start": 227.978,
+      "end": 252.028,
+      "dimensional": {
+        "arousal": 0.4189191460609436,
+        "valence": 0.38665589690208435,
+        "dominance": 0.44243091344833374
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.0021105739288032055,
+          "calm": 0.00935481395572424,
+          "disgust": 0.13688117265701294,
+          "fearful": 0.01693839766085148,
+          "happy": 0.002788456156849861,
+          "neutral": 0.0013474992010742426,
+          "sad": 0.8300914764404297,
+          "surprised": 0.00048763499944470823
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 5.03,
+        "f0_mean": 99.6,
+        "f0_std": 23.75,
+        "f0_range": 127.22,
+        "energy_mean": 0.038002,
+        "energy_std": 0.042888
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.27,
+      "fused_arousal": 0.2821
+    },
+    {
+      "start": 259.518,
+      "end": 264.297,
+      "dimensional": {
+        "arousal": 0.26849985122680664,
+        "valence": 0.37673285603523254,
+        "dominance": 0.32366442680358887
+      },
+      "speech_emotions": {
+        "scores": {
+          "angry": 0.004807134624570608,
+          "calm": 0.008962062187492847,
+          "disgust": 0.04874715209007263,
+          "fearful": 0.2201979011297226,
+          "happy": 0.009892832487821579,
+          "neutral": 0.0019578218925744295,
+          "sad": 0.6972828507423401,
+          "surprised": 0.008152326568961143
+        },
+        "top_label": "sad"
+      },
+      "prosody": {
+        "speech_rate": 5.65,
+        "f0_mean": 109.54,
+        "f0_std": 22.43,
+        "f0_range": 79.12,
+        "energy_mean": 0.017967,
+        "energy_std": 0.032845
+      },
+      "fused_label": "sad",
+      "fused_valence": 0.2663,
+      "fused_arousal": 0.1054
+    }
+  ]
+}
