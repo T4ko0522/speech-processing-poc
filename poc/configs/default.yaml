@@ -6,7 +6,8 @@ llm:
   provider: ollama
   ollama:
     base_url: http://localhost:11434/v1
-    model: gemma3:4b
+    model: gemma3:12b
+    timeout: 300  # API呼び出しタイムアウト（秒）
   openai:
     model_correction: gpt-5.1-mini 
     model_summary: gpt-5.1-mini
@@ -33,7 +34,7 @@ asr:
 
 # 誤字補正
 correction:
-  chunk_size: 10
+  chunk_size: 3
   max_retries: 3
   temperature: 0.1
   confidence_threshold: 0.7
@@ -66,7 +67,7 @@ emotion:
 # 動画エクスポート（--export-video 指定時）
 video_export:
   font_size: 48
-  transcript_font_size: 32  # トランスクリプト字幕のフォントサイズ
+  transcript_font_size: 24  # トランスクリプト字幕のフォントサイズ
   # font_name: "Yu Gothic"  # fontconfig フォント名（省略時はOSデフォルト）
 
 # 出力
