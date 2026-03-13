@@ -64,7 +64,7 @@ def run_pipeline(
     from poc.src.correction.typo_corrector import correct_transcript
     from poc.src.emotion.dimensional_emotion import analyze_dimensional_emotion
     from poc.src.emotion.fusion import fuse_emotions
-    from poc.src.emotion.text_emotion import analyze_text_emotion
+    from poc.src.emotion.speech_emotion import analyze_speech_emotion
     from poc.src.io.reader import validate_input
     from poc.src.io.writer import write_results
     from poc.src.llm import create_llm_client, get_model_for_task
@@ -219,7 +219,7 @@ def run_pipeline(
     # ===== Step 6: 感情推定 (スキップ可) =====
     emotion_cfg = config["emotion"]
     dimensional_emotions = None
-    text_emotions = None
+    speech_emotions = None
 
     # 感情推定用に音声を一度だけロード
     import librosa as _librosa
@@ -254,21 +254,24 @@ def run_pipeline(
         )
         logger.warning("次元感情推定スキップ")
 
-    # テキスト感情
+    # 音声感情 (SER)
     t0 = time.monotonic()
     try:
-        text_cfg = emotion_cfg["text"]
-        text_emotions = analyze_text_emotion(
+        speech_cfg = emotion_cfg["speech"]
+        speech_emotions = analyze_speech_emotion(
+            audio_path,
             segments,
-            model_name=text_cfg["model"],
+            model_name=speech_cfg["model"],
             device=device,
+            preloaded_audio=_emotion_audio,
+            temperature=speech_cfg.get("temperature", 0.5),
         )
-        _record_timing(timings, "emotion_text", t0)
+        _record_timing(timings, "emotion_speech", t0)
     except Exception:
         _record_timing(
-            timings, "emotion_text", t0, status="failed", skip_reason="推定エラー"
+            timings, "emotion_speech", t0, status="failed", skip_reason="推定エラー"
         )
-        logger.warning("テキスト感情推定スキップ")
+        logger.warning("音声感情推定スキップ")
 
     # prosody
     t0 = time.monotonic()
@@ -300,14 +303,15 @@ def run_pipeline(
     # 融合
     t0 = time.monotonic()
     fusion_cfg = emotion_cfg["fusion"]
-    if dimensional_emotions or text_emotions:
+    if dimensional_emotions or speech_emotions:
         timeline = fuse_emotions(
             segments,
             dimensional_emotions=dimensional_emotions,
-            text_emotions=text_emotions,
+            speech_emotions=speech_emotions,
             prosody_results=prosody_results,
-            text_weight=fusion_cfg["text_weight"],
+            speech_weight=fusion_cfg["speech_weight"],
             dimensional_weight=fusion_cfg["dimensional_weight"],
+            prosody_boost=fusion_cfg["prosody_boost"],
             neutral_zone=fusion_cfg["neutral_zone"],
         )
         result.emotions = timeline
@@ -331,12 +335,23 @@ def run_pipeline(
 
                 video_out = out_path / "emotion_overlay.mp4"
                 export_cfg = config.get("video_export", {})
+                # トランスクリプトセグメントを取得（fixed > raw の優先順）
+                transcript_segs = None
+                if result.fixed_transcript and result.fixed_transcript.segments:
+                    transcript_segs = result.fixed_transcript.segments
+                elif result.raw_transcript and result.raw_transcript.segments:
+                    transcript_segs = result.raw_transcript.segments
+
                 export_video_with_emotions(
                     video_path,
                     video_out,
                     result.emotions,
+                    transcript_segments=transcript_segs,
                     font_name=export_cfg.get("font_name"),
                     font_size=export_cfg.get("font_size", 48),
+                    transcript_font_size=export_cfg.get(
+                        "transcript_font_size", 32
+                    ),
                 )
                 _record_timing(timings, "video_export", t0)
             except Exception as e:
