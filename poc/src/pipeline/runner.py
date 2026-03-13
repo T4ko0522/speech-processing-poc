@@ -124,6 +124,7 @@ def run_pipeline(
             compute_type=asr_cfg["compute_type"],
             device=device,
             hf_token=hf_token,
+            diarization=asr_cfg.get("diarization"),
         )
         result.raw_transcript = raw_transcript
         _record_timing(timings, "transcribe", t0)
@@ -349,9 +350,7 @@ def run_pipeline(
                     transcript_segments=transcript_segs,
                     font_name=export_cfg.get("font_name"),
                     font_size=export_cfg.get("font_size", 48),
-                    transcript_font_size=export_cfg.get(
-                        "transcript_font_size", 32
-                    ),
+                    transcript_font_size=export_cfg.get("transcript_font_size", 32),
                 )
                 _record_timing(timings, "video_export", t0)
             except Exception as e:
